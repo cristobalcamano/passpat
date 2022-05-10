@@ -16,6 +16,9 @@ export class AmountPayableComponent implements OnInit {
   public rut:string = '';
   public email:string = '';
   public telefono:string = '';
+
+  opcionSeleccionado: string  = '0';
+  verSeleccion: string        = '0';
   
   public validateCon:Boolean = true;
 
@@ -37,11 +40,16 @@ export class AmountPayableComponent implements OnInit {
   }
 
   nextToPage(){
-    this.router.navigate(['/payment-model']);
+    this.router.navigate(['/payment-method']);
   }
 
   selectToamount(amount: string){
     localStorage.setItem('amount',amount);
   }
 
+
+  capturar(){
+    console.log(this.opcionSeleccionado);
+    this.verSeleccion = this.opcionSeleccionado;
+  }
 }
