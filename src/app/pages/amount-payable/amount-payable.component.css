@@ -20,3 +20,19 @@ button {
     height: 9px;
     background-color: rgb(99, 199, 166);
 }
+
+/* .form-check-input{
+    background-color: #6B196B;
+} */
+
+.form-check-input:checked {
+    background-color: #6B196B;
+    border-color: #6B196B;
+}
+
+#text-fecha-limite {
+    letter-spacing: 0.25px;
+
+    color: #828EA5;
+    font-size: 12px;
+}
