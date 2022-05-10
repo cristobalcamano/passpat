@@ -1,0 +1,22 @@
+button {
+    border: white !important;
+    padding: 5px;
+    border-radius: 30px;
+    width: 90px;
+}
+
+.process {
+    width: 100%;
+    height: 9px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 5px;
+}
+
+.porcent {
+    position: relative;
+    right: 12px;
+    border-radius: 5px;
+    width: 50%;
+    height: 9px;
+    background-color: rgb(99, 199, 166);
+}

@@ -1,0 +1,36 @@
+<img src="../../../assets/img/header-img.PNG" class="width-100 top-absolute-0">
+<div class="container">
+    <div class="box-empty-25"></div>
+    <div class="row">
+        <img src="../../../assets/img/webpay.PNG" class="width-20 center max-width min-width">
+    </div>
+    <div class="box-empty-25"></div>
+
+    <div class="row">
+        <p>Monto de pago</p>
+        <div class="process">
+            <div class="porcent"></div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-8">
+            Estas pagando en
+            <h1>{{namecompay}}</h1>
+        </div>
+        <div class="col-4">
+            Monto a pagar
+            <h1>${{amount}}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <img src="../../../assets/img/tarjeta.PNG" class="width-80 center max-width min-width">
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <img style="position: absolute; width: 30px; right: 5%;" src="{{imgCD}}"> numero tarjeta
+            <input type="text" class="form-control width-100" [(ngModel)]="numberCD" (ngModelChange)="validateCD()" placeholder="[-]  XXXX XXXX XXXX XXXX  ">
+        </div>
+    </div>
+</div>

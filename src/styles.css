@@ -1,0 +1,89 @@
+.width-100 {
+    width: 100%;
+    ;
+}
+
+.width-300px {
+    width: 300px;
+    ;
+}
+
+.max-width {
+    max-width: 350px !important;
+}
+
+.min-width {
+    min-width: 150px !important;
+}
+
+.min-width-170 {
+    min-width: 220px !important;
+}
+
+.width-50 {
+    width: 50%;
+    ;
+}
+
+.width-80 {
+    width: 80%;
+    ;
+}
+
+.width-30 {
+    width: 30%;
+    ;
+}
+
+.width-20 {
+    width: 20%;
+    ;
+}
+
+.top-absolute-0 {
+    position: static;
+    top: 0px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.box-empty-25 {
+    width: 100%;
+    height: 25px;
+    ;
+}
+
+.box-empty-10 {
+    width: 100%;
+    height: 10px;
+    ;
+}
+
+.box-empty-50 {
+    width: 100%;
+    height: 50px;
+    ;
+}
+
+button {
+    width: 300px;
+    ;
+    background-color: white;
+    border: #730397 1px solid !important;
+    color: #730397 !important;
+}
+
+button:hover {
+    width: 300px;
+    background-color: #730397;
+    border: white 1px solid !important;
+    color: white !important;
+}
+
+small {
+    color: rgb(199, 0, 0);
+}

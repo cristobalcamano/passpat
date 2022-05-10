@@ -1,0 +1,66 @@
+<img src="../../../assets/img/header-img.PNG" class="width-100 top-absolute-0">
+<div class="container">
+    <div class="box-empty-25"></div>
+    <div class="row">
+        <img src="../../../assets/img/webpay.PNG" class="width-20 center max-width min-width">
+    </div>
+    <div class="box-empty-25"></div>
+    <div class="row">
+
+        <p>Datos personales</p>
+        <div class="process center">
+            <div class="porcent"></div>
+        </div>
+    </div>
+    <div class="box-empty-50"></div>
+    <div class="row">
+        <img src="{{img}}" class="width-50 max-width min-width-170">
+    </div>
+    <div class="box-empty-25"></div>
+    <form [formGroup]="searchForm" class="form-inline" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <strong>Ingresa tus datos personales</strong>
+        </div>
+        <div class="box-empty-25"></div>
+        <div class="row content center ">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Nombre y apellido</label>
+            <input formControlName="nombre" type="txt" class="form-control" placeholder="Ingresa tu nombre y apellido" required>
+            <small *ngIf="searchForm.controls['nombre'].invalid &&
+            (searchForm.controls['nombre'].dirty || searchForm.controls['nombre'].touched)">El nombre debe contener minimo 3 letras (Sin numeros)*</small>
+        </div>
+        <div class="box-empty-10"></div>
+        <div class="form-group">
+            <label>Rut</label>
+            <input formControlName="rut" type="txt" class="form-control" placeholder="Ingresa tu RUT" ngModel required>
+            <small *ngIf="searchForm.controls['rut'].invalid &&
+            (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched)">El rut debe tener minimo 11 caracteres</small>
+        </div>
+        <div class="box-empty-10"></div>
+        <div class="form-group">
+            <label>Email address</label>
+            <input formControlName="correo" type="email" class="form-control" placeholder="Ingresa tu correo electrónico" ng-required="true">
+            <small *ngIf="searchForm.controls['correo'].invalid &&
+            (searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)">debe ser un formato email valido*</small>
+        </div>
+        <div class="box-empty-10"></div>
+        <div class="form-group">
+            <label>Telefono</label>
+            <input formControlName="telefono" class="form-control" placeholder="Ingresa tu teléfono">
+            <small *ngIf="searchForm.controls['telefono'].invalid &&
+            (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)">El telefono debe tener minimo 8 numeros*</small>
+        </div>
+        <div class="box-empty-10"></div>
+        <div class="box-empty-25"></div>
+        <div class="row center width-300px">
+            <div class="row ">
+                <button class="btn center" type="submit" [disabled]="!searchForm.valid">Confirmar</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="box-empty-25"></div>
+
+</div>

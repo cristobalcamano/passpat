@@ -1,0 +1,48 @@
+<img src="../../../assets/img/header-img.PNG" class="width-100 top-absolute-0">
+<div class="container">
+    <div class="box-empty-25"></div>
+    <div class="row">
+        <img src="../../../assets/img/webpay.PNG" class="width-20 center max-width min-width">
+    </div>
+    <div class="box-empty-25"></div>
+
+    <div class="row">
+        <p>Metodo de pago</p>
+        <div class="process">
+            <div class="porcent"></div>
+        </div>
+    </div>
+    <div class="box-empty-50"></div>
+    <div class="row">
+        <img src="{{img}}" class="width-50 max-width min-width-170">
+    </div>
+    <div class="box-empty-25"></div>
+    <form [formGroup]="searchForm" class="form-inline">
+        <div class="row">
+            <strong>Monto</strong>
+        </div>
+        <div class="box-empty-25"></div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Selecciona monto a pagar</label>
+            <br>
+            <br>
+            <button class="btn " (click)="selectToamount('15.000')">$15.000</button>
+            <button class="btn " (click)="selectToamount('20.000')">$20.000</button>
+            <button class="btn " (click)="selectToamount('25.000')">$25.000</button>
+        </div>
+        <div class="box-empty-50"></div>
+        <div class="form-group">
+            <label>Periodicidad</label>
+
+        </div>
+        <div class="box-empty-25"></div>
+        <div class="row center width-300px">
+            <div class="row ">
+                <button class="btn center" (click)="nextToPage()">Confirmar</button>
+            </div>
+        </div>
+    </form>
+    <div class="box-empty-25"></div>
+
+</div>

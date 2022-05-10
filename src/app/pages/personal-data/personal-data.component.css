@@ -1,0 +1,15 @@
+.process {
+    width: 95%;
+    height: 9px;
+    background-color: #E7EBF3;
+    border-radius: 5px;
+}
+
+.porcent {
+    position: relative;
+    right: 12px;
+    border-radius: 5px;
+    width: 30%;
+    height: 9px;
+    background-color: #00C4B4;
+}
