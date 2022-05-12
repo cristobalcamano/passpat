@@ -27,16 +27,24 @@
 
         <div class="form-group">
             <label for="exampleInputPassword1">Nombre y apellido</label>
-            <input formControlName="nombre" type="txt" class="form-control" placeholder="Ingresa tu nombre y apellido" required>
+            <input formControlName="nombre" type="txt" class="form-control " placeholder="Ingresa tu nombre y apellido" required>
             <small *ngIf="searchForm.controls['nombre'].invalid &&
             (searchForm.controls['nombre'].dirty || searchForm.controls['nombre'].touched)">El nombre debe contener minimo 3 letras (Sin numeros)*</small>
         </div>
         <div class="box-empty-10"></div>
         <div class="form-group">
             <label>Rut</label>
-            <input formControlName="rut" type="txt" class="form-control" placeholder="Ingresa tu RUT" ngModel required>
-            <small *ngIf="searchForm.controls['rut'].invalid &&
-            (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched)">El rut debe tener minimo 11 caracteres</small>
+            <div class="input-group mb-3">
+                <input formControlName="rut" type="txt" class="form-control" placeholder="Ingresa tu RUT" ngModel required>
+                <span class="input-group-text" id="basic-addon1">-</span>
+                <input formControlName="rut2" type="txt" class="form-control" ngModel required>
+            </div>
+            <small *ngIf="(searchForm.controls['rut'].invalid &&
+            (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched)) ||
+            (searchForm.controls['rut2'].invalid &&
+            (searchForm.controls['rut2'].dirty || searchForm.controls['rut2'].touched || 
+            (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched)))">El rut debe tener 10 numeros</small>
+
         </div>
         <div class="box-empty-10"></div>
         <div class="form-group">
@@ -48,9 +56,22 @@
         <div class="box-empty-10"></div>
         <div class="form-group">
             <label>Telefono</label>
-            <input formControlName="telefono" class="form-control" placeholder="Ingresa tu teléfono">
+
+            <div class="row">
+                <div class="col-5">
+                    <div class="input-group">
+                        <span class="input-group-text">+</span>
+                        <input formControlName="telefono" class="form-control">
+                    </div>
+                </div>
+                <div class="col-7">
+                    <input formControlName="telefono2" class="form-control" placeholder="Ingresa tu teléfono">
+                </div>
+            </div>
             <small *ngIf="searchForm.controls['telefono'].invalid &&
-            (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)">El telefono debe tener minimo 8 numeros*</small>
+            (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)">Indicativo debe ser 3 numeros*</small>
+            <small *ngIf="searchForm.controls['telefono2'].invalid &&
+            (searchForm.controls['telefono2'].dirty || searchForm.controls['telefono2'].touched)">El telefono debe tener minimo 8 numeros*</small>
         </div>
         <div class="box-empty-10"></div>
         <div class="box-empty-25"></div>
