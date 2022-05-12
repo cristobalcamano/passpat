@@ -16,9 +16,11 @@ export class PersonalDataComponent implements OnInit {
   createformGroup(){
     return new FormGroup({
       nombre: new FormControl('', [Validators.required, Validators.minLength(3), Validators.pattern(/^[a-zA-Z ]+$/)]),
-      rut: new FormControl('', [Validators.required, Validators.minLength(10)]),
+      rut: new FormControl('', [Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern(/^[1-9 ]+$/)]),
+      rut2: new FormControl('', [Validators.required, Validators.minLength(1), Validators.maxLength(1), Validators.pattern(/^[1-9 ]+$/)]),
       correo: new FormControl('', [Validators.required, Validators.email]),
-      telefono: new FormControl('', [Validators.required, Validators.minLength(10)])
+      telefono: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(3), Validators.pattern(/^[1-9 ]+$/)]),
+      telefono2: new FormControl('', [Validators.required, Validators.minLength(8), Validators.pattern(/^[1-9 ]+$/)])
     });
   }
 
