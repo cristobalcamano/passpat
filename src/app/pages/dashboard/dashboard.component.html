@@ -1,35 +1,22 @@
-<img src="../../../assets/img/header-img.PNG" class="width-100 top-absolute-0">
-<div class="container">
-    <div class="box-empty-25"></div>
-    <div class="row">
-        <img src="{{imgFirst}}" class="width-20 center max-width min-width">
+<div class="contenedor-dash center">
+
+    <div style="width: 250px " class="center">
+        <img src="{{imgSecond}}" class="img">
     </div>
-    <div class="box-empty-50"></div>
-    <div class="row">
-        <img src="{{imgSecond}}" class="width-50 center max-width min-width-170">
+    <div class="title ">
+        {{title}}
     </div>
-    <div class="box-empty-50"></div>
-    <div class="row title center">
-        <h1>{{title}}</h1>
+    <div class="text-p center">
+        {{content}}
     </div>
-    <div class="box-empty-25"></div>
-    <div class="row content center ">
-        <p class="text-p center ">{{content}}</p>
-    </div>
-    <div class="box-empty-50"></div>
-    <div class="row center content">
-        <div class="center">
-            <i class="bi-circle-fill" [ngClass]="{'i-primary':cont==1}"></i>
-            <i class="bi-circle-fill" [ngClass]="{'i-primary':cont==2}"></i>
-            <i class="bi-circle-fill" [ngClass]="{'i-primary':cont==3}"></i>
-            <i class="bi-circle-fill" [ngClass]="{'i-primary':cont==4}"></i>
+    <div class="content-selecccion center">
+        <div class="row">
+            <div class="circle-dash" [ngClass]="{'i-primary':cont==1}"></div>
+            <div class="circle-dash" [ngClass]="{'i-primary':cont==2}"></div>
         </div>
     </div>
-    <div class="box-empty-25"></div>
-    <div class="row center width-300px">
-        <div class="row ">
-            <button type="button" class="btn center" (click)="nextpresentation()">{{siguiente}}</button>
-        </div>
+    <div style="width: 134px !important;" class="center">
+        <button type="button" class="btn" (click)="nextpresentation()">{{siguiente}}</button>
     </div>
     <div class="box-empty-25"></div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class PersonalDataComponent implements OnInit {
 
-  public img: any;
+  @Output() viewShow: EventEmitter<string> = new EventEmitter();
 
+  public img: any;
   public validateCon:Boolean = true;
 
   createformGroup(){
@@ -50,7 +51,8 @@ export class PersonalDataComponent implements OnInit {
   
 
   onSubmit(){
-    this.router.navigate(['/amount-payable']);
+    console.log('Emitir');
+    this.viewShow.emit('amountPayable');
   }
 
 }

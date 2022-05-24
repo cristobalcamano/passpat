@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./payment-method.component.css']
 })
 export class PaymentMethodComponent implements OnInit {
+
+  @Output() viewShow: EventEmitter<string> = new EventEmitter();
 
   namecompay:any;
   amount: any;
@@ -47,14 +49,12 @@ export class PaymentMethodComponent implements OnInit {
     }
   }
 
-
-
   redirectTarjeta(){
-    this.router.navigate(['/payment-model']);
+    this.viewShow.emit('paymentModel');
   }
 
   volver(){
-    this.router.navigate(['/amount-payable']);
+    this.viewShow.emit('amountPayable');
   }
 
 
