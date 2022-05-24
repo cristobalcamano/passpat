@@ -1,0 +1,8 @@
+@media(min-width:960px) {
+    .contenedor-page {
+        height: 772px;
+        width: 960px;
+        top: 0px;
+        border-radius: 0px;
+    }
+}

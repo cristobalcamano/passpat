@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { Company } from 'src/app/models/company.model';
@@ -11,6 +11,8 @@ import { QrService } from 'src/app/services/qr.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+  @Output() viewShow: EventEmitter<string> = new EventEmitter();
 
   constructor(private route: ActivatedRoute, private qr: QrService,
     private router:Router) { 
@@ -52,8 +54,8 @@ export class DashboardComponent implements OnInit {
     } else if(this.cont == 4){
       this.fourth();
     } else if(this.cont == 5){
-      
-      this.router.navigate(['/data/user']);
+      console.log('Emitir dhsboard');
+      this.viewShow.emit('personalData');
     }
     
   } 

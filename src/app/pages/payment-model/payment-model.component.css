@@ -1,3 +1,12 @@
+.button-mount {
+    border: white !important;
+    padding: 5px;
+    border-radius: 30px;
+    width: 200px;
+    border: #730397 1px solid !important;
+    height: 40px;
+}
+
 .process {
     width: 100%;
     height: 9px;
@@ -12,4 +21,17 @@
     width: 70%;
     height: 9px;
     background-color: #00C4B4;
+}
+
+label {
+    font-size: 12px;
+}
+
+@media(max-width:450px) {
+    .container {
+        width: 90%;
+    }
+    h1 {
+        font-size: 18px;
+    }
 }

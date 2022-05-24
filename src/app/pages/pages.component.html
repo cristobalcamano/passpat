@@ -1,1 +1,11 @@
-<p>pages works!</p>
+<div class="center contenedor-page">
+    <app-header></app-header>
+
+    <app-dashboard *ngIf="dashboard" (viewShow)="content($event)"></app-dashboard>
+    <app-personal-data *ngIf="personalData" (viewShow)="content($event)"></app-personal-data>
+    <app-amount-payable *ngIf="amountPayable" (viewShow)="content($event)"></app-amount-payable>
+    <app-payment-model *ngIf="paymentModel" (viewShow)="content($event)"></app-payment-model>
+    <app-payment-method *ngIf="paymentMethod" (viewShow)="content($event)"></app-payment-method>
+
+
+</div>

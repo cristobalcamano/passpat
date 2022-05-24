@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter   } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AmountPayableComponent implements OnInit {
 
+  @Output() viewShow: EventEmitter<string> = new EventEmitter();
   
   public img: any;
 
@@ -40,7 +41,7 @@ export class AmountPayableComponent implements OnInit {
   }
 
   nextToPage(){
-    this.router.navigate(['/payment-method']);
+    this.viewShow.emit('paymentModel');
   }
 
   selectToamount(amount: string){

@@ -1,9 +1,5 @@
-<img src="../../../assets/img/header-img.PNG" class="width-100 top-absolute-0">
 <div class="container">
-    <div class="box-empty-25"></div>
-    <div class="row">
-        <img src="../../../assets/img/webpay.PNG" class="width-20 center max-width min-width">
-    </div>
+
     <div class="box-empty-25"></div>
 
     <div class="row">
@@ -14,12 +10,12 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-8">
-            Estas pagando en
+        <div class="col-7">
+            <label for="">Estas pagando en</label>
             <h1>{{namecompay}}</h1>
         </div>
-        <div class="col-4">
-            Monto a pagar
+        <div class="col-5">
+            <label for="">Monto a pagar</label>
             <h1>${{amount}}</h1>
         </div>
     </div>
@@ -27,11 +23,49 @@
     <div class="row">
         <img src="../../../assets/img/tarjeta.PNG" class="width-80 center max-width min-width">
     </div>
+    <br>
+    <div>
+        <button class="center button-mount" disabled="true">[-] Escanear Tarjeta</button>
+    </div>
+    <br>
     <div class="row">
         <div class="col-12">
-            <img style="position: absolute; width: 30px; right: 5%;" src="{{imgCD}}"> numero tarjeta
 
-            <input type="text" class="form-control width-100" [(ngModel)]="numberCD" (ngModelChange)="validateCD()" placeholder="[-]  XXXX XXXX XXXX XXXX  ">
+            <label for="">numero tarjeta</label>
+
+            <div class="input-group">
+                <span class="input-group-text"><img style="width: 25px;" src="{{imgCD}}"></span>
+                <input type="text" class="form-control width-100" [(ngModel)]="numberCD" (ngModelChange)="validateCD()" placeholder="XXXX XXXX XXXX XXXX " maxlength="16">
+            </div>
+
         </div>
+    </div>
+    <br>
+    <div *ngIf="validateTC" class="row">
+        <div class="col-6">
+            <label>Fecha de expiración</label>
+            <input type="text" class="form-control width-100" maxlength="5" [(ngModel)]="fechaE" placeholder="XX/XX" (ngModelChange)="validateFE()">
+        </div>
+        <div class="col-6">
+            <label>CVV</label>
+            <input type="password" class="form-control width-100" placeholder="***" maxlength="3" [(ngModel)]="cvv">
+        </div>
+    </div>
+    <br><br>
+    <div class="row center width-300px">
+        <div class="row ">
+            <button (click)="inscribirTarjeta()" class="btn center" type="submit" [disabled]="fechaE.length < 5 || cvv.length < 3 || numberCD.length < 16">Inscribir</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-2" style="position: relative; left: 0; top: 0;">
+            <img src="../../../assets/img/shield.svg" class="heaven">
+            <img src="../../../assets/img/lock.svg" class="eye">
+        </div>
+        <label class="col-10">
+            Transacción respaldada por Transbank. Revisa las <a href="#">condiciones del servicio</a>.
+        </label>
     </div>
 </div>
