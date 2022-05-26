@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { QrService } from 'src/app/services/qr.service';
+import { PersonalData } from '../models/personal-data/personal-data.model';
+import { Company } from 'src/app/models/company.model';
 
 @Component({
   selector: 'app-pages',
@@ -13,9 +18,26 @@ export class PagesComponent implements OnInit {
   paymentModel: boolean = false;
   personalData: boolean = false;
 
-  constructor() { }
+  id = '';
+
+  companyO : Company = new Company('','','',[]);
+
+  constructor(private route: ActivatedRoute, private qr: QrService,
+    private router:Router) {
+      this.router.routeReuseStrategy.shouldReuseRoute = function () {
+        return false;
+      }
+    }
 
   ngOnInit(): void {
+    this.searchId();
+  }
+
+  searchId(){
+    this.route.params.subscribe((params) => this.id = params['id']);
+    this.qr.consultaId(this.id).subscribe((data: Company) => {
+      this.companyO = data;
+    });
   }
 
   content(view: string){
@@ -43,6 +65,11 @@ export class PagesComponent implements OnInit {
         this.personalData = true;
       break;
     }
+  }
+
+  capturarData(personal:PersonalData){
+
+    console.log('Persona: ',personal);
   }
 
 }
