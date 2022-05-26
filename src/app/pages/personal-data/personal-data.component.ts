@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input , Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PersonalData } from '../../models/personal-data/personal-data.model';
 
 @Component({
   selector: 'app-personal-data',
@@ -10,8 +11,10 @@ import { Router } from '@angular/router';
 export class PersonalDataComponent implements OnInit {
 
   @Output() viewShow: EventEmitter<string> = new EventEmitter();
+  @Output() dataPersonal: EventEmitter<PersonalData> = new EventEmitter();
 
-  public img: any;
+  @Input() img: string;
+
   public validateCon:Boolean = true;
 
   createformGroup(){
@@ -38,9 +41,6 @@ export class PersonalDataComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     }
-    if(localStorage.getItem('image') != null){
-      this.img = localStorage.getItem('image');
-    }
   }
 
   ngOnInit(): void {
@@ -49,9 +49,9 @@ export class PersonalDataComponent implements OnInit {
 
   //    const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
   
-
   onSubmit(){
-    console.log('Emitir');
+    let personal:PersonalData = new PersonalData('nombre','rut','telefoon','correo');
+    this.dataPersonal.emit(personal);
     this.viewShow.emit('amountPayable');
   }
 
