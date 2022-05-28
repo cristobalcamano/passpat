@@ -1,6 +1,7 @@
+<br>
 <div class="contenedor-dash center">
 
-    <div *ngIf="!siguiente">
+    <div *ngIf="!siguiente" style="width: 100% !important;">
         <div style="width: 250px " class="center">
             <img src="../../../assets/img/onboding/Ilustración Onboarding.svg" class="img">
         </div>
@@ -11,30 +12,30 @@
             Ahorra tiempo y suscribe el pago automático a tu tarjeta en simples pasos.
         </div>
     </div>
-    <div *ngIf="siguiente" style="position: relative; width: 632px; height: 206px; top: 0px !important;" class="center">
+    <div *ngIf="siguiente" class="container center content-dash-second">
         <div class="row">
             <div class="col">
-                <div style="text-align: center; width: 180px; font-size: 18px; color: #2D3338;"><img src="../../../assets/img/onboding/Datos.svg" class="img" style="width: 93px;"></div>
-                <div style="text-align: center; width: 180px; font-size: 18px; color: #2D3338;">Registra tus datos personales</div>
+                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Datos.svg" class="img-size"></div>
+                <div style="text-align: center;">Registra tus datos personales</div>
             </div>
             <div class="col">
-                <div style="text-align: center; width: 180px; font-size: 18px; color: #2D3338;"><img src="../../../assets/img/onboding/Calendario.svg" class="img" style="width: 93px;"></div>
-                <div style="text-align: center; width: 180px; font-size: 18px; color: #2D3338;">Selecciona un monto a pagar</div>
+                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Calendario.svg" class="img-size"></div>
+                <div style="text-align: center;">Selecciona un monto a pagar</div>
             </div>
             <div class="col">
-                <div style="text-align: center; width: 180px; font-size: 18px; color: #2D3338;"><img src="../../../assets/img/onboding/Medios de pago.svg" class="img" style="width: 93px;"></div>
-                <div style="text-align: center; width: 180px; font-size: 18px; color: #2D3338;">Define el medio de pago y confirma</div>
+                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Medios de pago.svg" class="img-size"></div>
+                <div style="text-align: center;">Define el medio de pago y confirma</div>
             </div>
         </div>
     </div>
-    <div class="content-selecccion center">
+    <div class="content-selecccion center" [ngClass]="{'btn-selecction-next':siguiente}">
         <div class="row">
             <div class="circle-dash" [ngClass]="{'i-primary':cont==1}"></div>
             <div class="circle-dash" [ngClass]="{'i-primary':cont==2}"></div>
         </div>
     </div>
     <div style="width: 134px !important;" class="center">
-        <button type="button" class="btn" (click)="nextpresentation()">{{siguientetxt}}</button>
+        <button type="button" class="btn" [ngClass]="{'btn-second':siguiente}" (click)="nextpresentation()">{{siguientetxt}}</button>
     </div>
     <div class="box-empty-25"></div>
 
