@@ -10,6 +10,23 @@
 .process {
     background: #00C4B4;
     border-radius: 8px;
-    width: 16px;
+    width: 0px;
+    ;
     height: 8px;
+}
+
+.process-pd {
+    width: 10px !important;
+}
+
+.process-2 {
+    width: 50% !important;
+}
+
+.process-3 {
+    width: 96% !important;
+}
+
+.bold-pb {
+    font-weight: bolder;
 }

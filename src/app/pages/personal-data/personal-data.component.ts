@@ -13,7 +13,7 @@ export class PersonalDataComponent implements OnInit {
   @Output() viewShow: EventEmitter<string> = new EventEmitter();
   @Output() dataPersonal: EventEmitter<PersonalData> = new EventEmitter();
 
-  @Input() img: string;
+  @Input() img: string = '';
 
   public validateCon:Boolean = true;
 
@@ -37,7 +37,6 @@ export class PersonalDataComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private router:Router) { 
     this.searchForm = this.createformGroup();
-    this.img = '';
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     }

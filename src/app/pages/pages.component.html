@@ -7,12 +7,12 @@
 
     <div class="contenedor-page-2">
         <br>
-        <app-progress-bar *ngIf="!dashboard"></app-progress-bar>
+        <app-progress-bar *ngIf="!dashboard" [imgIcon]="view"></app-progress-bar>
 
         <app-dashboard *ngIf="dashboard" (viewShow)="content($event)"></app-dashboard>
         <app-personal-data *ngIf="personalData" (dataPersonal)="capturarData($event)" [img]="companyO.imagen" (viewShow)="content($event)"></app-personal-data>
         <app-amount-payable *ngIf="amountPayable" (viewShow)="content($event)"></app-amount-payable>
-        <app-payment-model *ngIf="paymentModel" (viewShow)="content($event)"></app-payment-model>
+        <app-payment-model *ngIf="paymentModel" (viewShow)="content($event)" [img]="companyO.imagen"></app-payment-model>
         <app-payment-method *ngIf="paymentMethod" (viewShow)="content($event)"></app-payment-method>
     </div>
 

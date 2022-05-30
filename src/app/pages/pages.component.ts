@@ -12,6 +12,8 @@ import { Company } from 'src/app/models/company.model';
 })
 export class PagesComponent implements OnInit {
 
+  view = '';
+
   dashboard: boolean = true;
   amountPayable: boolean = false;
   paymentMethod: boolean = false;
@@ -41,7 +43,7 @@ export class PagesComponent implements OnInit {
   }
 
   content(view: string){
-    console.log('Emitir content');
+    this.view = view;
     this.dashboard = false;
     this.amountPayable = false;
     this.paymentMethod = false;

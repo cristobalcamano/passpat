@@ -1,65 +1,63 @@
-<div class="container">
+<div class="contenedor-pm center">
 
-    <div class="box-empty-25"></div>
+    <div class="contenedor-pm-second center">
 
-    <br><br>
-    <div class="row">
-        <div class="col-7">
-            <label for="">Estas pagando en</label>
-            <h1>{{namecompay}}</h1>
+        <div class="row">
+            <img src="{{img}}" class="img-pm">
         </div>
-        <div class="col-5">
-            <label for="">Monto a pagar</label>
-            <h1>${{amount}}</h1>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <img src="../../../assets/img/tarjeta.PNG" class="width-80 center max-width min-width">
-    </div>
-    <br>
-    <div>
-        <button class="center button-mount" disabled="true">[-] Escanear Tarjeta</button>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-12">
-
-            <label for="">numero tarjeta</label>
-
-            <div class="input-group">
-                <span class="input-group-text"><img style="width: 25px;" src="{{imgCD}}"></span>
-                <input type="text" class="form-control width-100" [(ngModel)]="numberCD" (ngModelChange)="validateCD()" placeholder="XXXX XXXX XXXX XXXX " maxlength="16">
+        <br>
+        <div>
+            <div>
+                Suscribe un medio de pago
+                <div>
+                    Selecciona cualquier tipo de tarjeta de crédito.
+                </div>
             </div>
+        </div>
 
+        <div class="row">
+            <img src="../../../assets/img/tarjeta.PNG" class="width-80 center max-width min-width">
         </div>
-    </div>
-    <br>
-    <div *ngIf="validateTC" class="row">
-        <div class="col-6">
-            <label>Fecha de expiración</label>
-            <input type="text" class="form-control width-100" maxlength="5" [(ngModel)]="fechaE" placeholder="XX/XX" (ngModelChange)="validateFE()">
+        <br>
+        <div class="row">
+            <div class="col-12">
+
+                <label for="">numero tarjeta</label>
+
+                <div class="input-group">
+                    <span class="input-group-text"><img style="width: 25px;" src="{{imgCD}}"></span>
+                    <input type="text" class="form-control width-100" [(ngModel)]="numberCD" (ngModelChange)="validateCD()" placeholder="XXXX XXXX XXXX XXXX " maxlength="16">
+                </div>
+
+            </div>
         </div>
-        <div class="col-6">
-            <label>CVV</label>
-            <input type="password" class="form-control width-100" placeholder="***" maxlength="3" [(ngModel)]="cvv">
+        <br>
+        <div *ngIf="validateTC" class="row">
+            <div class="col-6">
+                <label>Fecha de expiración</label>
+                <input type="text" class="form-control width-100" maxlength="5" [(ngModel)]="fechaE" placeholder="XX/XX" (ngModelChange)="validateFE()">
+            </div>
+            <div class="col-6">
+                <label>CVV</label>
+                <input type="password" class="form-control width-100" placeholder="***" maxlength="3" [(ngModel)]="cvv">
+            </div>
         </div>
-    </div>
-    <br><br>
-    <div class="row center width-300px">
-        <div class="row ">
-            <button (click)="inscribirTarjeta()" class="btn center" type="submit" [disabled]="fechaE.length < 5 || cvv.length < 3 || numberCD.length < 16">Inscribir</button>
+        <br><br>
+        <div class="row center width-300px">
+            <div class="row ">
+                <button (click)="inscribirTarjeta()" class="btn center" type="submit" [disabled]="fechaE.length < 5 || cvv.length < 3 || numberCD.length < 16">Inscribir</button>
+            </div>
         </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-2" style="position: relative; left: 0; top: 0;">
-            <img src="../../../assets/img/shield.svg" class="heaven">
-            <img src="../../../assets/img/lock.svg" class="eye">
-        </div>
-        <label class="col-10">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-2" style="position: relative; left: 0; top: 0;">
+                <img src="../../../assets/img/shield.svg" class="heaven">
+                <img src="../../../assets/img/lock.svg" class="eye">
+            </div>
+            <label class="col-10">
             Transacción respaldada por Transbank. Revisa las <a href="#">condiciones del servicio</a>.
         </label>
+        </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-progress-bar',
@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgressBarComponent implements OnInit {
 
-  constructor() { }
+
+  money: boolean = false;
+  user: boolean = false;
+  check: boolean = false;
+
+  @Input() imgIcon: string;
+
+  constructor() {
+    this.imgIcon = '';
+  }
 
   ngOnInit(): void {
   }

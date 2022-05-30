@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter  } from '@angular/core';
 import { Data } from '@angular/router';
 
 @Component({
@@ -9,6 +9,8 @@ import { Data } from '@angular/router';
 export class PaymentModelComponent implements OnInit {
 
   @Output() viewShow: EventEmitter<string> = new EventEmitter();
+
+  @Input() img: string = '';
 
   namecompay:any;
   validateTC:boolean;
