@@ -65,3 +65,20 @@ label {
         font-size: 18px;
     }
 }
+
+.btn-pmo {
+    position: relative !important;
+    width: 134px !important;
+    top: 40px;
+    height: 48px !important;
+    background-color: white;
+    border: 1px solid #6B196B !important;
+    border-radius: 4px;
+    color: #730397 !important;
+}
+
+.btn-pmo:hover {
+    background-color: #730397;
+    border: white 1px solid !important;
+    color: white !important;
+}
