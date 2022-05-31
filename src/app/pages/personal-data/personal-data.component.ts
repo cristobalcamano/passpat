@@ -47,10 +47,10 @@ export class PersonalDataComponent implements OnInit {
     
   }
 
-  //    const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-  
   onSubmit(){
-    let personal:PersonalData = new PersonalData('nombre','rut','telefoon','correo');
+    let personal:PersonalData = new PersonalData(this.searchForm.get('nombre')?.value,
+    this.searchForm.get('rut')?.value,
+    this.searchForm.get('correo')?.value, this.searchForm.get('telefono')?.value);
     this.dataPersonal.emit(personal);
     this.viewShow.emit('amountPayable');
   }

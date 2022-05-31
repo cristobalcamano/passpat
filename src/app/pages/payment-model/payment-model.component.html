@@ -45,19 +45,23 @@
             </div>
 
         </div>
-        <div class="row center width-300px">
-            <button (click)="inscribirTarjeta()" class="btn-pmo center" type="submit" [disabled]="fechaE.length < 5 || cvv.length < 3 || numberCD.length < 16">Inscribir</button>
-        </div>
         <br>
-        <br>
-        <div class="row">
-            <div class="col-2" style="position: relative; left: 0; top: 0;">
-                <img src="../../../assets/img/shield.svg" class="heaven">
-                <img src="../../../assets/img/lock.svg" class="eye">
+        <div class="row width-300px">
+            <div class="col-10">
+                < volver</div>
+                    <div class="col-2"><button (click)="inscribirTarjeta()" class="btn-pmo" type="submit" [disabled]="fechaE.length < 5 || cvv.length < 3 || numberCD.length < 16">Inscribir</button></div>
+
             </div>
-            <label class="col-10">
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-2" style="position: relative; left: 0; top: 0;">
+                    <img src="../../../assets/img/shield.svg" class="heaven">
+                    <img src="../../../assets/img/lock.svg" class="eye">
+                </div>
+                <label class="col-10">
             Transacción respaldada por Transbank. Revisa las <a href="#">condiciones del servicio</a>.
         </label>
+            </div>
         </div>
     </div>
-</div>

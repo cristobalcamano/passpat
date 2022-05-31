@@ -22,7 +22,7 @@ export class PagesComponent implements OnInit {
 
   id = '';
 
-  companyO : Company = new Company('','','',[]);
+  companyO : Company = new Company('','','',[],[],'','');
 
   constructor(private route: ActivatedRoute, private qr: QrService,
     private router:Router) {

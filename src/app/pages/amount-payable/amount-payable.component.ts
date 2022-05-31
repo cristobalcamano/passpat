@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter   } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter, Input   } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,48 +9,48 @@ import { Router } from '@angular/router';
 })
 export class AmountPayableComponent implements OnInit {
 
+  @Input() img: string = '';
+  @Input() montoPesos: string[] = [];
+  @Input() montoUF: string[] = [];
+  @Input() monedaPeso: string = '0';
+  @Input() monedaUF: string = '0';
+
+  public searchForm : FormGroup;
+
   @Output() viewShow: EventEmitter<string> = new EventEmitter();
-  
-  public img: any;
+  @Output() montoSeleccionado: EventEmitter<String> = new EventEmitter();
 
-  public nombreApellido:string = '';
-  public rut:string = '';
-  public email:string = '';
-  public telefono:string = '';
-
-  opcionSeleccionado: string  = '0';
-  verSeleccion: string        = '0';
+  tipoMonedaSeleccionada: string = '';
+  tipoMonto: string = '';
   
-  public validateCon:Boolean = true;
 
   constructor(private fb: FormBuilder, private router:Router) { 
-    this.img = '';
-    if(localStorage.getItem('image') != null){
-      this.img = localStorage.getItem('image');
+    this.searchForm = this.createformGroup();
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
     }
+    //this.rutValidate = '';
   }
 
-  public searchForm = this.fb.group({
-    nombre: ['', [Validators.required]],
-    rut: ['', [Validators.required]],
-    correo: ['', [Validators.required]],
-    telefono: ['', [Validators.required]]
-  });
+  onSubmit(){
+    this.viewShow.emit('paymentModel');
+  }
+
+  createformGroup(){
+    return new FormGroup({});
+  }
 
   ngOnInit(): void {
   }
 
-  nextToPage(){
-    this.viewShow.emit('paymentModel');
+  onChange( event:any ){
+    this.tipoMonedaSeleccionada = event.target.value;
+    this.tipoMonto = '';
+    console.log(event.target.value);
   }
 
-  selectToamount(amount: string){
-    localStorage.setItem('amount',amount);
-  }
-
-
-  capturar(){
-    console.log(this.opcionSeleccionado);
-    this.verSeleccion = this.opcionSeleccionado;
+  valorSeleccionado(event:any){
+    this.tipoMonto = event.target.value;
+    
   }
 }
