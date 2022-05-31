@@ -1,100 +1,147 @@
-<div class="container">
+<div class="contenedor-pd center">
+    <div class="contenedor-pd-second center">
 
-    <div class="box-empty-25"></div>
+        <div class="row">
+            <img src="{{img}}" class="img-pd">
+        </div>
+        <div style="width:100%">
+            <br>
+            <form [formGroup]="searchForm" class="form-inline" (ngSubmit)="onSubmit()">
+                <div style="font-size: 34px; ">
+                    <strong>Monto a suscribir</strong>
+                </div>
+                <ng-container *ngIf="montoPesos.length == 1 || montoUF.length == 1; then if1"></ng-container>
+                <ng-container *ngIf="montoPesos.length == 0 && montoUF.length == 0; then if2"></ng-container>
+                <ng-container *ngIf="montoPesos.length > 1 || montoUF.length > 1; then if3"></ng-container>
 
-    <div class="row">
-        <p>Metodo de pago</p>
-        <div class="process">
-            <div class="porcent"></div>
+                <!-- If Statement -->
+                <ng-template #if1>
+                    <div style="font-size: 16px; top: 4px;">
+                        Conoce la cantidad a pagar y su frecuencia
+                    </div>
+                </ng-template>
+                <!-- If Else Statement -->
+                <ng-template #if2>
+                    <div style="font-size: 16px; top: 4px;">
+                        Define el monto máximo a pagar, la cantidad estará sujeta al consumo mensual.
+                    </div>
+                </ng-template>
+                <!-- Else Statement -->
+                <ng-template #if3>
+                    <div style="font-size: 16px; top: 4px;">
+                        Define la cantidad a pagar y conoce su frecuencia.
+                    </div>
+                </ng-template>
+
+                <div class="container" style="padding: 0px; top: 32px; position: relative;">
+                    <div class="row">
+                        <div class="form-group">
+
+                            <!-- inicio codigo monnto -->
+                            <div class="row">
+                                <div class="col-12" *ngIf="monedaPeso == '1' && monedaUF == '1'">
+                                    <label for="">Opciones de monto</label>
+                                    <select class="form-control" (change)="onChange( $event )">
+                                        <option value="" selected>Selecciona</option>
+                                        <option value="PESOS">Monto fijo en $</option>
+                                        <option value="UF">Monto fijo en UF</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row" *ngIf="monedaPeso == '1' && monedaUF == '1'">
+                                <div class="row" *ngIf="tipoMonedaSeleccionada == 'PESOS'">
+
+                                    <div class="button col-3" *ngFor="let valor of montoPesos; let i = index">
+                                        <input type="radio" id="{{i}}" (change)="valorSeleccionado( $event )" value="{{valor}}" />
+                                        <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
+                                    </div>
+                                    <div class="button col-3" *ngIf="montoPesos.length > 1">
+                                        <input type="radio" (change)="valorSeleccionado( $event )" value="otro-monto" id="{{montoPesos.length}}" />
+                                        <label class="bttn btn-default form-control" for="{{montoPesos.length}}">Otro
+                                            monto</label>
+                                    </div>
+                                </div>
+                                <div class="row" *ngIf="tipoMonedaSeleccionada == 'UF'">
+                                    <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
+                                        <input type="radio" id="{{i}}" (change)="valorSeleccionado( $event )" value="{{valor}}" />
+                                        <label class="bttn btn-default form-control" for="{{i}}">{{valor}} UF</label>
+                                    </div>
+                                    <div class="button col-3" *ngIf="montoUF.length > 1">
+                                        <input type="radio" (change)="valorSeleccionado( $event )" id="{{montoUF.length}}" value="otro-monto" />
+                                        <label class="bttn btn-default form-control" for="{{montoUF.length}}">Otro
+                                            monto</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="monedaPeso == '1' && monedaUF == '0'">
+                                <div class="button col-3" *ngFor="let valor of montoPesos; let i = index">
+                                    <input type="radio" (change)="valorSeleccionado( $event )" id="{{i}}" value="{{valor}}" />
+                                    <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
+                                </div>
+                                <div class="button col-3" *ngIf="montoPesos.length > 1">
+                                    <input type="radio" (change)="valorSeleccionado( $event )" value="otro-monto" id="{{montoPesos.length}}" />
+                                    <label class="bttn btn-default form-control" for="{{montoPesos.length}}">Otro
+                                        monto</label>
+                                </div>
+                            </div>
+                            <div class="row" *ngIf="monedaPeso == '0' && monedaUF == '1'">
+                                <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
+                                    <input type="radio" (change)="valorSeleccionado( $event )" id="{{i}}" value="{{valor}}" />
+                                    <label class="bttn btn-default form-control" for="{{i}}">{{valor}} UF</label>
+                                </div>
+                                <div class="button col-3" *ngIf="montoUF.length > 1">
+                                    <input type="radio" id="{{montoUF.length}}" (change)="valorSeleccionado( $event )" value="otro-monto" />
+                                    <label class="bttn btn-default form-control" for="{{montoUF.length}}">Otro
+                                        monto</label>
+                                </div>
+                            </div>
+                            <!-- fin codigo monnto -->
+                            <br>
+                        </div>
+
+                        <div class="form-group col" style="top:32px ;">
+
+                            <div class="col-12" *ngIf="tipoMonto == 'otro-monto' || (montoPesos.length == 0 && montoUF.length == 0)">
+                                <input type="number" class="form-control" placeholder="Ingrese una cantidad">
+                                <div *ngIf="monedaPeso == '1' && monedaUF == '1'">
+                                    <div *ngIf="tipoMonedaSeleccionada == 'PESOS'">
+                                        <span class="text-descripcion-digitar-monto">El monto máximo es de
+                                            $100.000</span>
+                                    </div>
+                                    <div *ngIf="tipoMonedaSeleccionada == 'UF'">
+                                        <span class="text-descripcion-digitar-monto">El monto máximo es de 2 UF</span>
+                                    </div>
+                                </div>
+                                <div *ngIf="monedaPeso == '1' && monedaUF == '0'">
+                                    <span class="text-descripcion-digitar-monto">El monto máximo es de $100.000</span>
+                                </div>
+                                <div *ngIf="monedaPeso == '0' && monedaUF == '1'">
+                                    <span class="text-descripcion-digitar-monto">El monto máximo es de 2 UF</span>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-12 text-center" style="background: #EBF6FF; border-radius: 4px; height: 48px; justify-content: center;align-items: center;
+                            display: flex;">
+                                <span><img src="../../../assets/img/Icon.svg" class="img"
+                                        style="width: 13.13px;vertical-align: text-top;">
+                                    El monto seleccionado para la suscripción se cargará mensualmente de manera indefinida.</span>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <button class="center btn-pd" type="submit" [disabled]="!searchForm.valid">Regresar</button>
+                    <button class="center btn-pd" type="submit" [disabled]="!searchForm.valid">Confirmar</button>
+                </div>
+
+            </form>
         </div>
     </div>
-    <div class="box-empty-50"></div>
-    <div class="row">
-        <img src="{{img}}" class="width-50 max-width min-width-170">
-    </div>
-    <div class="box-empty-25"></div>
-    <form [formGroup]="searchForm" class="form-inline">
-        <div class="row">
-            <h3>Monto</h3>
-        </div>
-        <div class="box-empty-25"></div>
-
-        <div class="form-group">
-            <label for="exampleInputPassword1">Selecciona monto a pagar</label>
-            <br>
-            <br>
-            <button class="btn button-mount" (click)="selectToamount('15.000')">$15.000</button>
-            <button class="btn button-mount" (click)="selectToamount('20.000')">$20.000</button>
-            <button class="btn button-mount" (click)="selectToamount('25.000')">$25.000</button>
-        </div>
-        <div class="box-empty-50"></div>
-        <div class="form-group">
-            <h3>Periodicidad</h3>
-            <p>Selecciona el período de pago</p>
-
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Mensual indefinida
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Por una sola vez
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" value="0" type="radio" name="flexRadioDefault" id="flexRadioDefault3" [(ngModel)]="opcionSeleccionado" (change)="capturar()" [ngModelOptions]="{standalone: true}">
-                    <label class="form-check-label" for="flexRadioDefault3">
-                        Mensual hasta
-                    </label>
-                    <p id="text-fecha-limite">Define una fecha limite de pago</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="row " [hidden]="opcionSeleccionado != '0'">
-            <div class="col-6">
-                <select name="month" class="form-control">
-                    <option value="0">Mes</option>
-                    <option value="1">Enero</option>
-                    <option value="2">Febrero</option>
-                    <option value="3">Marzo</option>
-                    <option value="4">Abril</option>
-                    <option value="5">Mayo</option>
-                    <option value="6">Junio</option>
-                    <option value="7">Julio</option>
-                    <option value="8">Agosto</option>
-                    <option value="9">Septiembre</option>
-                    <option value="10">Octubre</option>
-                    <option value="11">Noviembre</option>
-                    <option value="12">Diciembre</option>
-                </select>
-            </div>
-            <div class="col-6">
-                <select name="year" class="form-control">
-                    <option selected hidden>Año</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                    <option value="2028">2028</option>
-                    <option value="2029">2029</option>
-                    <option value="2030">2030</option>
-                </select>
-            </div>
-        </div>
-        <div class="box-empty-25"></div>
-
-        <button class="btn center" (click)="nextToPage()">Confirmar</button>
-
-    </form>
-    <div class="box-empty-25"></div>
-
 </div>

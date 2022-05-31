@@ -1,77 +1,58 @@
-<div class="container">
+<div class="contenedor-pd center">
+    <div class="contenedor-pd-second center">
 
-    <div class="box-empty-25"></div>
-
-    <div class="box-empty-50"></div>
-    <div class="row">
-        <img src="{{img}}" class="width-50 max-width min-width-170">
-    </div>
-    <div class="box-empty-25"></div>
-    <form [formGroup]="searchForm" class="form-inline" (ngSubmit)="onSubmit()">
         <div class="row">
-            <strong>Ingresa tus datos personales</strong>
+            <img src="{{img}}" class="img-pd">
         </div>
-        <div class="box-empty-25"></div>
-        <div class="row content center ">
-        </div>
+        <div style="width:100%">
+            <br>
+            <form [formGroup]="searchForm" class="form-inline" (ngSubmit)="onSubmit()">
+                <div style="font-size: 34px; ">
+                    <strong>Registra tus datos personales</strong>
+                </div>
+                <div style="font-size: 16px; top: 4px;">
+                    Ingresa correctamente la información solicitada, revisa los datos antes de continuar con el proceso.
+                </div>
 
-        <div class="form-group">
-            <label for="exampleInputPassword1">Nombre y apellido</label>
-            <input formControlName="nombre" type="txt" class="form-control " placeholder="Ingresa tu nombre y apellido" required>
-            <small *ngIf="searchForm.controls['nombre'].invalid &&
-            (searchForm.controls['nombre'].dirty || searchForm.controls['nombre'].touched)">El nombre debe contener minimo 3 letras (Sin numeros)*</small>
-        </div>
-        <div class="box-empty-10"></div>
-        <div class="form-group">
-            <label>Rut</label>
-            <div class="input-group mb-3">
-                <input formControlName="rut" type="txt" class="form-control" placeholder="Ingresa tu RUT" ngModel required>
-                <span class="input-group-text" id="basic-addon1">-</span>
-                <input formControlName="rut2" type="txt" class="form-control" ngModel required>
-            </div>
-            <small *ngIf="(searchForm.controls['rut'].invalid &&
-            (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched)) ||
-            (searchForm.controls['rut2'].invalid &&
-            (searchForm.controls['rut2'].dirty || searchForm.controls['rut2'].touched || 
-            (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched)))">El rut debe tener 10 numeros</small>
+                <div class="container" style="padding: 0px; top: 32px; position: relative;">
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="nombre">Nombre y apellido</label>
+                            <input [ngClass]="{'input-error-pd':searchForm.controls['nombre'].invalid &&
+                            (searchForm.controls['nombre'].dirty || searchForm.controls['nombre'].touched)}" formControlName="nombre" type="txt" class="form-control input-pd" placeholder="Juan Perez" required>
+                            <small *ngIf="searchForm.controls['nombre'].invalid &&
+            (searchForm.controls['nombre'].dirty || searchForm.controls['nombre'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un nombre válido</small>
+                            <br>
+                            <label for="correo">Email address</label>
+                            <input [ngClass]="{'input-error-pd':searchForm.controls['correo'].invalid &&
+                            (searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)}" formControlName="correo" type="email" class="form-control input-pd" placeholder="mail@mail.com" ng-required="true">
+                            <small *ngIf="searchForm.controls['correo'].invalid &&
+(searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un mail válido</small>
+                            <br>
+                        </div>
+                        <div class="form-group col" style="top:32px ;">
 
-        </div>
-        <div class="box-empty-10"></div>
-        <div class="form-group">
-            <label>Email address</label>
-            <input formControlName="correo" type="email" class="form-control" placeholder="Ingresa tu correo electrónico" ng-required="true">
-            <small *ngIf="searchForm.controls['correo'].invalid &&
-            (searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)">debe ser un formato email valido*</small>
-        </div>
-        <div class="box-empty-10"></div>
-        <div class="form-group">
-            <label>Telefono</label>
+                            <label for="rut">Rut</label>
+                            <input [ngClass]="{'input-error-pd':(searchForm.controls['rut'].invalid &&
+                            (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched))}" maxlength="11" formControlName="rut" type="txt" class="form-control input-pd" placeholder="111111111-1" (ngModelChange)="validateRut()" ngModel required>
 
-            <div class="row">
-                <div class="col-5">
-                    <div class="input-group">
-                        <span class="input-group-text">+</span>
-                        <input formControlName="telefono" class="form-control">
+                            <small *ngIf="(searchForm.controls['rut'].invalid &&
+            (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched))"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp; Ingresa un rut válido</small>
+                            <br>
+                            <label>Telefono</label>
+                            <input [ngClass]="{'input-error-pd':searchForm.controls['telefono'].invalid &&
+                            (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)}" (ngModelChange)="validateTelefono()" maxlength="18" placeholder="+ 123 12345678" formControlName="telefono" class="form-control input-pd">
+
+                            <small *ngIf="searchForm.controls['telefono'].invalid &&
+            (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un número válido</small>
+
+                        </div>
                     </div>
                 </div>
-                <div class="col-7">
-                    <input formControlName="telefono2" class="form-control" placeholder="Ingresa tu teléfono">
-                </div>
-            </div>
-            <small *ngIf="searchForm.controls['telefono'].invalid &&
-            (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)">Indicativo debe ser 3 numeros*</small>
-            <small *ngIf="searchForm.controls['telefono2'].invalid &&
-            (searchForm.controls['telefono2'].dirty || searchForm.controls['telefono2'].touched)">El telefono debe tener minimo 8 numeros*</small>
-        </div>
-        <div class="box-empty-10"></div>
-        <div class="box-empty-25"></div>
-        <div class="row center width-300px">
-            <div class="row ">
-                <button class="btn center" type="submit" [disabled]="!searchForm.valid">Confirmar</button>
-            </div>
-        </div>
-    </form>
+                <br>
+                <button class="center btn-pd" type="submit" [disabled]="!searchForm.valid">Confirmar</button>
 
-    <div class="box-empty-25"></div>
-
+            </form>
+        </div>
+    </div>
 </div>
