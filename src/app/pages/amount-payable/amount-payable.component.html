@@ -35,64 +35,43 @@
 
                 <div class="container" style="padding: 0px; top: 32px; position: relative;">
                     <div class="row">
-                        <div class="form-group">
+                        <div class="form-group" *ngIf="montoPesos.length > 0 || montoUF.length > 0">
 
                             <!-- inicio codigo monnto -->
-                            <div class="row">
-                                <div class="col-12" *ngIf="monedaPeso == '1' && monedaUF == '1'">
+                            <div class="row" *ngIf="monedaPeso == '1' && monedaUF == '1'">
+                                <div class="col-12">
                                     <label for="">Opciones de monto</label>
-                                    <select class="form-control" (change)="onChange( $event )">
+                                    <select class="form-select" formControlName="selecionarMonto" (change)="onChange( $event )">
                                         <option value="" selected>Selecciona</option>
                                         <option value="PESOS">Monto fijo en $</option>
                                         <option value="UF">Monto fijo en UF</option>
                                     </select>
                                 </div>
                             </div>
-                            <br>
-                            <div class="row" *ngIf="monedaPeso == '1' && monedaUF == '1'">
-                                <div class="row" *ngIf="tipoMonedaSeleccionada == 'PESOS'">
-
-                                    <div class="button col-3" *ngFor="let valor of montoPesos; let i = index">
-                                        <input type="radio" id="{{i}}" (change)="valorSeleccionado( $event )" value="{{valor}}" />
-                                        <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
-                                    </div>
-                                    <div class="button col-3" *ngIf="montoPesos.length > 1">
-                                        <input type="radio" (change)="valorSeleccionado( $event )" value="otro-monto" id="{{montoPesos.length}}" />
-                                        <label class="bttn btn-default form-control" for="{{montoPesos.length}}">Otro
-                                            monto</label>
-                                    </div>
-                                </div>
-                                <div class="row" *ngIf="tipoMonedaSeleccionada == 'UF'">
-                                    <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
-                                        <input type="radio" id="{{i}}" (change)="valorSeleccionado( $event )" value="{{valor}}" />
-                                        <label class="bttn btn-default form-control" for="{{i}}">{{valor}} UF</label>
-                                    </div>
-                                    <div class="button col-3" *ngIf="montoUF.length > 1">
-                                        <input type="radio" (change)="valorSeleccionado( $event )" id="{{montoUF.length}}" value="otro-monto" />
-                                        <label class="bttn btn-default form-control" for="{{montoUF.length}}">Otro
-                                            monto</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row" *ngIf="monedaPeso == '1' && monedaUF == '0'">
+                            <br>                            
+                            <div class="row" *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')">
                                 <div class="button col-3" *ngFor="let valor of montoPesos; let i = index">
-                                    <input type="radio" (change)="valorSeleccionado( $event )" id="{{i}}" value="{{valor}}" />
+                                    <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" id="{{i}}"
+                                        [value]="valor" />
                                     <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
                                 </div>
                                 <div class="button col-3" *ngIf="montoPesos.length > 1">
-                                    <input type="radio" (change)="valorSeleccionado( $event )" value="otro-monto" id="{{montoPesos.length}}" />
+                                    <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" value="otro-monto"
+                                        id="{{montoPesos.length}}" />
                                     <label class="bttn btn-default form-control" for="{{montoPesos.length}}">Otro
                                         monto</label>
-                                </div>
+                                </div> 
                             </div>
-                            <div class="row" *ngIf="monedaPeso == '0' && monedaUF == '1'">
+                            <div class="row" *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')" >
                                 <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
-                                    <input type="radio" (change)="valorSeleccionado( $event )" id="{{i}}" value="{{valor}}" />
-                                    <label class="bttn btn-default form-control" for="{{i}}">{{valor}} UF</label>
+                                    <input type="radio"  (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" id="{{i*5}}"
+                                        [value]="valor" />
+                                    <label class="bttn btn-default form-control" for="{{i*5}}">{{valor}} UF</label>
                                 </div>
                                 <div class="button col-3" *ngIf="montoUF.length > 1">
-                                    <input type="radio" id="{{montoUF.length}}" (change)="valorSeleccionado( $event )" value="otro-monto" />
-                                    <label class="bttn btn-default form-control" for="{{montoUF.length}}">Otro
+                                    <input type="radio" id="{{montoUF.length*5}}" (change)="valorSeleccionado( $event )"
+                                    formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" value="otro-monto" />
+                                    <label class="bttn btn-default form-control" for="{{montoUF.length*5}}">Otro
                                         monto</label>
                                 </div>
                             </div>
@@ -101,23 +80,25 @@
                         </div>
 
                         <div class="form-group col" style="top:32px ;">
-
-                            <div class="col-12" *ngIf="tipoMonto == 'otro-monto' || (montoPesos.length == 0 && montoUF.length == 0)">
-                                <input type="number" class="form-control" placeholder="Ingrese una cantidad">
+                            <div class="col-12"
+                                *ngIf="tipoMonto == 'otro-monto' || (montoPesos.length == 0 && montoUF.length == 0)">
+                                <label *ngIf="(montoPesos.length == 0 && montoUF.length == 0)" for="">Monto máximo a pagar</label>
+                                <input type="number" class="form-control" placeholder="Ingrese una cantidad" formControlName="montoDigitadoPeso" name="monto-ingresado-peso" *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')">
+                                <input type="number" class="form-control" placeholder="Ingrese una cantidad" formControlName="montoDigitadoUF" name="monto-ingresado-uf" *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
                                 <div *ngIf="monedaPeso == '1' && monedaUF == '1'">
                                     <div *ngIf="tipoMonedaSeleccionada == 'PESOS'">
                                         <span class="text-descripcion-digitar-monto">El monto máximo es de
-                                            $100.000</span>
+                                            ${{montoMaximoPeso | number}}</span>
                                     </div>
                                     <div *ngIf="tipoMonedaSeleccionada == 'UF'">
-                                        <span class="text-descripcion-digitar-monto">El monto máximo es de 2 UF</span>
+                                        <span class="text-descripcion-digitar-monto">El monto máximo es de {{montoMaximoUF | number}} UF</span>
                                     </div>
                                 </div>
                                 <div *ngIf="monedaPeso == '1' && monedaUF == '0'">
-                                    <span class="text-descripcion-digitar-monto">El monto máximo es de $100.000</span>
+                                    <span class="text-descripcion-digitar-monto">El monto máximo es de ${{montoMaximoPeso | number}}</span>
                                 </div>
                                 <div *ngIf="monedaPeso == '0' && monedaUF == '1'">
-                                    <span class="text-descripcion-digitar-monto">El monto máximo es de 2 UF</span>
+                                    <span class="text-descripcion-digitar-monto">El monto máximo es de {{montoMaximoUF | number}} UF</span>
                                 </div>
                             </div>
                             <br>
@@ -132,12 +113,12 @@
                             <br>
                             <br>
                         </div>
-
+                       
                     </div>
                 </div>
                 <br>
                 <div class="row">
-                    <button class="center btn-pd" type="submit" [disabled]="!searchForm.valid">Regresar</button>
+                    <button class="center btn-pd" (click)="volver()">Regresar</button>
                     <button class="center btn-pd" type="submit" [disabled]="!searchForm.valid">Confirmar</button>
                 </div>
 

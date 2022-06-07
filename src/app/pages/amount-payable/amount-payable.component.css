@@ -1,7 +1,7 @@
 .img-pd {
     width: 81px;
     height: 24px;
-    right: 0px !important;
+    right: 100% !important;
     position: absolute;
 }
 
@@ -100,52 +100,67 @@ small {
 }
 
 
-/*Inicio convert readio botton en botton*/
 
+
+
+
+/*Inicio convert readio botton en botton*/
 .button {
     float: left;
     margin: 0 auto 0 0;
     width: 100px;
     height: 40px;
     position: relative;
-}
-
-.button label,
-.button input {
+  }
+  
+  .button label,
+  .button input {
     display: block;
     position: absolute;
     top: 0;
     left: 10px;
     right: 0;
     bottom: 0;
+
     justify-content: center;
     align-items: center;
     display: flex;
-}
-
-.button input[type="radio"] {
+  }
+  
+  .button input[type="radio"] {
     opacity: 0.011;
     z-index: 100;
-}
-
-.button input[type="radio"]:checked+label {
+  }
+  
+  .button input[type="radio"]:checked + label {
     background: #6B196B;
     color: white;
     border-radius: 100px;
-}
+  }
 
-.button input[type="radio"]+label {
+  .button input[type="radio"] + label {
     border-radius: 100px;
-}
-
-.button label {
+  }
+  
+  .button label {
     cursor: pointer;
     z-index: 90;
     line-height: 1.5em;
     width: 110px;
-}
+  }
 
-.text-descripcion-digitar-monto {
+  /* .bttn {
+    position: absolute !important;
+    width: 134px !important;
+    height: 48px !important;
+    background-color: white;
+    border: 1px solid #6B196B !important;
+    border-radius: 4px;
+    color: black;
+} */
+
+.text-descripcion-digitar-monto{
     color: #707382;
     font-size: 12px;
-}
+  }
+/*Fin convert readio botton en botton*/

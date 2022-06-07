@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { QrService } from 'src/app/services/qr.service';
 import { PersonalData } from '../models/personal-data/personal-data.model';
 import { Company } from 'src/app/models/company.model';
+import { AmountPayable } from '../models/amount-payable/amount-payable.model';
 
 @Component({
   selector: 'app-pages',
@@ -23,7 +24,7 @@ export class PagesComponent implements OnInit {
   id = '';
   serviceId = '';
 
-  companyO : Company = new Company('','','',[],[],'','');
+  companyO : Company = new Company('','','',[],[],'0','0','0','0');
 
   constructor(private route: ActivatedRoute, private qr: QrService,
     private router:Router) {
@@ -75,6 +76,11 @@ export class PagesComponent implements OnInit {
   capturarData(personal:PersonalData){
 
     console.log('Persona: ',personal);
+  }
+
+  capturarMonto(monto:AmountPayable){
+
+    console.log('Monto Debitar: ',monto);
   }
 
 }
