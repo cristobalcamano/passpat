@@ -11,57 +11,91 @@
                 <div style="font-size: 36px;font-weight: bold;">
                     Suscribe un medio de pago
                 </div>
-                <div>
+                <div style="font-size: 16px;">
                     Selecciona cualquier tipo de tarjeta de crédito.
                 </div>
             </div>
         </div>
 
-        <div class="row" style="position: relative; top: 32px;">
-            <div class="col-4">
-                <label style="font-size: 14px;font-weight: bold;">Añadir tarjeta</label>
-                <img src="../../../assets/img/payment-model/Frontside.svg" class="max-width min-width" style="width: 200px;">
-            </div>
-            <div class="col-8">
+        <form [formGroup]="searchForm" class="form-inline" (ngSubmit)="onSubmit()">
 
-                <label style="font-size: 14px;">Número tarjeta</label>
+            <div class="container" style="padding: 0px; top: 32px; position: relative;">
+                <div class="row">
+                    <div class="form-group col-5 center" style="width: 100%; max-width: 200px;">
+                        <div>
+                            <label for="img-pmo" style="font-size: 14px;font-weight: bold;">Añadir tarjeta</label>
+                            <div *ngIf="!tarjetaChangeval" style="position: absolute; width: 175px; height: 100px;" class="center">
+                                <span style="font-size: 14px; position: absolute; top: 45px; left: 16px;">{{tarjetaX}}</span>
+                                <span style="font-size: 10px; position: absolute; top: 85px; left: 16px;">{{fechaX}}</span>
 
-                <div class="input-group">
-                    <span class="input-group-text"><img style="width: 25px;" src="{{imgCD}}"></span>
-                    <input type="text" class="form-control width-100" [(ngModel)]="numberCD" (ngModelChange)="validateCD()" placeholder="XXXX XXXX XXXX XXXX " maxlength="16">
-
-                </div>
-                <br>
-                <div *ngIf="validateTC" class="row">
-                    <div class="col-6">
-                        <label>Fecha de expiración</label>
-                        <input type="text" class="form-control width-100" maxlength="5" [(ngModel)]="fechaE" placeholder="XX/XX" (ngModelChange)="validateFE()">
+                            </div>
+                            <img src="{{imgCD}}" style="font-size: 10px; position: absolute; top: 105px; left: 135px; width:30px" alt="">
+                            <div *ngIf="tarjetaChangeval"><img style="width: 100%;" id="img-pmo" src="../../../assets/img/payment-model/tarjeta-cvv.svg"></div>
+                            <div *ngIf="!tarjetaChangeval"><img style="width: 100%;" id="img-pmo" src="../../../assets/img/payment-model/Frontside.svg"></div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <label>CVV</label>
-                        <input type="password" class="form-control width-100" placeholder="***" maxlength="3" [(ngModel)]="cvv">
+                    <div class="form-group col">
+                        <div style="padding: 5px;">
+                            <label style="font-size: 14px;">Número tarjeta</label>
+
+                            <input (click)='changeTargeta(1)' [ngClass]="{'input-error-pd':searchForm.controls['tarjeta'].invalid &&
+                            (searchForm.controls['tarjeta'].dirty || searchForm.controls['tarjeta'].touched)}" style="min-width: 240px;" type="text" class="form-control input-pd" formControlName="tarjeta" (ngModelChange)="validateCD() " placeholder="XXXX XXXX XXXX XXXX"
+                                maxlength="19">
+                            <img src="{{imgCD}}" style="position: relative; width: 30px; top: -33px; left:10px" alt="">
+                            <br>
+                            <div *ngIf="searchForm.controls[ 'tarjeta'].valid && (searchForm.controls[ 'tarjeta'].dirty || searchForm.controls[ 'tarjeta'].touched) " class="row ">
+
+                                <div class="form-group col">
+                                    <label>Fecha de expiración</label>
+                                    <input (click)='changeTargeta(2)' [ngClass]="{'input-error-pd':searchForm.controls['fechaV'].invalid &&
+                                    (searchForm.controls['fechaV'].dirty || searchForm.controls['fechaV'].touched)}" type="text" class="form-control width-100 " maxlength="5 " placeholder="XX/XX " formControlName="fechaV" (ngModelChange)="validateFE() ">
+                                </div>
+                                <div class="form-group col">
+                                    <label>CVV</label>
+                                    <img src="../../../assets/img/Icon-interrogacion.svg" style="width: 13px;position :absolute; left: 95%" alt="">
+                                    <input (click)='changeTargeta(3)' [ngClass]="{'input-error-pd':searchForm.controls['cvv'].invalid &&
+                                    (searchForm.controls['cvv'].dirty || searchForm.controls['cvv'].touched)}" type="password" class="form-control width-100 " placeholder="***" maxlength="3 " formControlName="cvv">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" *ngIf="searchForm.controls['cvv'].valid && searchForm.controls['fechaV'].valid && searchForm.controls['tarjeta'].valid">
+
+                    <div class="form-group col" style="width: 100%; top: 30px; position: relative; background: #EBF6FF; height: 48px; padding: 10px;">
+                        <img src="../../../assets/img/Icon-interrogacion.svg" style="width: 13px;" alt="">&nbsp;
+                        <label> Haremos un cobro <strong>de $50, que serán devueltos</strong> luego de validar tu tarjeta.</label>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+
+                    <div class="form-group col" style="width: 100%; top: 30px; position: relative;">
+                        <input type="checkbox">&nbsp;
+                        <label> Acepto los  <a href="# ">términos y condiciones.</a></label>
                     </div>
                 </div>
             </div>
+            <div class="row " style="width: 100%; top: 70px; position: relative;">
 
-        </div>
-        <br>
-        <div class="row width-300px">
-            <div class="col-10">
-                < volver</div>
-                    <div class="col-2"><button (click)="inscribirTarjeta()" class="btn-pmo" type="submit" [disabled]="fechaE.length < 5 || cvv.length < 3 || numberCD.length < 16">Inscribir</button></div>
-
-            </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-2" style="position: relative; left: 0; top: 0;">
-                    <img src="../../../assets/img/shield.svg" class="heaven">
-                    <img src="../../../assets/img/lock.svg" class="eye">
+                <div class="form-group col">
+                    <button (click)="inscribirTarjeta() " style="color: #6B196B; padding: 15px;margin-left: 20px;" class="btn-back " type="submit " (click)="back()">< Volver</button>
                 </div>
-                <label class="col-10">
-            Transacción respaldada por Transbank. Revisa las <a href="#">condiciones del servicio</a>.
-        </label>
+                <div class="form-group col">
+                    <button (click)="inscribirTarjeta() " class="btn-pmo " type="submit ">Confirmar y suscribir</button>
+                </div>
             </div>
-        </div>
+
+        </form>
+
     </div>
+
+</div>
+<div class="row message-onditions-service">
+    <div class="form-group col center " style="position: relative; width: 80%; text-align: center; top: 100px;">
+        <label> <img src="../../../assets/img/shield.svg " style="width: 26px; "> Transacción respaldada por Transbank. Revisa las <a href="# ">condiciones del servicio.</a></label>
+    </div>
+</div>
+<br>

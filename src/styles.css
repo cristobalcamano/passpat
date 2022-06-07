@@ -88,3 +88,9 @@
 small {
     color: rgb(199, 0, 0);
 }
+
+.btn-back {
+    border: none;
+    background-color: white;
+    color: #730397 !important;
+}

@@ -17,8 +17,8 @@ export class QrService {
 
     }
 
-    consultaId(id:string){
-        const url = `${url_base}service/consulta/${id}`;
+    consultaId(id:string, serviceId:string){
+        const url = `${url_base}service/consulta/${id}/${serviceId}`;
         
         return this.http.get<Company>(url)
         .pipe(catchError( e =>{
