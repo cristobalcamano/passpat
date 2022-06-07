@@ -22,7 +22,6 @@ export class AmountPayableComponent implements OnInit {
 
   tipoMonedaSeleccionada: string = '';
   tipoMonto: string = '';
-  
 
   constructor(private fb: FormBuilder, private router:Router) { 
     this.searchForm = this.createformGroup();

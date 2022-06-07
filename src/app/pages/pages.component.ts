@@ -21,6 +21,7 @@ export class PagesComponent implements OnInit {
   personalData: boolean = false;
 
   id = '';
+  serviceId = '';
 
   companyO : Company = new Company('','','',[],[],'','');
 
@@ -36,8 +37,10 @@ export class PagesComponent implements OnInit {
   }
 
   searchId(){
+    
     this.route.params.subscribe((params) => this.id = params['id']);
-    this.qr.consultaId(this.id).subscribe((data: Company) => {
+    this.route.params.subscribe((params) => this.serviceId = params['idservice']);
+    this.qr.consultaId(this.id, this.serviceId).subscribe((data: Company) => {
       this.companyO = data;
     });
   }
