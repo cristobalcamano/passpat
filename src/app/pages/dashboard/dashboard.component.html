@@ -1,35 +1,41 @@
-<img src="../../../assets/img/header-img.PNG" class="width-100 top-absolute-0">
-<div class="container">
-    <div class="box-empty-25"></div>
-    <div class="row">
-        <img src="{{imgFirst}}" class="width-20 center max-width min-width">
-    </div>
-    <div class="box-empty-50"></div>
-    <div class="row">
-        <img src="{{imgSecond}}" class="width-50 center max-width min-width-170">
-    </div>
-    <div class="box-empty-50"></div>
-    <div class="row title center">
-        <h1>{{title}}</h1>
-    </div>
-    <div class="box-empty-25"></div>
-    <div class="row content center ">
-        <p class="text-p center ">{{content}}</p>
-    </div>
-    <div class="box-empty-50"></div>
-    <div class="row center content">
-        <div class="center">
-            <i class="bi-circle-fill" [ngClass]="{'i-primary':cont==1}"></i>
-            <i class="bi-circle-fill" [ngClass]="{'i-primary':cont==2}"></i>
-            <i class="bi-circle-fill" [ngClass]="{'i-primary':cont==3}"></i>
-            <i class="bi-circle-fill" [ngClass]="{'i-primary':cont==4}"></i>
+<br>
+<div class="contenedor-dash center">
+
+    <div *ngIf="!siguiente" style="width: 100% !important;">
+        <div style="width: 250px " class="center">
+            <img src="../../../assets/img/onboding/Ilustración Onboarding.svg" class="img">
+        </div>
+        <div class="title ">
+            Suscribe tu pago automático
+        </div>
+        <div class="text-p center">
+            Ahorra tiempo y suscribe el pago automático a tu tarjeta en simples pasos.
         </div>
     </div>
-    <div class="box-empty-25"></div>
-    <div class="row center width-300px">
-        <div class="row ">
-            <button type="button" class="btn center" (click)="nextpresentation()">{{siguiente}}</button>
+    <div *ngIf="siguiente" class="container center content-dash-second">
+        <div class="row">
+            <div class="col">
+                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Datos.svg" class="img-size"></div>
+                <div style="text-align: center;">Registra tus datos personales</div>
+            </div>
+            <div class="col">
+                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Calendario.svg" class="img-size"></div>
+                <div style="text-align: center;">Selecciona un monto a pagar</div>
+            </div>
+            <div class="col">
+                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Medios de pago.svg" class="img-size"></div>
+                <div style="text-align: center;">Define el medio de pago y confirma</div>
+            </div>
         </div>
+    </div>
+    <div class="content-selecccion center" [ngClass]="{'btn-selecction-next':siguiente}">
+        <div class="row">
+            <div class="circle-dash" [ngClass]="{'i-primary':cont==1}"></div>
+            <div class="circle-dash" [ngClass]="{'i-primary':cont==2}"></div>
+        </div>
+    </div>
+    <div style="width: 134px !important;" class="center">
+        <button type="button" class="btn" [ngClass]="{'btn-second':siguiente}" (click)="nextpresentation()">{{siguientetxt}}</button>
     </div>
     <div class="box-empty-25"></div>
 

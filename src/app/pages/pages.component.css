@@ -1,0 +1,38 @@
+.contenedor-page {
+    height: 772px;
+    top: 0px;
+    border-radius: 0px;
+    width: 100%;
+    max-width: 1000px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.contenedor-page-2 {
+    height: 772px;
+    top: 0px;
+    border-radius: 0px;
+}
+
+@media(max-width:960px) {
+    .contenedor-page {
+        width: 100%;
+        max-width: 960px;
+    }
+}
+
+@media(max-width:720px) {
+    .contenedor-page {
+        width: 100%;
+        max-width: 9600px;
+    }
+}
+
+@media(max-width:320px) {
+    .contenedor-page {
+        width: 100%;
+        max-width: 272px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

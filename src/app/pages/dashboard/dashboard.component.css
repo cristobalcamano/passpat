@@ -1,33 +1,236 @@
-.title {
-    text-align: center;
-    font-size: 30%;
+/* Primer pantalla */
+
+.img {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    top: 40px !important;
+    border-radius: 0px;
 }
 
-.content {
+.contenedor-dash {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    max-width: 960px !important;
+    height: 546px;
+    top: 41px;
+    /* Other/Light */
+    background: #FFFFFF;
+    /* Basic / 300 */
+    border: 1px solid #E7EBF3;
+    /* Box shadow/Default WP 3DS */
+    box-shadow: 0px 16px 64px rgba(170, 174, 187, 0.2);
+    border-radius: 16px;
+}
+
+@media(max-width:960px) {
+    .contenedor-dash {
+        max-width: 960px !important;
+    }
+}
+
+@media(max-width:720px) {
+    .contenedor-dash {
+        width: 100%;
+        max-width: 720px !important;
+        border: none;
+    }
+    .title {
+        font-size: 32px !important;
+    }
+}
+
+@media(max-width:323px) {
+    .title {
+        font-size: 19px !important;
+    }
+}
+
+@media(max-width:500px) {
+    .title {
+        font-size: 24px !important;
+    }
+}
+
+@media(max-width:384px) {
+    .text-p {
+        font-size: 14px !important;
+    }
+}
+
+@media(max-width:380px) {
+    .contenedor-dash {
+        width: 100%;
+        max-width: 270px !important;
+    }
+    .title {
+        font-size: 19px !important;
+    }
+    .text-p {
+        font-size: 14px !important;
+    }
+}
+
+@media(max-width:400px) {
+    .content-selecccion {
+        top: 440px !important;
+    }
+    .btn {
+        margin-top: 20px !important;
+    }
+}
+
+@media(max-width:720px) {
+    .content-selecccion {
+        top: 440px !important;
+    }
+    .btn {
+        margin-top: 20px !important;
+    }
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    top: 298px !important;
+    /* Text/Display 04 ( 36, 48 ) */
+    /*ont-family: 'Roboto';*/
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height, or 133% */
     text-align: center;
-    font-size: 130%;
+    letter-spacing: 0.25px;
+    /* Webpay / 300 Default */
+    color: #6B196B;
 }
 
 .text-p {
+    position: absolute;
     width: 100%;
-    font-size: min(15px, 1500px);
+    height: 24px;
+    top: 354px;
+    /* Text/Paragraph 01 ( 18, 24 ) 
+    font-family: 'Roboto';*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+    text-align: center;
+    letter-spacing: 0.25px;
+    /* Grey / 300 Default */
+    color: #2D3338;
 }
 
-i {
-    padding: 5px;
-    color: #C1C1C1;
-    font-size: 10px;
-    ;
+.content-selecccion {
+    position: absolute;
+    width: 30% !important;
+    top: 410px;
+    left: 48%;
+}
+
+.btn {
+    top: 462px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.circle-dash {
+    position: relative;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 16px;
+    background: #C9D0E4;
 }
 
 .i-primary {
-    width: 100px;
-    color: #730397;
+    background: #00C4B4 !important;
+    border-radius: 16px !important;
+    color: #00C4B4;
 }
 
-@media(min-width:600px) {
-    .text-p {
-        width: 100%;
-        font-size: min(20px, 1500px);
+.next-to-icons {
+    position: relative;
+    width: 632px;
+    height: 206px;
+    top: 0px !important;
+}
+
+
+/* ----------------  Segunda pantalla ---------------- */
+
+.img-text-to {
+    text-align: center;
+}
+
+.img-dahs-second {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+    color: #2D3338;
+    position: relative;
+    height: 250px;
+    top: 100px !important;
+    border-radius: 0px;
+}
+
+.img-size {
+    width: 150px !important;
+    height: 160px !important;
+}
+
+.content-dash-second {
+    position: relative;
+    width: 632px;
+    height: 206px;
+    top: 0px !important;
+}
+
+@media(max-width:970px) {
+    .content-dash-second {
+        width: 100% !important;
+    }
+    .img-size {
+        width: 110px !important;
+        height: 120px !important;
+    }
+    .btn-second {}
+}
+
+@media(max-width:720px) {
+    .content-dash-second {
+        position: relative;
+        top: -90px !important;
+        text-align: center;
+        width: 400px !important;
+    }
+    .img-size {
+        width: 400px !important;
+    }
+    .col {
+        height: 200px;
+    }
+    .btn-second {
+        top: 650px !important;
+    }
+    .btn-selecction-next {
+        top: 630px !important;
+    }
+}
+
+@media(max-width:440px) {
+    .content-dash-second {
+        width: 200px !important;
+    }
+    .img-size {
+        width: 200px !important;
+    }
+    .col {
+        height: 200px;
     }
 }

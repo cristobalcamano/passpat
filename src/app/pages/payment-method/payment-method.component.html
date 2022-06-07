@@ -1,0 +1,61 @@
+<div class="container">
+
+    <div class="box-empty-25"></div>
+
+    <div class="row">
+        <div class="col-12">
+            <p>Monto de pago</p>
+            <div class="process">
+                <div class="porcent"></div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-8">
+            Suscripción en:
+            <h1>{{namecompay}}</h1>
+        </div>
+        <div class="col-4">
+            Monto a pagar
+            <h1>${{amount}}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            Selecciona un medio de pago
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <!-- <img src="../../../assets/img/tarjeta.PNG" class="width-80 center max-width min-width"> -->
+            <input type=image (click)="redirectTarjeta()" src="../../../assets/img/PaymentMethodCard.svg" class="width-80 center max-width min-width">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <!-- <img src="../../../assets/img/tarjeta.PNG" class="width-80 center max-width min-width"> -->
+            <input type=image src="../../../assets/img/PaymentMethodOnepay.svg" class="width-80 center max-width min-width">
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <button class=" btn center" (click)="volver()">Volver</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-2" style="position: relative; left: 0; top: 0;">
+            <img src="../../../assets/img/shield.svg" class="heaven">
+            <img src="../../../assets/img/lock.svg" class="eye">
+        </div>
+        <div class="col-10">
+            Transacción respaldada por Transbank. Revisa las <a href="#">condiciones del servicio</a>.
+        </div>
+    </div>
+</div>

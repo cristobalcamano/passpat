@@ -46,9 +46,9 @@
 }
 
 .center {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
 }
 
 .box-empty-25 {
@@ -69,16 +69,17 @@
     ;
 }
 
-button {
-    width: 300px;
-    ;
+.btn {
+    position: absolute !important;
+    width: 134px !important;
+    height: 48px !important;
     background-color: white;
-    border: #730397 1px solid !important;
+    border: 1px solid #6B196B !important;
+    border-radius: 4px;
     color: #730397 !important;
 }
 
-button:hover {
-    width: 300px;
+.btn:hover {
     background-color: #730397;
     border: white 1px solid !important;
     color: white !important;
@@ -86,4 +87,10 @@ button:hover {
 
 small {
     color: rgb(199, 0, 0);
+}
+
+.btn-back {
+    border: none;
+    background-color: white;
+    color: #730397 !important;
 }
