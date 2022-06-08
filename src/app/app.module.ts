@@ -18,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AmountPayableComponent } from './pages/amount-payable/amount-payable.component';
 import { PaymentModelComponent } from './pages/payment-model/payment-model.component';
 import { PaymentMethodComponent } from './pages/payment-method/payment-method.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PaymentMethodComponent } from './pages/payment-method/payment-method.co
     PersonalDataComponent,
     AmountPayableComponent,
     PaymentModelComponent,
-    PaymentMethodComponent
+    PaymentMethodComponent,
+    HeaderComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
