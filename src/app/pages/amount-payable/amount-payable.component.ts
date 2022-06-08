@@ -111,7 +111,7 @@ export class AmountPayableComponent implements OnInit {
   }
 
   volver(){
-    this.viewShow.emit('personalData');
+    this.viewShow.emit('personalData'); 
   }
 
   
