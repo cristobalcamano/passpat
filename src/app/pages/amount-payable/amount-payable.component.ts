@@ -83,7 +83,7 @@ export class AmountPayableComponent implements OnInit {
 
     let amountPayable: AmountPayable = new AmountPayable(monto, moneda);
     this.montoDebitar.emit(amountPayable);
-    this.viewShow.emit('amountPayable');
+    this.viewShow.emit('paymentModel');
   }
 
   createformGroup() {
@@ -111,7 +111,7 @@ export class AmountPayableComponent implements OnInit {
   }
 
   volver(){
-    this.viewShow.emit('personalData');
+    this.viewShow.emit('personalData'); 
   }
 
   
