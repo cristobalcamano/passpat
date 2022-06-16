@@ -3,7 +3,7 @@
     position: relative;
     width: 100% !important;
     max-width: 960px;
-    height: 516px;
+    height: 616px;
     top: 32px;
     /* Other/Light */
     background: #FFFFFF;
@@ -48,6 +48,23 @@
 
 label {
     font-size: 12px;
+}
+
+@media(max-width:499px) {
+    .img-dinamica-tarjeta-credito {
+        left: 63% !important;
+    }
+}
+
+@media(max-width:780px) {
+    .img-pm {
+        left: 0px !important;
+        padding: 0px;
+    }
+    .contenedor-pm {
+        box-shadow: none !important;
+        border: none;
+    }
 }
 
 @media(max-width:450px) {
@@ -114,4 +131,99 @@ label {
 
 .input-pd {
     padding-left: 50px;
+}
+
+.medio-de-pago-txt {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.font-size {
+    font-size: 16px;
+}
+
+.container-second-form {
+    padding: 0px;
+    top: 32px;
+    position: relative;
+}
+
+.form-tarjeta-pm {
+    width: 100%;
+    max-width: 200px;
+}
+
+.añadir-tarjeta-txt {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contenedor-txt-tarjeta {
+    position: absolute;
+    width: 175px;
+    height: 100px;
+}
+
+.contenedor-txt-tarjeta-tarjetaX {
+    font-size: 14px;
+    position: absolute;
+    top: 45px;
+    left: 16px;
+}
+
+.contenedor-txt-tarjeta-fechaX {
+    font-size: 10px;
+    position: absolute;
+    top: 85px;
+    left: 16px;
+}
+
+.width-26px {
+    width: 26px;
+}
+
+.container-txt-footer-transacion {
+    position: relative;
+    width: 80%;
+    text-align: center;
+    top: 100px;
+}
+
+.btn-back-pm {
+    color: #6B196B;
+    padding: 15px;
+    margin-left: 20px;
+}
+
+.u847ur-ur74y-9r74 {
+    width: 100%;
+    top: 70px;
+    position: relative;
+}
+
+.container-terminos-condiciones {
+    width: 100%;
+    top: 30px;
+    position: relative;
+}
+
+.mensaje-cobro-validacion-tarjeta {
+    width: 100%;
+    top: 30px;
+    position: relative;
+    background: #EBF6FF;
+    height: 48px;
+    padding: 10px;
+}
+
+.img-dinamica-tarjeta-credito {
+    font-size: 10px;
+    position: absolute;
+    top: 105px;
+    left: 135px;
+    width: 30px
+}
+
+.numero-tarjeta-txt {
+    font-size: 14px;
 }
