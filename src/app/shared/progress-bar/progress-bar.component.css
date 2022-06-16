@@ -15,6 +15,22 @@
     height: 8px;
 }
 
+.txt-progress-pb {
+    font-size: 12px;
+}
+
+.container-progress-bar {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    top: 40px
+}
+
+.medio-pago-style {
+    width: 120px !important;
+    right: 0px;
+}
+
 .process-pd {
     width: 10px !important;
 }

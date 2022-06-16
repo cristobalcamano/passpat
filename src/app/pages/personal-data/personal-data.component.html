@@ -4,17 +4,17 @@
         <div class="row">
             <img src="{{img}}" class="img-pd">
         </div>
-        <div style="width:100%">
+        <div class="width-100">
             <br>
             <form [formGroup]="searchForm" class="form-inline" (ngSubmit)="onSubmit()">
-                <div style="font-size: 34px; ">
+                <div class="font-size-34px">
                     <strong>Registra tus datos personales</strong>
                 </div>
-                <div style="font-size: 16px; top: 4px;">
+                <div class="txt-inf-revision">
                     Ingresa correctamente la información solicitada, revisa los datos antes de continuar con el proceso.
                 </div>
 
-                <div class="container" style="padding: 0px; top: 32px; position: relative;">
+                <div class="container container-personal-data">
                     <div class="row">
                         <div class="form-group col">
                             <label for="nombre">Nombre y apellido</label>
@@ -25,12 +25,12 @@
                             <br>
                             <label for="correo">Email address</label>
                             <input [ngClass]="{'input-error-pd':searchForm.controls['correo'].invalid &&
-                            (searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)}" formControlName="correo" type="email" class="form-control input-pd" placeholder="mail@mail.com" ng-required="true">
+                          (searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)}" formControlName="correo" type="email" class="form-control input-pd" placeholder="mail@mail.com" ng-required="true">
                             <small *ngIf="searchForm.controls['correo'].invalid &&
 (searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un mail válido</small>
                             <br>
                         </div>
-                        <div class="form-group col" style="top:32px ;">
+                        <div class="form-group col formulario-32px">
 
                             <label for="rut">Rut</label>
                             <input [ngClass]="{'input-error-pd':(searchForm.controls['rut'].invalid &&
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <br>
-                <button class="center btn-pd" type="submit" [disabled]="!searchForm.valid">Confirmar</button>
+                <button class="center btn-pd-position" [ngClass]="{'btn-disable-primary':!searchForm.valid, 'btn-pd':searchForm.valid}" type="submit" [disabled]="!searchForm.valid">Siguiente</button>
 
             </form>
         </div>

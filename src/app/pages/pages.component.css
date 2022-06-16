@@ -1,3 +1,8 @@
+.img-primary-page {
+    top: 40px !important;
+    position: relative;
+}
+
 .contenedor-page {
     height: 772px;
     top: 0px;
