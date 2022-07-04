@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AmountPayableComponent } from './pages/amount-payable/amount-payable.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { PaymentMethodComponent } from './pages/payment-method/payment-method.component';
-import { PaymentModelComponent } from './pages/payment-model/payment-model.component';
 import { PagesComponent } from './pages/pages.component';
+import { LoadComponent } from './pages/load/load.component';
+import { ErrorComponent } from './error/error/error.component';
 
 const routes: Routes = [
   { path: 'user/:id/:idservice', component: PagesComponent},
-  { path: '**', component: NotFoundComponent }
+  { path: 'loader', component: LoadComponent},
+  { path: 'error', component: ErrorComponent},
+  { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({

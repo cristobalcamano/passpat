@@ -126,6 +126,7 @@ export class PaymentModelComponent implements OnInit {
   inscribirTarjeta(){
     const data:Data = {
     }
+    this.viewShow.emit('appLoad');
   }
 
   fotmarTargetCredit(){

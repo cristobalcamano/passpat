@@ -20,6 +20,8 @@ import { PaymentModelComponent } from './pages/payment-model/payment-model.compo
 import { PaymentMethodComponent } from './pages/payment-method/payment-method.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
+import { LoadComponent } from './pages/load/load.component';
+import { ErrorComponent } from './error/error/error.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ProgressBarComponent } from './shared/progress-bar/progress-bar.compone
     PaymentModelComponent,
     PaymentMethodComponent,
     HeaderComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    LoadComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
