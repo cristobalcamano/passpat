@@ -10,13 +10,14 @@
             <div [ngClass]="{'bold-pb':imgIcon == 'amountPayable'}" style="font-size: 12px;">Monto a suscribir</div>
         </div>
         <div style="width: 120px !important;right: 0px;">
-            <img *ngIf="imgIcon != 'paymentModel'" src="../../../assets/img/process-bar/Check.svg">
-            <img *ngIf="imgIcon == 'paymentModel'" src="../../../assets/img/process-bar/Check-select.svg">
-            <div [ngClass]="{'bold-pb':imgIcon == 'paymentModel'}" style="font-size: 12px;">Medio de pago</div>
+            <img *ngIf="imgIcon != 'paymentModel' && imgIcon != 'bankResponse'" src="../../../assets/img/process-bar/Check.svg">
+            <img *ngIf="imgIcon == 'paymentModel' || imgIcon == 'bankResponse'" src="../../../assets/img/process-bar/Check-select.svg">
+            <div [ngClass]="{'bold-pb':imgIcon == 'paymentModel' || imgIcon == 'bankResponse'}" style="font-size: 12px;">Medio de pago</div>
         </div>
     </div>
     <div class="bar">
         <div class="process" [ngClass]="{'process-pd':imgIcon == 'personalData',
-        'process-2':imgIcon == 'amountPayable', 'process-3':imgIcon == 'paymentModel'}"></div>
+        'process-2':imgIcon == 'amountPayable', 'process-3':imgIcon == 'paymentModel' , 
+        'process-4':imgIcon == 'bankResponse'}"></div>
     </div>
 </div>
