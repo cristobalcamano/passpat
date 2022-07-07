@@ -1,67 +1,9 @@
-.img-pd {
-    width: 81px;
-    height: 24px;
-    right: 0 !important;
-    position: absolute;
-}
-
-.text-template {
-    font-size: 16px;
-    top: 4px;
-}
-
-.container-second-c {
-    padding: 0px;
-    top: 32px;
-    position: relative;
-}
-
-.top-32px {
-    top: 32px;
-}
-
-.txt-footer {
-    width: 13.13px;
-    vertical-align: text-top;
-}
-
-.button-back-ap {
-    color: #6B196B;
-    padding: 15px;
-    margin-left: 20px;
-}
-
-.txt-footer-container {
-    background: #EBF6FF;
-    border-radius: 4px;
-    height: 48px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.process {
-    width: 95%;
-    height: 9px;
-    background-color: #E7EBF3;
-    border-radius: 5px;
-}
-
-.porcent {
-    position: relative;
-    right: 12px;
-    border-radius: 5px;
-    width: 30%;
-    height: 9px;
-    background-color: #00C4B4;
-}
-
-.contenedor-pd {
+.contenedor-pm {
     box-sizing: border-box;
     position: relative;
     width: 100% !important;
     max-width: 960px;
-    height: 546px;
+    height: 616px;
     top: 32px;
     /* Other/Light */
     background: #FFFFFF;
@@ -72,45 +14,40 @@
     border-radius: 16px;
 }
 
-.contenedor-pd-second {
+.contenedor-pm-second {
     width: 100%;
     max-width: 700px;
     position: relative;
     top: 40px;
 }
 
+.button-mount {
+    border: white !important;
+    padding: 5px;
+    border-radius: 30px;
+    width: 200px;
+    border: #730397 1px solid !important;
+    height: 40px;
+}
+
+.process {
+    width: 100%;
+    height: 9px;
+    background-color: #E7EBF3;
+    border-radius: 5px;
+}
+
+.porcent {
+    position: relative;
+    right: 12px;
+    border-radius: 5px;
+    width: 70%;
+    height: 9px;
+    background-color: #00C4B4;
+}
+
 label {
     font-size: 12px;
-}
-
-.btn-pd {
-    width: 134px !important;
-    height: 48px !important;
-    background-color: white;
-    border: 1px solid #6B196B !important;
-    border-radius: 4px;
-    color: #730397 !important;
-    /* margin-top: 45px !important; */
-    position: relative;
-}
-
-@media(max-width:720px) {
-    .contenedor-page {
-        width: 100%;
-        max-width: 9600px;
-    }
-    .img-pd {
-        left: 0px !important;
-        padding: 0px;
-    }
-    .contenedor-pd {
-        /* Basic / 300 */
-        border: none;
-    }
-}
-
-.input-pd {
-    min-width: 250px;
 }
 
 small {
@@ -124,83 +61,24 @@ small {
     position: relative;
 }
 
-.input-error-pd {
-    border: #FF4B4B 2px solid !important;
+@media(max-width:499px) {
+    .img-dinamica-tarjeta-credito {
+        left: 63% !important;
+    }
 }
 
-.btn-pd:hover {
-    background-color: #730397;
-    border: white 1px solid !important;
-    color: white !important;
+@media(max-width:780px) {
+    .img-pm {
+        left: 0px !important;
+        padding: 0px;
+    }
+    .contenedor-pm {
+        box-shadow: none !important;
+        border: none;
+    }
 }
 
-
-/*Inicio convert readio botton en botton*/
-
-.button {
-    float: left;
-    margin: 0 auto 0 0;
-    width: 100px;
-    height: 40px;
-    position: relative;
-}
-
-.button label,
-.button input {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    right: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.button input[type="radio"] {
-    opacity: 0.011;
-    z-index: 100;
-}
-
-.button input[type="radio"]:checked+label {
-    background: #6B196B;
-    color: white;
-    border-radius: 100px;
-}
-
-.button input[type="radio"]+label {
-    border-radius: 100px;
-}
-
-.button label {
-    cursor: pointer;
-    z-index: 90;
-    line-height: 1.5em;
-    width: 110px;
-}
-
-
-/* .bttn {
-    position: absolute !important;
-    width: 134px !important;
-    height: 48px !important;
-    background-color: white;
-    border: 1px solid #6B196B !important;
-    border-radius: 4px;
-    color: black;
-} */
-
-.text-descripcion-digitar-monto {
-    color: #707382;
-    font-size: 12px;
-}
-
-
-/*Fin convert readio botton en botton*/
-
-
-/* @media(max-width:450px) {
+@media(max-width:450px) {
     .container {
         width: 100%;
     }
@@ -228,19 +106,138 @@ small {
     }
 }
 
+@media(max-width:500px) {
+    .message-onditions-service {
+        position: relative;
+        top: 170px !important;
+    }
+}
 
 .btn-pmo {
+    border: 1px solid #6B196B !important;
+    color: #730397 !important;
+    background-color: white;
+}
+
+.btn-pmo-position {
     right: 10px;
     width: 100%;
     height: 48px !important;
-    background-color: white;
-    border: 1px solid #6B196B !important;
     border-radius: 4px;
-    color: #730397 !important;
 }
 
 .btn-pmo:hover {
     background-color: #730397;
     border: white 1px solid !important;
     color: white !important;
-} */
+}
+
+.img-pm {
+    width: 81px;
+    height: 24px;
+    right: 0px !important;
+    position: absolute;
+}
+
+.input-error-pd {
+    border: #FF4B4B 2px solid !important;
+}
+
+.input-pd {
+    padding-left: 50px;
+}
+
+.medio-de-pago-txt {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.font-size {
+    font-size: 16px;
+}
+
+.container-second-form {
+    padding: 0px;
+    top: 32px;
+    position: relative;
+}
+
+.form-tarjeta-pm {
+    width: 100%;
+    max-width: 200px;
+}
+
+.añadir-tarjeta-txt {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contenedor-txt-tarjeta {
+    position: absolute;
+    width: 175px;
+    height: 100px;
+}
+
+.contenedor-txt-tarjeta-tarjetaX {
+    font-size: 14px;
+    position: absolute;
+    top: 45px;
+    left: 16px;
+}
+
+.contenedor-txt-tarjeta-fechaX {
+    font-size: 10px;
+    position: absolute;
+    top: 85px;
+    left: 16px;
+}
+
+.width-26px {
+    width: 26px;
+}
+
+.container-txt-footer-transacion {
+    position: relative;
+    width: 80%;
+    text-align: center;
+    top: 100px;
+}
+
+.btn-back-pm {
+    color: #6B196B;
+    padding: 15px;
+    margin-left: 20px;
+}
+
+.u847ur-ur74y-9r74 {
+    width: 100%;
+    top: 70px;
+    position: relative;
+}
+
+.container-terminos-condiciones {
+    width: 100%;
+    top: 30px;
+    position: relative;
+}
+
+.mensaje-cobro-validacion-tarjeta {
+    width: 100%;
+    top: 30px;
+    position: relative;
+    background: #EBF6FF;
+    height: 48px;
+    padding: 10px;
+}
+
+.img-dinamica-tarjeta-credito {
+    font-size: 10px;
+    position: absolute;
+    top: 105px;
+    left: 135px;
+    width: 30px
+}
+
+.numero-tarjeta-txt {
+    font-size: 14px;
+}
