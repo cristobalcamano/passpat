@@ -11,8 +11,6 @@
                     <strong>Monto a suscribir</strong>
                 </div>
 
-
-
                 <ng-container *ngIf="montoPesos.length == 1 || montoUF.length == 1; then if1"></ng-container>
                 <ng-container *ngIf="montoPesos.length == 0 && montoUF.length == 0; then if2"></ng-container>
                 <ng-container *ngIf="montoPesos.length > 1 || montoUF.length > 1; then if3"></ng-container>
@@ -41,7 +39,8 @@
                         <div class="form-group" *ngIf="montoPesos.length > 0 || montoUF.length > 0">
 
                             <!-- inicio codigo monnto -->
-                            <div class="row" *ngIf="monedaPeso == '1' && monedaUF == '1'">
+                            <div class="row" 
+                                *ngIf="monedaPeso == '1' && monedaUF == '1'">
                                 <div class="col-12">
                                     <label for="">Opciones de monto</label>
                                     <select class="form-select" formControlName="selecionarMonto"
@@ -65,12 +64,14 @@
                                     <input type="radio" (change)="valorSeleccionado( $event )"
                                         formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso"
                                         value="otro-monto" id="{{montoPesos.length}}" />
-                            <div class="row" *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')">
+                            <div class="row" 
+                                *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')">
                                 <div class="button col-3" *ngFor="let valor of montoPesos; let i = index">
                                     <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" id="{{i}}" [value]="valor" />
                                     <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
                                 </div>
-                                <div class="button col-3" *ngIf="montoPesos.length > 1">
+                                <div class="button col-3" 
+                                    *ngIf="montoPesos.length > 1">
                                     <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" value="otro-monto" id="{{montoPesos.length}}" />
                                     <label class="bttn btn-default form-control" for="{{montoPesos.length}}">Otro
                                         monto</label>
@@ -78,7 +79,8 @@
                             </div>
 
                             <div class="row"
-                                *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
+                                *ngIf="(monedaPeso == '0' && monedaUF == '1') || 
+                                (tipoMonedaSeleccionada == 'UF')">
                                 <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
                                     <input type="radio" (change)="valorSeleccionado( $event )"
                                         formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" id="{{i*5}}"
@@ -90,7 +92,8 @@
                                         formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF"
                                         value="otro-monto" />
 
-                            <div class="row" *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
+                            <div class="row" 
+                                *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
                                 <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
                                     <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" id="{{i*5}}" [value]="valor" />
                                     <label class="bttn btn-default form-control" for="{{i*5}}">{{valor}} UF</label>
