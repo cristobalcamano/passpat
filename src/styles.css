@@ -1,3 +1,4 @@
+
 .width-100 {
     width: 100%;
     ;
@@ -95,13 +96,3 @@ small {
     color: #730397 !important;
 }
 
-.font-size-34px {
-    font-size: 34px;
-}
-
-.btn-disable-primary {
-    background: #E7EBF3 !important;
-    border: 1px solid #E7EBF3 !important;
-    color: #A0AFCA !important;
-    ;
-}
