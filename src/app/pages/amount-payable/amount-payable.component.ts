@@ -150,10 +150,4 @@ export class AmountPayableComponent implements OnInit {
     }
   }
 
-
-
-  
-
-
-
 }
