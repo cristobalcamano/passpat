@@ -124,6 +124,8 @@ export class PaymentModelComponent implements OnInit {
   }
 
   inscribirTarjeta(){
+    
+    this.viewShow.emit('bankResponse');
     const data:Data = {
     }
   }
