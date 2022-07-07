@@ -8,6 +8,10 @@
     border-radius: 0px;
 }
 
+.text-aling-center {
+    text-align: center;
+}
+
 .contenedor-dash {
     width: 100%;
     box-sizing: border-box;
@@ -35,6 +39,7 @@
         width: 100%;
         max-width: 720px !important;
         border: none;
+        box-shadow: none;
     }
     .title {
         font-size: 32px !important;

@@ -22,7 +22,7 @@ export class PersonalDataComponent implements OnInit {
       nombre: new FormControl('', [Validators.required, Validators.minLength(6), Validators.pattern(/^[a-zA-Z]{1,12}\s([a-zA-Z\s]{1,50})$/i)]),
       rut: new FormControl('', [Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern(/^([1-9]{9}-\d)+$/)]),
       correo: new FormControl('', [Validators.required, Validators.email, Validators.pattern(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i)]),
-      telefono: new FormControl('', [Validators.required, Validators.minLength(12), Validators.maxLength(18), Validators.pattern(/^(\+\s[1-9]{3}\s[1-9]{8,12})+$/)]),
+      telefono: new FormControl('', [Validators.required, Validators.minLength(12), Validators.maxLength(18), Validators.pattern(/^(\+\s[1-9]{3}\s[1-9]{8,12})+$/)])
     });
   }
 

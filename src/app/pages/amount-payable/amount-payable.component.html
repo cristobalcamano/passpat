@@ -4,10 +4,10 @@
         <div class="row">
             <img src="{{img}}" class="img-pd">
         </div>
-        <div style="width:100%">
+        <div class="width-100">
             <br>
             <form [formGroup]="searchForm" class="form-inline" (ngSubmit)="onSubmit()">
-                <div style="font-size: 34px; ">
+                <div class="font-size-34px">
                     <strong>Monto a suscribir</strong>
                 </div>
 
@@ -19,24 +19,24 @@
 
                 <!-- If Statement -->
                 <ng-template #if1>
-                    <div style="font-size: 16px; top: 4px;">
+                    <div class="text-template">
                         Conoce la cantidad a pagar y su frecuencia
                     </div>
                 </ng-template>
                 <!-- If Else Statement -->
                 <ng-template #if2>
-                    <div style="font-size: 16px; top: 4px;">
+                    <div class="text-template">
                         Define el monto máximo a pagar, la cantidad estará sujeta al consumo mensual.
                     </div>
                 </ng-template>
                 <!-- Else Statement -->
                 <ng-template #if3>
-                    <div style="font-size: 16px; top: 4px;">
+                    <div class="text-template">
                         Define la cantidad a pagar y conoce su frecuencia.
                     </div>
                 </ng-template>
 
-                <div class="container" style="padding: 0px; top: 32px; position: relative;">
+                <div class="container container-second-c">
                     <div class="row">
                         <div class="form-group" *ngIf="montoPesos.length > 0 || montoUF.length > 0">
 
@@ -65,10 +65,18 @@
                                     <input type="radio" (change)="valorSeleccionado( $event )"
                                         formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso"
                                         value="otro-monto" id="{{montoPesos.length}}" />
+                            <div class="row" *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')">
+                                <div class="button col-3" *ngFor="let valor of montoPesos; let i = index">
+                                    <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" id="{{i}}" [value]="valor" />
+                                    <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
+                                </div>
+                                <div class="button col-3" *ngIf="montoPesos.length > 1">
+                                    <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" value="otro-monto" id="{{montoPesos.length}}" />
                                     <label class="bttn btn-default form-control" for="{{montoPesos.length}}">Otro
                                         monto</label>
                                 </div>
                             </div>
+
                             <div class="row"
                                 *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
                                 <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
@@ -81,6 +89,15 @@
                                     <input type="radio" id="{{montoUF.length*5}}" (change)="valorSeleccionado( $event )"
                                         formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF"
                                         value="otro-monto" />
+
+                            <div class="row" *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
+                                <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
+                                    <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" id="{{i*5}}" [value]="valor" />
+                                    <label class="bttn btn-default form-control" for="{{i*5}}">{{valor}} UF</label>
+                                </div>
+                                <div class="button col-3" *ngIf="montoUF.length > 1">
+                                    <input type="radio" id="{{montoUF.length*5}}" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" value="otro-monto" />
+
                                     <label class="bttn btn-default form-control" for="{{montoUF.length*5}}">Otro
                                         monto</label>
                                 </div>
@@ -88,6 +105,7 @@
                             <!-- fin codigo monnto -->
                             <br>
                         </div>
+
 
                         <div class="form-group col" style="top:32px ;">
                             <div class="col-12"
@@ -105,6 +123,13 @@
                                     *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')"
                                     (ngModelChange)="validateEnteredAmountUF()">
 
+
+
+                        <div class="form-group col top-32px">
+                            <div class="col-12" *ngIf="tipoMonto == 'otro-monto' || (montoPesos.length == 0 && montoUF.length == 0)">
+                                <label *ngIf="(montoPesos.length == 0 && montoUF.length == 0)" for="">Monto máximo a pagar</label>
+                                <input type="number" class="form-control" placeholder="Ingrese una cantidad" formControlName="montoDigitadoPeso" name="monto-ingresado-peso" *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')">
+                                <input type="number" class="form-control" placeholder="Ingrese una cantidad" formControlName="montoDigitadoUF" name="monto-ingresado-uf" *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
 
                                 <div *ngIf="monedaPeso == '1' && monedaUF == '1'">
                                     <div *ngIf="tipoMonedaSeleccionada == 'PESOS'">
@@ -147,12 +172,18 @@
                             <br>
                         </div>
                         <div class="form-group">
+
                             <div class="col-12 text-center" style="background: #EBF6FF; border-radius: 4px; height: 48px; justify-content: center;align-items: center;
                             display: flex;">
                                 <span style="font-size: 12px;"><img src="../../../assets/img/Icon.svg" class="img"
                                         style="width: 13.13px;vertical-align: text-top;">
                                     El monto seleccionado para la suscripción se cargará mensualmente de manera
                                     indefinida.</span>
+
+                            <div class="col-12 text-center txt-footer-container">
+                                <span><img src="../../../assets/img/Icon.svg" class="img txt-footer">
+                                    El monto seleccionado para la suscripción se cargará mensualmente de manera indefinida.</span>
+
                             </div>
                             <br>
                             <br>
@@ -161,12 +192,19 @@
                     </div>
                 </div>
                 <br>
+
                 <div class="row">
 
                     <div class="form-group col">
                         <button class="center btn-pd" style="color: #6B196B; padding: 15px;margin-left: 20px;"
                             class="btn-back " type="submit " (click)="volver()">
                             < Volver</button>
+
+                <div class="row ">
+
+                    <div class="form-group col">
+                        <button class="center btn-pd" class="btn-back button-back-ap" type="submit " (click)="volver()">< Volver</button>
+
                     </div>
                     <div class="form-group col">
                         <button *ngIf="seleccionMonto=='0'" class="center btn-pd-disabled"
