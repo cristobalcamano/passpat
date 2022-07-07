@@ -4,6 +4,7 @@
             <img src="../../../assets/img/process-bar/User.svg">
             <div [ngClass]="{'bold-pb':imgIcon == 'personalData'}" style="font-size: 12px;">Datos personales</div>
         </div>
+        
         <div class="col">
             <img *ngIf="imgIcon == 'personalData'" src="../../../assets/img/process-bar/Money.svg">
             <img *ngIf="imgIcon != 'personalData'" src="../../../assets/img/process-bar/Money-select.svg">
@@ -14,6 +15,7 @@
             <img *ngIf="imgIcon == 'paymentModel' || imgIcon == 'bankResponse'" src="../../../assets/img/process-bar/Check-select.svg">
             <div [ngClass]="{'bold-pb':imgIcon == 'paymentModel' || imgIcon == 'bankResponse'}" style="font-size: 12px;">Medio de pago</div>
         </div>
+
     </div>
     <div class="bar">
         <div class="process" [ngClass]="{'process-pd':imgIcon == 'personalData',
