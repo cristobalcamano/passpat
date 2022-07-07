@@ -1,4 +1,4 @@
-import { Component, OnInit,Input, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { Data } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -9,6 +9,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class PaymentModelComponent implements OnInit {
 
+  @ViewChild('cvv') tagCvv : ElementRef | undefined;
+
   @Output() viewShow: EventEmitter<string> = new EventEmitter();
 
   @Input() img: string = '';
@@ -17,12 +19,16 @@ export class PaymentModelComponent implements OnInit {
   fechaX: string = 'XX/XX';
 
   tarjetaChangeval: boolean = false;
+  showCvv: boolean = true;
+
+  termsconditios: boolean = false;
 
   createformGroup(){
     return new FormGroup({
       tarjeta: new FormControl('', [Validators.required, Validators.minLength(6), Validators.pattern(/^\d\d\d\d \d\d\d\d \d\d\d\d \d\d\d\d$/i)]),
       cvv: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(3), Validators.pattern(/^(\d\d\d)+$/)]),
-      fechaV: new FormControl('', [Validators.required, Validators.pattern(/^(01||02||03||04||05||06||07||08||09||10||11||12)\/\d\d$/i)])
+      fechaV: new FormControl('', [Validators.required, Validators.pattern(/^(01||02||03||04||05||06||07||08||09||10||11||12)\/\d\d$/i)]),
+      termsconditions: new FormControl('', [Validators.required, Validators.requiredTrue])
     });
   }
 
@@ -43,7 +49,7 @@ export class PaymentModelComponent implements OnInit {
 
   tarjetaValidate = '';
 
-  constructor() {
+  constructor(private renderer:Renderer2) {
     
     this.validateInscripcion = false;
     this.fechaE = '';
@@ -174,6 +180,20 @@ export class PaymentModelComponent implements OnInit {
         this.tarjetaChangeval = true;
       } 
     }
+  }
+
+  showPassword(): void{
+    if(this.tagCvv == undefined){
+      this.tagCvv = new ElementRef(null);
+    }
+    const cvv = this.tagCvv.nativeElement;
+
+    if(this.showCvv){
+      this.renderer.setAttribute(cvv, 'type','txt');
+    }else{
+      this.renderer.setAttribute(cvv, 'type','password');
+    }
+    this.showCvv = !this.showCvv;
   }
 
   back(){

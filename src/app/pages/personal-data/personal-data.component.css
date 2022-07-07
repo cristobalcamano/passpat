@@ -1,3 +1,18 @@
+.txt-inf-revision {
+    font-size: 16px;
+    top: 4px;
+}
+
+.container-personal-data {
+    padding: 0px;
+    top: 32px;
+    position: relative;
+}
+
+.formulario-32px {
+    top: 32px;
+}
+
 .img-pd {
     width: 81px;
     height: 24px;
@@ -49,12 +64,15 @@ label {
 }
 
 .btn-pd {
-    width: 134px !important;
-    height: 48px !important;
     background-color: white;
     border: 1px solid #6B196B !important;
-    border-radius: 4px;
     color: #730397 !important;
+}
+
+.btn-pd-position {
+    width: 134px !important;
+    height: 48px !important;
+    border-radius: 4px;
     margin-top: 45px !important;
     position: relative;
 }
@@ -71,6 +89,7 @@ label {
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
+        box-shadow: none;
     }
 }
 

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class PersonalData {\n  constructor(nombre, rut, correo, telefono) {\n    this.nombre = nombre;\n    this.rut = rut;\n    this.correo = correo;\n    this.telefono = telefono;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
