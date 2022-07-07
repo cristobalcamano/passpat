@@ -27,14 +27,18 @@ export class AmountPayableComponent implements OnInit {
   tipoMonedaSeleccionada: string = '';
   tipoMonto: string = '';
   selectUF: string = '';
-
+  validateAmountPesos = '';
+  validateAmountUF = '';
+  seleccionMonto = '';
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.searchForm = this.createformGroup();
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     }
-    //this.rutValidate = '';
+    this.validateAmountPesos = '0';
+    this.validateAmountUF = '0';
+    this.seleccionMonto = '0';
   }
 
   get selecionarMonto() { return this.searchForm.get('selecionarMonto'); }
@@ -88,11 +92,11 @@ export class AmountPayableComponent implements OnInit {
 
   createformGroup() {
     return new FormGroup({
-      selecionarMonto: new FormControl('',[]),
-      montoSeleccionadoPeso: new FormControl('',[]),
-      montoSeleccionadoUF: new FormControl('',[]),
-      montoDigitadoPeso: new FormControl('',[]),
-      montoDigitadoUF: new FormControl('',[]),
+      selecionarMonto: new FormControl('', []),
+      montoSeleccionadoPeso: new FormControl('', []),
+      montoSeleccionadoUF: new FormControl('', []),
+      montoDigitadoPeso: new FormControl('', [Validators.pattern("^[0-9]*$")]),
+      montoDigitadoUF: new FormControl('', [Validators.pattern("^[0-9]*$")]),
     });
   }
 
@@ -107,12 +111,44 @@ export class AmountPayableComponent implements OnInit {
 
   valorSeleccionado(event: any) {
     this.tipoMonto = event.target.value;
+    this.seleccionMonto = '0';
+    if (this.tipoMonto != 'otro-monto') {
+      this.seleccionMonto = '1';
+    }
     // console.log(event.target.value,this.montoSeleccionadoUF?.value,event);
   }
 
-  volver(){
-    this.viewShow.emit('personalData'); 
+  volver() {
+    this.viewShow.emit('personalData');
   }
 
-  
+  validateEnteredAmountPesos() {
+    this.validateAmountPesos = '0';
+    this.seleccionMonto = '0';
+    console.log(this.montoDigitadoPeso?.value);
+    if (Number(this.montoDigitadoPeso?.value) > 0) {
+      if (Number(this.montoDigitadoPeso?.value) > Number(this.montoMaximoPeso)) {
+        this.validateAmountPesos = '1';
+        this.seleccionMonto = '0';
+      } else {
+        this.seleccionMonto = '1';
+      }
+    }
+
+  }
+
+  validateEnteredAmountUF() {
+    this.validateAmountUF = '0';
+    this.seleccionMonto = '0';
+    if (Number(this.montoDigitadoUF?.value) > 0) {
+      if (Number(this.montoDigitadoUF?.value) > Number(this.montoMaximoUF)) {
+        this.validateAmountUF = '1';
+        this.seleccionMonto = '0';
+      } else {
+        this.seleccionMonto = '1';
+      }
+    }
+  }
+
+
 }
