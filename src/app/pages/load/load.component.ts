@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CardService } from '../../services/card.service';
+import { Data } from '../../models/data.model';
 
 @Component({
   selector: 'app-load',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadComponent implements OnInit {
 
-  constructor() { }
+  data: Data;
+
+  constructor(private cardService: CardService) {
+    this.data = new Data('','','',12,'','','','',12,'','','','','','','');
+ }
 
   ngOnInit(): void {
+
+    this.enrollCard();
+  }
+
+  enrollCard(){
+/*    this.cardService.registrartarjeta(this.data).subscribe((data: Company) => {
+      this.companyO = data;
+    }
+    );*/
   }
 
 }

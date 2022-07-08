@@ -1,42 +1,56 @@
-<br>
-<div class="contenedor-dash center">
+<div class="contenedor center">
+    <div class="contenedor-dash center">
 
-    <div *ngIf="!siguiente" style="width: 100% !important;">
-        <div style="width: 250px " class="center">
-            <img src="../../../assets/img/onboding/Ilustración Onboarding.svg" class="img">
-        </div>
-        <div class="title ">
-            Suscribe tu pago automático
-        </div>
-        <div class="text-p center">
-            Ahorra tiempo y suscribe el pago automático a tu tarjeta en simples pasos.
-        </div>
-    </div>
-    <div *ngIf="siguiente" class="container center content-dash-second">
-        <div class="row">
-            <div class="col">
-                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Datos.svg" class="img-size"></div>
-                <div class="text-aling-center">Registra tus datos personales</div>
+        <!--<div *ngIf="!siguiente" class="contenedor-page-one">-->
+        <div *ngIf="!siguiente" class="contenedor-page-one">
+            <div style="width: 100%; height: 250px; " class="center">
+                <img src="../../../assets/img/onboding/Ilustración Onboarding.svg" class="center">
             </div>
-            <div class="col">
-                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Calendario.svg" class="img-size"></div>
-                <div class="text-aling-center">Selecciona un monto a pagar</div>
+            <div class="titulo-figma titulo-figma-on">
+                Suscribe tu pago automático
             </div>
-            <div class="col">
-                <div class="img-dahs-second"><img src="../../../assets/img/onboding/Medios de pago.svg" class="img-size"></div>
-                <div class="text-aling-center">Define el medio de pago y confirma</div>
+            <div class="texto-figma-on" style="top:8px;position: relative;">
+                Ahorra tiempo y suscribe el pago automático a tu tarjeta en simples pasos.
+            </div>
+            <br><br>
+            <div class="content-selecccion center " [ngClass]="{ 'btn-selecction-next':siguiente} ">
+                <div class="row ">
+                    <div class="circle-dash " [ngClass]="{ 'i-primary':cont==1} "></div>
+                    <div class="circle-dash " [ngClass]="{ 'i-primary':cont==2} "></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content-selecccion center" [ngClass]="{'btn-selecction-next':siguiente}">
-        <div class="row">
-            <div class="circle-dash" [ngClass]="{'i-primary':cont==1}"></div>
-            <div class="circle-dash" [ngClass]="{'i-primary':cont==2}"></div>
+        <!--<div *ngIf="siguiente" class="container center content-dash-second">-->
+        <div *ngIf="siguiente" class="">
+            <div class="contenedor-second-images center">
+                <div class="row contenedor-second-images-row">
+                    <div class="col">
+                        <div><img class="img-on-second" src="../../../assets/img/onboding/Datos.svg "></div>
+                        <div class="texto-figma-on">Registra tus datos personales</div>
+                        <div class="espaciado-on"></div>
+                    </div>
+                    <div class="col">
+                        <div><img class="img-on-second" src="../../../assets/img/onboding/Calendario.svg "></div>
+                        <div class="texto-figma-on">Selecciona un monto a pagar</div>
+                        <div class="espaciado-on"></div>
+                    </div>
+                    <div class="col">
+                        <div><img class="img-on-second" src="../../../assets/img/onboding/Medios de pago.svg "></div>
+                        <div class="texto-figma-on">Define el medio de pago y confirma</div>
+                    </div>
+                </div>
+            </div>
+            <div class="center top-on-progress" style="width: 30px;">
+                <div class="row ">
+                    <div class="circle-dash " [ngClass]="{ 'i-primary':cont==1} "></div>
+                    <div class="circle-dash " [ngClass]="{ 'i-primary':cont==2} "></div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div style="width: 134px !important;" class="center">
-        <button type="button" class="btn" [ngClass]="{'btn-second':siguiente}" (click)="nextpresentation()">{{siguientetxt}}</button>
-    </div>
-    <div class="box-empty-25"></div>
 
+        <div class="btn-width center ">
+            <button type="button " class="btn " [ngClass]="{ 'btn-second':siguiente} " (click)="nextpresentation() ">{{siguientetxt}}</button>
+        </div>
+
+    </div>
 </div>

@@ -105,3 +105,53 @@ small {
     color: #A0AFCA !important;
     ;
 }
+
+
+/** Definicion de estilos por pantallas */
+
+.titulo-figma {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+    color: #202830;
+    text-align: center;
+}
+
+.texto-figma-on {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.25px;
+    color: #2D3338;
+    text-align: center;
+}
+
+@media(max-width:1440px) {
+    .titulo-figma {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .texto-figma-on {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media(max-width:720px) {
+    .titulo-figma {
+        font-size: 24px !important;
+        line-height: 32px;
+    }
+}
+
+@media(max-width:320px) {
+    .titulo-figma {
+        font-size: 20px !important;
+    }
+    .texto-figma-on {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
