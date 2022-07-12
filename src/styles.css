@@ -139,6 +139,19 @@ small {
     }
 }
 
+@media(min-width:551px) {
+    .cdv {
+        margin: auto;
+        text-align: center;
+        width: 100% !important;
+        max-width: 160px !important;
+        height: 48px !important;
+        letter-spacing: 0.25px !important;
+        line-height: 20px !important;
+        font-size: 18px !important;
+    }
+}
+
 @media(max-width:720px) {
     .titulo-figma {
         font-size: 24px !important;
