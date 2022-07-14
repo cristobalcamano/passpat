@@ -70,13 +70,12 @@
 }
 
 .btn {
-    position: absolute !important;
     width: 134px !important;
     height: 48px !important;
-    background-color: white;
-    border: 1px solid #6B196B !important;
+    background-color: #730397;
+    border: white 1px solid !important;
+    color: white !important;
     border-radius: 4px;
-    color: #730397 !important;
 }
 
 .btn:hover {
@@ -115,7 +114,22 @@ small {
     font-weight: 700;
     letter-spacing: 0.25px;
     color: #202830;
-    text-align: center;
+}
+
+.titulo-figma-on {
+    text-align: center !important;
+}
+
+.texto-figma {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    letter-spacing: 0.25px;
+    /* Grey / 300 Default */
+    color: #2D3338;
 }
 
 .texto-figma-on {
@@ -166,5 +180,19 @@ small {
     .texto-figma-on {
         font-size: 14px;
         line-height: 24px;
+    }
+    .texto-figma {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* or 143% */
+        letter-spacing: 0.25px;
+        /* Grey / 300 Default */
+        color: #2D3338;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
     }
 }
