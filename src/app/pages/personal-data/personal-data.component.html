@@ -5,32 +5,26 @@
             <img src="{{img}}" class="img-pd">
         </div>
         <div class="width-100">
-            <br>
-            <form [formGroup]="searchForm" class="form-inline" (ngSubmit)="onSubmit()">
-                <div class="font-size-34px">
+
+            <form [formGroup]="searchForm" class="form-inline form-res-c" (ngSubmit)="onSubmit()">
+                <div class="titulo-figma">
                     <strong>Registra tus datos personales</strong>
                 </div>
-                <div class="txt-inf-revision">
+                <div class="txt-inf-revision texto-figma">
                     Ingresa correctamente la información solicitada, revisa los datos antes de continuar con el proceso.
                 </div>
 
                 <div class="container container-personal-data">
                     <div class="row">
                         <div class="form-group col">
-                            <label for="nombre">Nombre y apellido</label>
+                            <label for="nombre">Nombres y apellidos</label>
                             <input [ngClass]="{'input-error-pd':searchForm.controls['nombre'].invalid &&
                             (searchForm.controls['nombre'].dirty || searchForm.controls['nombre'].touched)}" formControlName="nombre" type="txt" class="form-control input-pd" placeholder="Juan Perez" required>
                             <small *ngIf="searchForm.controls['nombre'].invalid &&
             (searchForm.controls['nombre'].dirty || searchForm.controls['nombre'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un nombre válido</small>
                             <br>
-                            <label for="correo">Email address</label>
-                            <input [ngClass]="{'input-error-pd':searchForm.controls['correo'].invalid &&
-                          (searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)}" formControlName="correo" type="email" class="form-control input-pd" placeholder="mail@mail.com" ng-required="true">
-                            <small *ngIf="searchForm.controls['correo'].invalid &&
-(searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un mail válido</small>
-                            <br>
                         </div>
-                        <div class="form-group col formulario-32px">
+                        <div class="form-group col formulario-32px-r">
 
                             <label for="rut">Rut</label>
                             <input [ngClass]="{'input-error-pd':(searchForm.controls['rut'].invalid &&
@@ -38,8 +32,18 @@
 
                             <small *ngIf="(searchForm.controls['rut'].invalid &&
             (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched))"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp; Ingresa un rut válido</small>
+                        </div>
+                        <div class="form-group col formulario-32px">
+                            <label for="correo">Correo electrónico</label>
+                            <input [ngClass]="{'input-error-pd':searchForm.controls['correo'].invalid &&
+                          (searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)}" formControlName="correo" type="email" class="form-control input-pd" placeholder="mail@mail.com" ng-required="true">
+                            <small *ngIf="searchForm.controls['correo'].invalid &&
+(searchForm.controls['correo'].dirty || searchForm.controls['correo'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un mail válido</small>
                             <br>
-                            <label>Telefono</label>
+                        </div>
+
+                        <div class="form-group col formulario-32px">
+                            <label>Teléfono</label>
                             <input [ngClass]="{'input-error-pd':searchForm.controls['telefono'].invalid &&
                             (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)}" (ngModelChange)="validateTelefono()" maxlength="18" placeholder="+ 123 12345678" formControlName="telefono" class="form-control input-pd">
 
@@ -50,7 +54,7 @@
                     </div>
                 </div>
                 <br>
-                <button class="center btn-pd-position" [ngClass]="{'btn-disable-primary':!searchForm.valid, 'btn-pd':searchForm.valid}" type="submit" [disabled]="!searchForm.valid">Siguiente</button>
+                <button class="center btn-pd-position" [ngClass]="{'btn-disable-primary':!searchForm.valid, 'btn':searchForm.valid}" type="submit" [disabled]="!searchForm.valid">Siguiente</button>
 
             </form>
         </div>
