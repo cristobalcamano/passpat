@@ -21,6 +21,7 @@ export class PagesComponent implements OnInit {
   paymentModel: boolean = false;
   personalData: boolean = false;
   appLoad:  boolean = false;
+  bankResponse: boolean = false;
 
   id = '';
   serviceId = '';
@@ -55,7 +56,8 @@ export class PagesComponent implements OnInit {
     this.paymentModel = false;
     this.personalData = false;
     this.appLoad= false;
-
+    this.bankResponse = false;
+    
     switch(view){
       case 'dashboard':
         this.dashboard = true;
@@ -71,6 +73,11 @@ export class PagesComponent implements OnInit {
       break;
       case 'personalData':
         this.personalData = true;
+        // this.bankResponse = true;
+        // this.amountPayable = true;
+      break;
+      case 'bankResponse':
+        this.bankResponse = true;
       break;
       case 'appLoad':
         this.appLoad = true;

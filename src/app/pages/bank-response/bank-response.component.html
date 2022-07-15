@@ -1,0 +1,166 @@
+<div class="contenedor-pd center">
+    <div class="contenedor-pd-second center">
+
+        <div class="row">
+            <img src="{{img}}" class="img-pd">
+        </div>
+
+        <div class="container">
+            <br>
+            <div class="row text-center">
+                <div class="col-12">
+                    <img src="../../../assets/img/Check.svg" class="img">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="text-center" style="font-size: 36px;font-weight: bold;">
+                        ¡Tu suscripción ha sido exitosa!
+                    </div>
+                </div>
+            </div>
+            <br>
+   
+            <div class="row"
+                style="border-style: solid; border-radius: 4px; border: 1px solid #E7EBF3;; font-size: 14px;">
+
+                <div class="col-6">
+                    <br>
+                    <span class="titulo-info">Monto suscrito</span>
+                </div>
+                <div class="col-6">
+                    <br>
+                    <span>$15.000</span>
+                </div>
+                <div class="col-12">
+                    <hr color="#E7EBF3">
+                </div>
+
+                <div class="col-6">
+                    <span class="titulo-info">Frecuencia de pago</span>
+                </div>
+                <div class="col-6">
+                    <span>Mensual indefinido</span>
+                </div>
+                <div class="col-12">
+                    <hr color="#E7EBF3">
+                </div>
+
+                <div class="col-6">
+                    <span class="titulo-info">Medio de pago</span>
+                </div>
+                <div class="col-6">
+                    <span>Crédito</span>
+                </div>
+                <div class="col-12">
+                    <hr color="#E7EBF3">
+                </div>
+
+                <div class="col-6">
+                    <span class="titulo-info">N° de tarjeta</span>
+                </div>
+                <div class="col-6">
+                    <span>5454</span>
+                </div>
+                <div class="col-12">
+                    <hr color="#E7EBF3">
+                </div>
+
+                <div class="col-6">
+                    <span class="titulo-info">Cód. autorización</span>
+                </div>
+                <div class="col-6">
+                    <span>892000</span>
+                </div>
+                <br>
+                <br>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12 text-center" style="background: #EBF6FF; border-radius: 4px; height: 48px; justify-content: center;align-items: center;
+                display: flex;">
+                    <span style="font-size: 12px; font-weight: 400;"><img src="../../../assets/img/Icon.svg" class="img"
+                            style=" width: 13.13px;vertical-align: text-top;">
+                        Puedes modificar tu suscripción en el portal de tu banco o contactar al comercio o
+                        fundación.</span>
+                </div>
+
+            </div>
+            <br>
+            <div class="row text-center">
+                <div class="col-12">
+                    <button class="center btn-pd" (click)="printPage()">Descargar comprobante</button>
+                    <!-- <button (click)="printPage()">print</button> -->
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-12">
+                    <button class="center btn-pd" style="color: #6B196B; padding: 15px;margin-left: 20px;"
+                        class="btn-back " (click)="open(content)">Déjanos tu opinión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <ng-template #content let-modal>
+        <div class="modal-body">
+
+            <div class="row">
+                <div class="col-md-1">
+                </div>    
+                <div class="col-md-10">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" style="max-width: 8px !important; 
+                            max-height: 8px !important;" class="btn-close" aria-label="Close"
+                        (click)="modal.dismiss('Cross click')"></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-10 text-center">
+                    <span class="title-experience">¿Cómo fue tu experiencia de
+                        suscripción?</span>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+            <div style="height: 32px;">
+
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1">
+                        <i style="color:#A0AFCA; font-size: 2rem;" class="bi bi-emoji-angry"></i>
+                    </div>
+                    <div class="col-md-1">
+                        <i style="color:#A0AFCA; font-size: 2rem;" class="bi bi-emoji-frown"></i>
+                    </div>
+                    <div class="col-md-1">
+                        <i style="color:#A0AFCA; font-size: 2rem;" class="bi bi-emoji-neutral"></i>
+                    </div>
+                    <div class="col-md-1">
+                        <i style="color:#A0AFCA; font-size: 2rem;" class="bi bi-emoji-smile"></i>
+                    </div>
+                    <div class="col-md-1">
+                        <i style="color:#A0AFCA; font-size: 2rem;" class="bi bi-emoji-laughing"></i>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2"></div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <button type="button" class="btn btn-outline-dark"
+                        (click)="modal.close('Save click')">Enviar</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
