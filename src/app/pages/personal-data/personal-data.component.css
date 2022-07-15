@@ -1,6 +1,6 @@
 .txt-inf-revision {
-    font-size: 16px;
-    top: 4px;
+    position: relative;
+    top: 4px !important;
 }
 
 .form-res-c {
@@ -51,7 +51,7 @@
     position: relative;
     width: 100% !important;
     max-width: 960px;
-    height: 550px;
+    height: 496px;
     top: 45px;
     /* Other/Light */
     background: #FFFFFF;

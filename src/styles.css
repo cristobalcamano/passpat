@@ -112,8 +112,12 @@ small {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height, or 133% */
     letter-spacing: 0.25px;
-    color: #202830;
+    /* Grey / 300 Default */
+    color: #2D3338;
 }
 
 .titulo-figma-on {
@@ -124,7 +128,6 @@ small {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
     line-height: 24px;
     /* or 150% */
     letter-spacing: 0.25px;
@@ -158,7 +161,7 @@ small {
         margin: auto;
         text-align: center;
         width: 100% !important;
-        max-width: 160px !important;
+        max-width: 180px !important;
         height: 48px !important;
         letter-spacing: 0.25px !important;
         line-height: 20px !important;
@@ -175,7 +178,7 @@ small {
 
 @media(max-width:320px) {
     .titulo-figma {
-        font-size: 20px !important;
+        font-size: 24px !important;
     }
     .texto-figma-on {
         font-size: 14px;
