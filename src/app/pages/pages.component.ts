@@ -20,6 +20,7 @@ export class PagesComponent implements OnInit {
   paymentMethod: boolean = false;
   paymentModel: boolean = false;
   personalData: boolean = false;
+  appLoad:  boolean = false;
   bankResponse: boolean = false;
 
   id = '';
@@ -54,9 +55,9 @@ export class PagesComponent implements OnInit {
     this.paymentMethod = false;
     this.paymentModel = false;
     this.personalData = false;
+    this.appLoad= false;
     this.bankResponse = false;
     
-
     switch(view){
       case 'dashboard':
         this.dashboard = true;
@@ -77,6 +78,9 @@ export class PagesComponent implements OnInit {
       break;
       case 'bankResponse':
         this.bankResponse = true;
+      break;
+      case 'appLoad':
+        this.appLoad = true;
       break;
     }
   }

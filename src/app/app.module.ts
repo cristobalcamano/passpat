@@ -22,6 +22,9 @@ import { HeaderComponent } from './shared/header/header.component';
 import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
 import { BankResponseComponent } from './pages/bank-response/bank-response.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoadComponent } from './pages/load/load.component';
+import { ErrorComponent } from './error/error/error.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PaymentMethodComponent,
     HeaderComponent,
     ProgressBarComponent,
-    BankResponseComponent
+    LoadComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +48,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule
+    ReactiveFormsModule
   ],
   providers: [
     {

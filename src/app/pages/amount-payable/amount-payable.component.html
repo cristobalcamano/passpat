@@ -41,8 +41,7 @@
                             <div class="row" *ngIf="monedaPeso == '1' && monedaUF == '1'">
                                 <div class="col-12">
                                     <label for="">Opciones de monto</label>
-                                    <select class="form-select" formControlName="selecionarMonto"
-                                        (change)="onChange( $event )">
+                                    <select class="form-select" formControlName="selecionarMonto" (change)="onChange( $event )">
                                         <option value="" selected>Selecciona</option>
                                         <option value="PESOS">Monto fijo en $</option>
                                         <option value="UF">Monto fijo en UF</option>
@@ -66,6 +65,7 @@
                                         monto</label>
                                 </div>
                             </div>
+
                             <div class="row"
                                 *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
                                 <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
@@ -78,6 +78,7 @@
                                     <input type="radio" id="{{montoUF.length*5}}" (change)="valorSeleccionado( $event )"
                                         formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF"
                                         value="otro-monto" />
+
                                     <label class="bttn btn-default form-control" for="{{montoUF.length*5}}">Otro
                                         monto</label>
                                 </div>
@@ -87,10 +88,10 @@
                         </div>
 
                         <div class="form-group col" style="top:32px ;">
-                            <div class="col-12"
-                                *ngIf="tipoMonto == 'otro-monto' || (montoPesos.length == 0 && montoUF.length == 0)">
+                            <div class="col-12" *ngIf="tipoMonto == 'otro-monto' || (montoPesos.length == 0 && montoUF.length == 0)">
                                 <label *ngIf="(montoPesos.length == 0 && montoUF.length == 0)" for="">Monto máximo a
                                     pagar</label>
+
                                 <input type="number" [ngClass]="{'input-error-pd':(validateAmountPesos=='1')}" class="form-control" placeholder="Ingrese una cantidad" 
                                     formControlName="montoDigitadoPeso" name="monto-ingresado-peso"
                                     *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')"
@@ -98,6 +99,7 @@
                                 <input type="number" [ngClass]="{'input-error-pd':(validateAmountUF=='1')}" class="form-control" placeholder="Ingrese una cantidad"
                                     formControlName="montoDigitadoUF" name="monto-ingresado-uf"
                                     *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')"
+
                                     (ngModelChange)="validateEnteredAmountUF()">
 
 
@@ -156,8 +158,7 @@
                 <div class="row">
 
                     <div class="form-group col">
-                        <button class="center btn-pd" style="color: #6B196B; padding: 15px;margin-left: 20px;"
-                            class="btn-back " type="submit " (click)="volver()">
+                        <button class="center btn-pd" style="color: #6B196B; padding: 15px;margin-left: 20px;" class="btn-back " type="submit " (click)="volver()">
                             < Volver</button>
                     </div>
                     <div class="form-group col">

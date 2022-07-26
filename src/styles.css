@@ -1,4 +1,3 @@
-
 .width-100 {
     width: 100%;
     ;
@@ -71,13 +70,12 @@
 }
 
 .btn {
-    position: absolute !important;
     width: 134px !important;
     height: 48px !important;
-    background-color: white;
-    border: 1px solid #6B196B !important;
+    background-color: #730397;
+    border: white 1px solid !important;
+    color: white !important;
     border-radius: 4px;
-    color: #730397 !important;
 }
 
 .btn:hover {
@@ -96,3 +94,108 @@ small {
     color: #730397 !important;
 }
 
+.font-size-34px {
+    font-size: 34px;
+}
+
+.btn-disable-primary {
+    background: #E7EBF3 !important;
+    border: 1px solid #E7EBF3 !important;
+    color: #A0AFCA !important;
+    ;
+}
+
+
+/** Definicion de estilos por pantallas */
+
+.titulo-figma {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height, or 133% */
+    letter-spacing: 0.25px;
+    /* Grey / 300 Default */
+    color: #2D3338;
+}
+
+.titulo-figma-on {
+    text-align: center !important;
+}
+
+.texto-figma {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* or 150% */
+    letter-spacing: 0.25px;
+    /* Grey / 300 Default */
+    color: #2D3338;
+}
+
+.texto-figma-on {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    color: #2D3338;
+    text-align: center;
+}
+
+@media(max-width:1440px) {
+    .titulo-figma {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .texto-figma-on {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media(min-width:551px) {
+    .cdv {
+        margin: auto;
+        text-align: center;
+        width: 100% !important;
+        max-width: 180px !important;
+        height: 48px !important;
+        letter-spacing: 0.25px !important;
+        line-height: 20px !important;
+        font-size: 18px !important;
+    }
+}
+
+@media(max-width:720px) {
+    .titulo-figma {
+        font-size: 24px !important;
+        line-height: 32px;
+    }
+}
+
+@media(max-width:320px) {
+    .titulo-figma {
+        font-size: 24px !important;
+    }
+    .texto-figma-on {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .texto-figma {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* or 143% */
+        letter-spacing: 0.25px;
+        /* Grey / 300 Default */
+        color: #2D3338;
+        /* Inside auto layout */
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }
+}

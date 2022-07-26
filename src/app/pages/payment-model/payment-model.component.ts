@@ -128,6 +128,7 @@ export class PaymentModelComponent implements OnInit {
     this.viewShow.emit('bankResponse');
     const data:Data = {
     }
+    this.viewShow.emit('appLoad');
   }
 
   fotmarTargetCredit(){

@@ -43,10 +43,12 @@
     width: 96% !important;
 }
 
-.process-4 {
-    width: 100% !important;
-}
-
 .bold-pb {
     font-weight: bolder;
+}
+
+@media(max-width:388px) {
+    .medio-pago-style {
+        width: 33% !important;
+    }
 }

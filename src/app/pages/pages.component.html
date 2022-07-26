@@ -1,21 +1,19 @@
-<app-header></app-header>
-<div class="center contenedor-page">
+<div>
+    <app-header></app-header>
+    <div class="center contenedor-page">
 
-    <div class="container-header">
-        <img src="../../assets/img/header/webpay.png" style="top: 40px; position: relative;">
+        <img *ngIf="!appLoad" class="img-web-pay" src="../../assets/img/header/webpay.png">
+
+        <div class="contenedor-page-2">
+            <br>
+            <app-progress-bar *ngIf="!dashboard && !appLoad" [imgIcon]="view"></app-progress-bar>
+
+            <app-dashboard *ngIf="dashboard" (viewShow)="content($event)"></app-dashboard>
+            <app-personal-data *ngIf="personalData" (dataPersonal)="capturarData($event)" [img]="companyO.imagen" (viewShow)="content($event)"></app-personal-data>
+            <app-amount-payable *ngIf="amountPayable" (montoDebitar)="capturarMonto($event)" [img]="companyO.imagen" [montoPesos]="companyO.presupuestoPesos" [montoUF]="companyO.presupuestoUF" [monedaPeso]="companyO.tipoDeMonedaPeso" [monedaUF]="companyO.tipoDeMonedaUF"
+                [montoMaximoPeso]="companyO.montoMaximoPeso" [montoMaximoUF]="companyO.montoMaximoUF" (viewShow)="content($event)"></app-amount-payable>
+            <app-payment-model *ngIf="paymentModel" (viewShow)="content($event)" [img]="companyO.imagen"></app-payment-model>
+            <app-payment-method *ngIf="paymentMethod" (viewShow)="content($event)"></app-payment-method>
+            <app-load *ngIf="appLoad"></app-load>
+        </div>
     </div>
-
-    <div class="contenedor-page-2">
-        <br>
-        <app-progress-bar *ngIf="!dashboard" [imgIcon]="view"></app-progress-bar>
-
-        <app-dashboard *ngIf="dashboard" (viewShow)="content($event)"></app-dashboard>
-        <app-personal-data *ngIf="personalData" (dataPersonal)="capturarData($event)" [img]="companyO.imagen" (viewShow)="content($event)"></app-personal-data>
-        <app-amount-payable *ngIf="amountPayable" (montoDebitar)="capturarMonto($event)" [img]="companyO.imagen" [montoPesos]="companyO.presupuestoPesos" [montoUF]="companyO.presupuestoUF" [monedaPeso]="companyO.tipoDeMonedaPeso" [monedaUF]="companyO.tipoDeMonedaUF"
-            [montoMaximoPeso]="companyO.montoMaximoPeso" [montoMaximoUF]="companyO.montoMaximoUF" (viewShow)="content($event)"></app-amount-payable>
-        <app-payment-model *ngIf="paymentModel" (viewShow)="content($event)" [img]="companyO.imagen"></app-payment-model>
-        <app-payment-method *ngIf="paymentMethod" (viewShow)="content($event)"></app-payment-method>
-        <app-bank-response *ngIf="bankResponse" (viewShow)="content($event)" [img]="companyO.imagen"></app-bank-response>
-    </div>
-
-</div>
