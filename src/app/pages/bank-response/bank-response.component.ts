@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-bank-response',
@@ -12,12 +12,27 @@ export class BankResponseComponent implements OnInit {
 
   @Output() viewShow: EventEmitter<string> = new EventEmitter();
 
+  @ViewChild("endedProcess") endedProcess: ElementRef | undefined;
+
+  myTimeout: ReturnType<typeof setTimeout> | undefined;
+
   closeResult = '';
+  selectCalification = '';
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) { }
 
-  open(content:any) {
-    this.modalService.open(content, { windowClass : "myCustomModalClass"}).result.then((result) => {
+  open(content: any) {
+    clearTimeout(this.myTimeout!);
+    this.modalService.open(content, { windowClass: "myCustomModalClass" }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed}`;
+    });
+  }
+
+  openThankyou(thankyou: any, content: any) {
+    this.modalService.dismissAll(content);
+    this.modalService.open(thankyou, { windowClass: "modalClassThank" }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed}`;
@@ -26,10 +41,40 @@ export class BankResponseComponent implements OnInit {
 
 
   ngOnInit(): void {
+     this.myTimeout = setTimeout( () => {
+     
+     this.openEndedProcess();
+
+    }, 10000);
   }
 
   printPage() {
     window.print();
   }
 
+  changeSelectOption(event: any) {
+    this.selectCalification = '';
+    console.log(event.target.value);
+    this.selectCalification = event.target.value;
+  }
+
+  openEndedProcess(){
+    this.modalService.open(this.endedProcess, { windowClass: "modalClassEndedProcess" }).result.then((result) => {
+        this.closeResult = `Closed with: ${result}`;
+      }, (reason) => {
+        this.closeResult = `Dismissed}`;
+      });
+
+  }
+
+  enviarOpinion() {
+
+  }
+
+  volverAlInicio(){
+    location.reload();
+  }
+
 }
+
+

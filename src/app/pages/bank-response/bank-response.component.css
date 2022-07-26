@@ -67,10 +67,10 @@ label {
         max-width: 9600px;
     }
 
-    .img-pd {
+    /* .img-pd {
         left: 0px !important;
         padding: 0px;
-    }
+    } */
 
     .contenedor-pd {
         /* Basic / 300 */
@@ -146,7 +146,7 @@ small {
     border-radius: 8px !important;
 }
 */
-.title-experience {
+/* .title-experience {
 
     font-family: 'Roboto';
     font-style: normal;
@@ -161,14 +161,403 @@ small {
 
 
     color: #2D3338;
-} 
+} */
 
-::ng-deep .myCustomModalClass .modal-dialog{
+.face-img {
+    width: 40px;
+    height: 40px;
+}
+
+::ng-deep .myCustomModalClass .modal-dialog {
     /* max-width: 100px !important;
     max-height: 100px !important; */
 
     max-width: 633px !important;
-max-height: 590px !important;
+    max-height: 590px !important;
 
-/* max-width: 80%; */
+}
+
+
+::ng-deep .modalClassThank .modal-dialog {
+    /* max-width: 100px !important;
+    max-height: 100px !important; */
+
+    max-width: 633px !important;
+    max-height: 391px !important;
+}
+
+
+::ng-deep .modalClassEnding .modal-dialog {
+    /* max-width: 100px !important;
+    max-height: 100px !important; */
+
+    max-width: 633px !important;
+    max-height: 391px !important;
+}
+
+
+/*INICIO CONVERT IMG A RADIO*/
+/* HIDE RADIO */
+[type=radio] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio]+img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked+img {
+    /* outline: 2px solid #f00; */
+}
+
+
+/*FIN CONVERT IMG A RADIO*/
+
+@media(min-width:420px) {
+    .btn-close {
+        max-width: 24px;
+        max-height: 24px;
+    }
+
+    /* ::ng-deep .myCustomModalClass .modal-body{
+        padding-top: 24px !important;
+    } */
+
+    .tamano40-32 {
+        height: 40px;
+    }
+
+    .tamano32-24 {
+        height: 32px;
+    }
+
+    .tamano32-16 {
+        height: 32px;
+    }
+
+    .tamano24 {
+        height: 8px;
+    }
+
+    .tamano16 {
+        height: 16px;
+    }
+
+    .tamano416 {
+        height: 4px;
+    }
+
+    .tamano8-4 {
+        height: 8px;
+    }
+
+    .title-experience {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        /* identical to box height, or 133% */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.25px;
+
+        /* Grey / 300 Default */
+
+        color: #2D3338;
+    }
+
+    .space-emoji {
+        width: 32px;
+        height: 40px;
+        float: left
+    }
+
+    .desc-opinion {
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+    }
+
+    .sub-title-experience {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+    }
+
+    .td-table-response {
+        height: 48px;
+    }
+
+    .box-text-response {
+        width: 632px;
+        height: 48px;
+        left: 404px;
+        top: 733px;
+
+    }
+
+    .title-response {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        /* identical to box height, or 133% */
+
+        text-align: center;
+        letter-spacing: 0.25px;
+
+        /* Grey / 300 Default */
+
+        color: #2D3338;
+    }
+
+    .table-response {
+        margin-right: 0px;
+        margin-left: 22px;
+    }
+
+    ::ng-deep .modalClassEndedProcess .modal-dialog {
+        max-width: 633px;
+        max-height: 400px;
+
+        /* Other/Light */
+
+        background: #FFFFFF;
+        border-radius: 8px;
+    }
+
+    .text-ended-process {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* or 150% */
+
+        text-align: center;
+        letter-spacing: 0.25px;
+
+        /* Grey / 300 Default */
+
+        color: #2D3338;
+    }
+
+    .tittle-ended-process {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        /* identical to box height, or 160% */
+
+        text-align: center;
+        letter-spacing: 0.25px;
+
+        /* Grey / 300 Default */
+
+        color: #2D3338;
+    }
+
+}
+
+@media(max-width:419px) {
+    .btn-close {
+        max-width: 16px;
+        max-height: 16px;
+    }
+
+    /* .modal-body{
+        padding-top: 16px!important;
+    } */
+
+    .tamano40-32 {
+        height: 32px;
+    }
+
+    .tamano32-24 {
+        height: 24px;
+    }
+
+    .tamano32-16 {
+        height: 24px;
+    }
+
+    .tamano24 {
+        height: 16px;
+    }
+
+    .tamano16 {
+        height: 8px;
+    }
+
+    .tamano4-16 {
+        height: 16px;
+    }
+
+    .tamano8-4 {
+        height: 4px;
+    }
+
+    .title-experience {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        /* or 133% */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.25px;
+
+        /* Grey / 300 Default */
+
+        color: #2D3338;
+    }
+
+    .space-emoji {
+        width: 8px;
+        height: 40px;
+        float: left
+    }
+
+    .desc-opinion {
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+    }
+
+    .sub-title-experience {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+    }
+
+    .td-table-response {
+        height: 32px;
+    }
+
+    .box-text-response {
+        width: 272px;
+        height: 80px;
+        left: 24px;
+        top: 541px;
+    }
+
+    .contenedor-pd {
+        /* Basic / 300 */
+        border: none;
+        box-shadow: none;
+    }
+
+    .title-response {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        text-align: center;
+        letter-spacing: 0.25px;
+
+        /* Grey / 300 Default */
+
+        color: #2D3338;
+    }
+
+    ::ng-deep .modalClassEndedProcess .modal-dialog {
+        max-width: 272px;
+        max-height: 352px;
+
+        /* Other/Light */
+
+        background: #FFFFFF;
+        border-radius: 8px;
+    }
+
+    .tittle-ended-process {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+
+        text-align: center;
+        letter-spacing: 0.25px;
+
+        /* Grey / 300 Default */
+
+        color: #2D3338;
+    }
+
+    .text-ended-process {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* or 133% */
+
+        text-align: center;
+        letter-spacing: 0.25px;
+
+        /* Grey / 300 Default */
+
+        color: #2D3338;
+    }
+
+}
+
+#text-opinion {
+    max-width: 469px;
+    max-height: 105px;
+    border: 1px solid #C9D0E4;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.table-response {
+    border-style: solid;
+    border-radius: 4px;
+    border: 1px solid #E7EBF3;
+    font-size: 14px;
+    max-width: 632px;
+    max-height: 264px;
+    left: 404px;
+    top: 437px;
 }

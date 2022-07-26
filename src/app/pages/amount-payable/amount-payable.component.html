@@ -49,24 +49,36 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="row" *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')">
+                            <div class="row"
+                                *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')">
                                 <div class="button col-3" *ngFor="let valor of montoPesos; let i = index">
-                                    <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" id="{{i}}" [value]="valor" />
+                                    <input type="radio" (change)="valorSeleccionado( $event )"
+                                        formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" id="{{i}}"
+                                        [value]="valor" />
                                     <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
                                 </div>
                                 <div class="button col-3" *ngIf="montoPesos.length > 1">
-                                    <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso" value="otro-monto" id="{{montoPesos.length}}" />
+                                    <input type="radio" (change)="valorSeleccionado( $event )"
+                                        formControlName="montoSeleccionadoPeso" name="montoSeleccionadoPeso"
+                                        value="otro-monto" id="{{montoPesos.length}}" />
                                     <label class="bttn btn-default form-control" for="{{montoPesos.length}}">Otro
                                         monto</label>
                                 </div>
                             </div>
-                            <div class="row" *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
+
+                            <div class="row"
+                                *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')">
                                 <div class="button col-3" *ngFor="let valor of montoUF; let i = index">
-                                    <input type="radio" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" id="{{i*5}}" [value]="valor" />
+                                    <input type="radio" (change)="valorSeleccionado( $event )"
+                                        formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" id="{{i*5}}"
+                                        [value]="valor" />
                                     <label class="bttn btn-default form-control" for="{{i*5}}">{{valor}} UF</label>
                                 </div>
                                 <div class="button col-3" *ngIf="montoUF.length > 1">
-                                    <input type="radio" id="{{montoUF.length*5}}" (change)="valorSeleccionado( $event )" formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF" value="otro-monto" />
+                                    <input type="radio" id="{{montoUF.length*5}}" (change)="valorSeleccionado( $event )"
+                                        formControlName="montoSeleccionadoUF" name="montoSeleccionadoUF"
+                                        value="otro-monto" />
+
                                     <label class="bttn btn-default form-control" for="{{montoUF.length*5}}">Otro
                                         monto</label>
                                 </div>
@@ -79,9 +91,15 @@
                             <div class="col-12" *ngIf="tipoMonto == 'otro-monto' || (montoPesos.length == 0 && montoUF.length == 0)">
                                 <label *ngIf="(montoPesos.length == 0 && montoUF.length == 0)" for="">Monto máximo a
                                     pagar</label>
-                                <input type="number" [ngClass]="{'input-error-pd':(validateAmountPesos=='1')}" class="form-control" placeholder="Ingrese una cantidad" formControlName="montoDigitadoPeso" name="monto-ingresado-peso" *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')"
+
+                                <input type="number" [ngClass]="{'input-error-pd':(validateAmountPesos=='1')}" class="form-control" placeholder="Ingrese una cantidad" 
+                                    formControlName="montoDigitadoPeso" name="monto-ingresado-peso"
+                                    *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')"
                                     (ngModelChange)="validateEnteredAmountPesos()" appFormatNumber>
-                                <input type="number" [ngClass]="{'input-error-pd':(validateAmountUF=='1')}" class="form-control" placeholder="Ingrese una cantidad" formControlName="montoDigitadoUF" name="monto-ingresado-uf" *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')"
+                                <input type="number" [ngClass]="{'input-error-pd':(validateAmountUF=='1')}" class="form-control" placeholder="Ingrese una cantidad"
+                                    formControlName="montoDigitadoUF" name="monto-ingresado-uf"
+                                    *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')"
+
                                     (ngModelChange)="validateEnteredAmountUF()">
 
 
