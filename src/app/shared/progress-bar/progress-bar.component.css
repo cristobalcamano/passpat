@@ -52,3 +52,9 @@
         width: 33% !important;
     }
 }
+
+@media(max-width:320px) {
+    .container-progress-bar {
+        top: -6px !important;
+    }
+}

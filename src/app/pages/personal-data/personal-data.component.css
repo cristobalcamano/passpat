@@ -74,6 +74,14 @@ label {
 }
 
 .btn-pd-position {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    letter-spacing: 0.25px;
     width: 134px !important;
     height: 48px !important;
     border-radius: 4px;
@@ -109,6 +117,9 @@ label {
 }
 
 @media(max-width:320px) {
+    .contenedor-pd {
+        top: 0px !important;
+    }
     .btn-pd-position {
         width: 100% !important;
         top: 25px;
@@ -118,7 +129,7 @@ label {
         height: 100%;
     }
     .img-pd {
-        top: -55px;
+        top: -55px !important;
     }
     .form-res-c {
         top: -10px;
