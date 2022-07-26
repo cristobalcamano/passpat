@@ -48,7 +48,6 @@ import { ErrorComponent } from './error/error/error.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule
-    ReactiveFormsModule
   ],
   providers: [
     {
