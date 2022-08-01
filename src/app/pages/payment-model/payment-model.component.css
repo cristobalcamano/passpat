@@ -399,7 +399,8 @@ label {
     }
     .terms-conditions-content {
         padding: 23px 23px 23px 55px;
-        top: 80px;
+        top: 211px;
+        position: absolute;
     }
     .img-pm {
         right: -73px !important;
