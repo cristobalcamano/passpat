@@ -39,7 +39,8 @@ import { ErrorComponent } from './error/error/error.component';
     HeaderComponent,
     ProgressBarComponent,
     LoadComponent,
-    ErrorComponent
+    ErrorComponent,
+    BankResponseComponent
   ],
   imports: [
     BrowserModule,
@@ -47,8 +48,8 @@ import { ErrorComponent } from './error/error/error.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
