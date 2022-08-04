@@ -74,7 +74,7 @@ export class PagesComponent implements OnInit {
       case 'personalData':
         this.personalData = true;
         // this.bankResponse = true;
-        // this.amountPayable = true;
+        //this.amountPayable = true;
       break;
       case 'bankResponse':
         this.bankResponse = true;
