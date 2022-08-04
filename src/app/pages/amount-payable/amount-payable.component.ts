@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AmountPayable } from 'src/app/models/amount-payable/amount-payable.model';
@@ -39,6 +39,7 @@ export class AmountPayableComponent implements OnInit {
     this.validateAmountPesos = '0';
     this.validateAmountUF = '0';
     this.seleccionMonto = '0';
+    
   }
 
   get selecionarMonto() { return this.searchForm.get('selecionarMonto'); }
@@ -88,6 +89,7 @@ export class AmountPayableComponent implements OnInit {
     let amountPayable: AmountPayable = new AmountPayable(monto, moneda);
     this.montoDebitar.emit(amountPayable);
     this.viewShow.emit('paymentModel');
+
   }
 
   createformGroup() {
@@ -101,6 +103,8 @@ export class AmountPayableComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // let element: HTMLElement = document.getElementsByClassName('montoClassSeleccionadoPeso')[0] as HTMLElement;
+    // element.click();
   }
 
   onChange(event: any) {
@@ -120,6 +124,7 @@ export class AmountPayableComponent implements OnInit {
 
   volver() {
     this.viewShow.emit('personalData');
+    
   }
 
   validateEnteredAmountPesos() {
@@ -152,7 +157,7 @@ export class AmountPayableComponent implements OnInit {
 
 
 
-  
+
 
 
 
