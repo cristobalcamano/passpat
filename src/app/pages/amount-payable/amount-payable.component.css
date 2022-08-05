@@ -5,6 +5,13 @@
     position: absolute;
 }
 
+.img-pm {
+    width: 81px;
+    height: 24px;
+    right: 0px;
+    position: absolute;
+}
+
 .text-template {
     font-size: 16px;
     top: 4px;
@@ -64,7 +71,7 @@
     /* height: 546px; */
     height: 504px;
     /* height: 404px; */
-    top: 32px;
+    /* top: 32px; */
     /* Other/Light */
     background: #FFFFFF;
     /* Basic / 300 */
@@ -79,23 +86,13 @@
     /* max-width: 700px; */
     max-width: 632px;
     position: relative;
-    top: 40px;
+    /* top: 40px; */
 }
 
 label {
     font-size: 12px;
 }
 
-.btn-pd {
-    width: 134px !important;
-    height: 48px !important;
-    background-color: white;
-    border: 1px solid #E7EBF3 !important;
-    border-radius: 4px;
-    color: #730397 !important;
-    /* margin-top: 45px !important; */
-    position: relative;
-}
 
 @media(max-width:720px) {
     .contenedor-page {
@@ -246,6 +243,19 @@ small {
 
 @media(min-width:420px) {
 
+    .contenedor-pd {
+       top: 32px;
+    }
+
+    .contenedor-pd-second {
+        top: 40px;
+    }
+
+    .img-pm {
+        right: -73px !important;
+        padding: 0px;
+    }
+
     .tamano20-24 {
         height: 20px;
     }
@@ -346,6 +356,17 @@ small {
         margin-left: 48px;
     }
 
+    .btn-pd {
+        width: 134px !important;
+        height: 48px !important;
+        background-color: white;
+        border: 1px solid #E7EBF3 !important;
+        border-radius: 4px;
+        color: #730397 !important;
+        /* margin-top: 45px !important; */
+        position: relative;
+    }
+
     .button input[type="radio"]:checked+label {
         background: #6B196B;
         color: white;
@@ -368,13 +389,10 @@ small {
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        /* identical to box height, or 150% */
-
         letter-spacing: 0.25px;
-
-        /* Grey / 300 Default */
-
         color: #2D3338;
+        width: 272px;
+        height: 64px;
     }
 
     .text-title {
@@ -406,6 +424,8 @@ small {
         color: #2D3338;
     }
 
+
+
     .select-tipo-monto {
         font-family: 'Roboto';
         font-style: normal;
@@ -416,15 +436,63 @@ small {
         color: #2D3338;
     }
 
+    .div-text-tiempo {
+        width: 632px;
+        height: 48px;
+        background: #EBF6FF;
+        border-radius: 4px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+
+
+    .div-aux-text-tiempo {
+        width: 632px;
+        height: 48px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .text-tiempo {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+        display: flex;
+    }
+
+    .div-btn-mobil{
+        display:none !important;
+    }
+
 }
 
 @media(max-width:419px) {
 
+    .img-pm {
+        left: 0px !important;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .arriba-img-tamano{
+        height: 20px;
+    }
+
+    .abajo-img-tamano{
+        height: 16px;
+    }
 
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
         box-shadow: none;
+        width: 320px;
     }
 
     .tamano20-24 {
@@ -432,7 +500,7 @@ small {
     }
 
     .montoClassSeleccionadoPeso {
-        width: 78px;
+        width: 80px;
         height: 32px;
         font-family: 'Roboto';
         font-style: normal;
@@ -444,7 +512,7 @@ small {
     }
 
     .montoClassSeleccionadoUF {
-        width: 78px;
+        width: 80px;
         height: 32px;
         font-family: 'Roboto';
         font-style: normal;
@@ -456,13 +524,9 @@ small {
     }
 
     .text-tiempo {
-        padding: 16px;
-        gap: 8px;
-        width: 272px;
-        height: 80px;
-        left: 24px;
-        top: 357px;
 
+        /* width: 216px !important;
+        height: 48px !important; */
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -470,6 +534,19 @@ small {
         line-height: 16px;
         letter-spacing: 0.25px;
         color: #2D3338;
+
+    }
+
+    .div-aux-text-tiempo {
+        width: 216px !important;
+        height: 48px !important;
+    }
+
+    .div-text-tiempo {
+        width: 272px;
+        height: 80px;
+        background: #EBF6FF;
+        border-radius: 4px;
     }
 
     .text-descripcion-digitar-monto {
@@ -500,14 +577,11 @@ small {
         line-height: 24px;
         text-align: center;
         letter-spacing: 0.25px;
-        color: #A0AFCA;
+        color: #FFFFFF !important;
         width: 272px;
         height: 48px;
-        background: #E7EBF3;
-        border: 1px solid #E7EBF3;
-        border-radius: 4px;
-        margin-top: 1px;
-        margin-left: 36px;
+        background-color: #730397;
+        border: 1px solid #730397 !important;
     }
 
     .btn-pd-disabled {
@@ -524,27 +598,45 @@ small {
         background: #E7EBF3;
         border: 1px solid #E7EBF3;
         border-radius: 4px;
-        margin-top: 3px;
-        margin-left: 36px;
+    }
+
+    .btn-pd {
+        width: 81px;
+        height: 40px;
+        border-radius: 4px;
+
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #6B196B;
     }
 
     .button input[type="radio"]:checked+label {
         background: #6B196B;
         color: white;
         border-radius: 100px;
-        width: 90px;
+        width: 80px;
         height: 32px;
     }
 
     .button input[type="radio"]+label {
-        width: 90px;
+        width: 80px;
         height: 32px;
         background: #F9FBFE;
         border: 1px solid #E7EBF3;
         border-radius: 100px;
     }
 
-    .montoClassSeleccionadoPesoOtroMonto {
+    .montoClassSeleccionadoPesoOtroMonto+label {
+        width: 100px !important;
+    }
+
+    .montoClassSeleccionadoPesoOtroMonto:checked+label {
         width: 100px !important;
     }
 
@@ -586,5 +678,25 @@ small {
         line-height: 24px;
         letter-spacing: 0.25px;
         color: #2D3338;
+    }
+
+    .btn-monto {
+        height: 32px !important;
+        width: 80px !important;
+    }
+
+    .btn-monto-otro {
+        height: 32px !important;
+        width: 100px !important;
+        margin-top: 16px !important;
+    }
+
+    .div-text-tiempo {
+        display: inline-flex;
+        /* display: block; */
+    }
+
+    .div-btn-desktop{
+        display:none !important;
     }
 }
