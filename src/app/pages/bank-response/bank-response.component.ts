@@ -31,6 +31,7 @@ export class BankResponseComponent implements OnInit {
   }
 
   openThankyou(thankyou: any, content: any) {
+    this.selectCalification = '';
     this.modalService.dismissAll(content);
     this.modalService.open(thankyou, { windowClass: "modalClassThank" }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;

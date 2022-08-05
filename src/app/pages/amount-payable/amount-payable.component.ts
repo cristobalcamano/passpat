@@ -124,7 +124,6 @@ export class AmountPayableComponent implements OnInit {
 
   volver() {
     this.viewShow.emit('personalData');
-    
   }
 
   validateEnteredAmountPesos() {
