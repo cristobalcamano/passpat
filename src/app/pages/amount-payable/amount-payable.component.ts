@@ -52,37 +52,43 @@ export class AmountPayableComponent implements OnInit {
     let monto = '0';
     let moneda = '';
     //DOS MONEDAS
-    if (this.monedaPeso == '1' && this.monedaUF == '1') {
-      if (this.tipoMonedaSeleccionada == 'PESOS') {
+
+    if(this.montoPesos.length == 1){
+      monto = this.montoPesos[0];
+      moneda = 'PESOS';
+    }else{
+      if (this.monedaPeso == '1' && this.monedaUF == '1') {
+        if (this.tipoMonedaSeleccionada == 'PESOS') {
+          moneda = 'PESOS';
+          if (this.tipoMonto == 'otro-monto') {
+            monto = this.montoDigitadoPeso?.value;
+          } else {
+            monto = this.montoSeleccionadoPeso?.value;
+          }
+        } else if (this.tipoMonedaSeleccionada == 'UF') {
+          moneda = 'UF';
+          if (this.tipoMonto == 'otro-monto') {
+            monto = this.montoDigitadoUF?.value;
+          } else {
+            monto = this.montoSeleccionadoUF?.value;
+          }
+        }
+        //PESOS
+      } else if (this.monedaPeso == '1' && this.monedaUF == '0') {
         moneda = 'PESOS';
         if (this.tipoMonto == 'otro-monto') {
           monto = this.montoDigitadoPeso?.value;
         } else {
           monto = this.montoSeleccionadoPeso?.value;
         }
-      } else if (this.tipoMonedaSeleccionada == 'UF') {
+        //UF
+      } else if (this.monedaPeso == '0' && this.monedaUF == '1') {
         moneda = 'UF';
         if (this.tipoMonto == 'otro-monto') {
           monto = this.montoDigitadoUF?.value;
         } else {
           monto = this.montoSeleccionadoUF?.value;
         }
-      }
-      //PESOS
-    } else if (this.monedaPeso == '1' && this.monedaUF == '0') {
-      moneda = 'PESOS';
-      if (this.tipoMonto == 'otro-monto') {
-        monto = this.montoDigitadoPeso?.value;
-      } else {
-        monto = this.montoSeleccionadoPeso?.value;
-      }
-      //UF
-    } else if (this.monedaPeso == '0' && this.monedaUF == '1') {
-      moneda = 'UF';
-      if (this.tipoMonto == 'otro-monto') {
-        monto = this.montoDigitadoUF?.value;
-      } else {
-        monto = this.montoSeleccionadoUF?.value;
       }
     }
 

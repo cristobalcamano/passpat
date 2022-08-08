@@ -69,7 +69,7 @@
     width: 100% !important;
     max-width: 960px;
     /* height: 546px; */
-    height: 504px;
+    /* height: 504px; */
     /* height: 404px; */
     /* top: 32px; */
     /* Other/Light */
@@ -243,8 +243,64 @@ small {
 
 @media(min-width:420px) {
 
+    /*clase para el height 404px, pantalla con un solo monto (PESOS)*/
+    .contenedor-pd-h404 {
+        height: 404px;
+    }
+
+    /*clase para el height 472px, pantalla monto digitado (PESOS)*/
+    .contenedor-pd-h472 {
+        height: 472px;
+    }
+
+    /*clase para el height 416px, pantalla varios montos (PESOS)*/
+    .contenedor-pd-h416 {
+        height: 416px;
+    }
+
+    /*clase para el height 506px, pantalla varios montos, seleccionando otro monto (PESOS)*/
+    .contenedor-pd-h506 {
+        height: 506px !important;
+    }
+
+    /*clase para el height 440px, pantalla varios montos (UF)*/
+    .contenedor-pd-h440 {
+        height: 440px;
+    }
+
+    /*clase para el height 528px, pantalla varios montos, seleccionando otro monto (UF)*/
+    .contenedor-pd-h528 {
+        height: 528px !important;
+    }
+
+    /*clase para el height 436px, pantalla selec tipo monto, sin seleccion*/
+    .contenedor-pd-h436 {
+        height: 436px;
+    }
+
+    /*clase para el height 504px, pantalla selec tipo monto, seleccion PESOS*/
+    .contenedor-pd-h504 {
+        height: 504px;
+    }
+
+    /*clase para el height 532px, pantalla selec tipo monto, seleccion UF*/
+    .contenedor-pd-h532 {
+        height: 532px;
+    }
+
+    /*clase para el height 592px, pantalla selec tipo monto, seleccion PESOS y otro monto*/
+    .contenedor-pd-h592 {
+        height: 592px !important;
+    }
+
+    /*clase para el height 620px, pantalla selec tipo monto, seleccion UF y otro monto*/
+    .contenedor-pd-h620 {
+        height: 620px !important;
+    }
+
+
     .contenedor-pd {
-       top: 32px;
+        top: 32px;
     }
 
     .contenedor-pd-second {
@@ -391,8 +447,8 @@ small {
         line-height: 24px;
         letter-spacing: 0.25px;
         color: #2D3338;
-        width: 272px;
-        height: 64px;
+        /* width: 272px;
+        height: 64px; */
     }
 
     .text-title {
@@ -466,8 +522,14 @@ small {
         display: flex;
     }
 
-    .div-btn-mobil{
-        display:none !important;
+    .div-btn-mobil {
+        display: none !important;
+    }
+
+    .select-monto-unico+label {
+        background: #6B196B !important;
+        color: white !important;
+        border-radius: 100px !important;
     }
 
 }
@@ -480,11 +542,11 @@ small {
         padding-right: 0px;
     }
 
-    .arriba-img-tamano{
+    .arriba-img-tamano {
         height: 20px;
     }
 
-    .abajo-img-tamano{
+    .abajo-img-tamano {
         height: 16px;
     }
 
@@ -696,7 +758,31 @@ small {
         /* display: block; */
     }
 
-    .div-btn-desktop{
-        display:none !important;
+    .div-btn-desktop {
+        display: none !important;
+    }
+
+    .div-btn-volver-mobile {
+        width: 272px;
+        height: 40px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .btn-volver-mobile {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #6B196B;
+    }
+
+    .select-monto-unico+label {
+        background: #6B196B !important;
+        color: white !important;
+        border-radius: 100px !important;
     }
 }

@@ -1,4 +1,18 @@
-<div class="contenedor-pd center">
+<div class="contenedor-pd center" 
+    [ngClass]="{'contenedor-pd-h404': montoPesos.length == 1 &&  monedaPeso == '1' && monedaUF == '0', 
+    'contenedor-pd-h416': montoPesos.length > 1 &&  monedaPeso == '1' && monedaUF == '0', 
+    'contenedor-pd-h506': montoPesos.length > 1 &&  monedaPeso == '1' && monedaUF == '0' && tipoMonto == 'otro-monto', 
+    'contenedor-pd-h472': montoPesos.length == 0 &&  monedaPeso == '1' && monedaUF == '0',
+    'contenedor-pd-h440': montoUF.length > 1 &&  monedaUF == '1' &&  monedaPeso == '0',
+    'contenedor-pd-h528': montoUF.length > 1 &&  monedaUF == '1' &&  monedaPeso == '0' && tipoMonto == 'otro-monto',
+    'contenedor-pd-h436': montoPesos.length > 1 &&  monedaPeso == '1' && montoUF.length > 1 &&  monedaUF == '1' && tipoMonedaSeleccionada == '',
+    'contenedor-pd-h504': montoPesos.length > 1 &&  monedaPeso == '1' && montoUF.length > 1 &&  monedaUF == '1' && tipoMonedaSeleccionada == 'PESOS',
+    'contenedor-pd-h532': montoPesos.length > 1 &&  monedaPeso == '1' && montoUF.length > 1 &&  monedaUF == '1' && tipoMonedaSeleccionada == 'UF',
+    'contenedor-pd-h592': montoPesos.length > 1 &&  monedaPeso == '1' && montoUF.length > 1 &&  monedaUF == '1' && tipoMonedaSeleccionada == 'PESOS' && tipoMonto == 'otro-monto',
+    'contenedor-pd-h620': montoPesos.length > 1 &&  monedaPeso == '1' && montoUF.length > 1 &&  monedaUF == '1' && tipoMonedaSeleccionada == 'UF' && tipoMonto == 'otro-monto'
+}"
+>
+
     <div class="contenedor-pd-second center">
         <div class="arriba-img-tamano"></div>
         <div class="row">
@@ -69,7 +83,9 @@
                             <div *ngIf="monedaPeso == '1' && monedaUF == '1'" style="height: 20px;"></div>
                             <div class="btn-monto button col-md-3" *ngFor="let valor of montoPesos; let i = index">
                                 <input type="radio" (change)="valorSeleccionado( $event )"
-                                    class="montoClassSeleccionadoPeso" formControlName="montoSeleccionadoPeso"
+                                    class="montoClassSeleccionadoPeso" formControlName="montoSeleccionadoPeso" 
+                                    [ngClass]="{'select-monto-unico':montoPesos.length==1}" 
+                                    [checked]="{'true':montoPesos.length==1}" 
                                     name="montoSeleccionadoPeso" id="{{i}}" [value]="valor" checked="true" />
                                 <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
                             </div>
@@ -88,6 +104,7 @@
                             <div class="btn-monto button col-3" *ngFor="let valor of montoUF; let i = index">
                                 <input type="radio" (change)="valorSeleccionado( $event )"
                                     class="montoClassSeleccionadoUF" formControlName="montoSeleccionadoUF"
+                                    [ngClass]="{'select-monto-unico':montoUF.length==1}"
                                     name="montoSeleccionadoUF" id="{{i*5}}" [value]="valor" />
                                 <label class="bttn btn-default form-control" for="{{i*5}}">{{valor}} UF</label>
                             </div>
@@ -185,26 +202,24 @@
                                 style="vertical-align: text-top;">Volver</button>
                     </div>
                     <div class="col-md-4 offset-md-4">
-                        <button *ngIf="seleccionMonto=='0'" class="form-control  btn-pd-disabled"
+                        <button *ngIf="seleccionMonto=='0' && montoPesos.length > 1" class="form-control  btn-pd-disabled"
                             style="background-color: #E7EBF3 !important;" disabled>Siguiente</button>
-                        <button *ngIf="seleccionMonto=='1'" class="form-control  btn-pd-2"
+                        <button *ngIf="seleccionMonto=='1'  || montoPesos.length == 1" class="form-control  btn-pd-2"
                             type="submit">Siguiente</button>
                     </div>
                 </div>
 
                 <div class="row justify-content-center div-btn-mobil">
                     <div class="col-md-12">
-                        <button *ngIf="seleccionMonto=='0'" class="form-control  btn-pd-disabled"
+                        <button *ngIf="seleccionMonto=='0' && montoPesos.length > 1" class="form-control  btn-pd-disabled"
                             style="background-color: #E7EBF3 !important;" disabled>Siguiente</button>
-                        <button *ngIf="seleccionMonto=='1'" class="form-control  btn-pd-2"
+                        <button *ngIf="seleccionMonto=='1'  || montoPesos.length == 1" class="form-control  btn-pd-2"
                             type="submit">Siguiente</button>
                     </div>
                     <div style="height: 4px;"></div>
-                    <div class="col-md-12 text-center">
-                        <button class="form-control btn-pd"
-                            class="btn-back " type="submit " (click)="volver()">
-                            <img src="../../../assets/img/arrow-left.svg"
-                                style="vertical-align: text-top;">Volver</button>
+                    <div class="text-center div-btn-volver-mobile">
+                        <button class="form-control btn-volver-mobile btn-back"
+                            type="submit " (click)="volver()">< Volver</button>
                     </div>
                 </div>
             </form>
