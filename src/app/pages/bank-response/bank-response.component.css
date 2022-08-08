@@ -23,21 +23,7 @@
     background-color: #00C4B4;
 }
 
-.contenedor-pd {
-    box-sizing: border-box;
-    position: relative;
-    /* width: 100% !important; */
-    width: 960px !important;
-    height: 754px !important;
-    top: 32px;
-    /* Other/Light */
-    background: #FFFFFF;
-    /* Basic / 300 */
-    border: 1px solid #E7EBF3;
-    /* Box shadow/Default WP 3DS */
-    box-shadow: 0px 16px 64px rgba(170, 174, 187, 0.2);
-    border-radius: 16px;
-}
+
 
 .contenedor-pd-second {
     width: 100%;
@@ -46,7 +32,7 @@
     top: 40px;
 }
 
-.disabled-element{
+.disabled-element {
     pointer-events: none;
 }
 
@@ -195,9 +181,35 @@ small {
 /*FIN CONVERT IMG A RADIO*/
 
 @media(min-width:420px) {
+
+    .contenedor-pd {
+        box-sizing: border-box;
+        position: relative;
+        /* width: 100% !important; */
+        width: 960px !important;
+        height: 754px !important;
+        top: 32px;
+        /* Other/Light */
+        background: #FFFFFF;
+        /* Basic / 300 */
+        border: 1px solid #E7EBF3;
+        /* Box shadow/Default WP 3DS */
+        box-shadow: 0px 16px 64px rgba(170, 174, 187, 0.2);
+        border-radius: 16px;
+    }
+
     .btn-close {
-        max-width: 24px;
-        max-height: 24px;
+        width: 24px;
+        height: 24px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        float: right;
+    }
+
+    .div-btn-close {
+        height: 24px;
     }
 
     /* ::ng-deep .myCustomModalClass .modal-body{
@@ -220,7 +232,15 @@ small {
         height: 8px;
     }
 
+    .tamano24-8 {
+        height: 8px;
+    }
+
     .tamano16 {
+        height: 16px;
+    }
+
+    .tamano16-8 {
         height: 16px;
     }
 
@@ -246,20 +266,6 @@ small {
         width: 32px;
         height: 40px;
         float: left
-    }
-
-    .desc-opinion {
-
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        /* or 150% */
-
-        text-align: center;
-        letter-spacing: 0.25px;
-        color: #2D3338;
     }
 
     .sub-title-experience {
@@ -303,7 +309,7 @@ small {
     }
 
     .td-table-response {
-        
+
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -501,6 +507,17 @@ small {
         height: 400px !important;
     }
 
+    .desc-opinion {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+    }
+
     .div-desc-opinion {
         width: 466px !important;
         height: 72px !important;
@@ -569,7 +586,7 @@ small {
         letter-spacing: 0.25px;
         color: #FFFFFF;
     }
-    
+
     .img-terms {
         padding: 10px 10px 10px 0px;
     }
@@ -578,8 +595,9 @@ small {
         position: relative;
         top: 50px;
         width: 100%;
+        justify-content: center;
     }
-    
+
     .terms-conditions-content {
         font-family: 'Roboto';
         font-style: normal;
@@ -594,14 +612,23 @@ small {
         color: #707382;
         padding: 16px 10px 16px 16px;
     }
-    
+
 
 }
 
 @media(max-width:419px) {
     .btn-close {
-        max-width: 16px;
-        max-height: 16px;
+        width: 16px;
+        height: 16px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        float: right;
+    }
+
+    .div-btn-close {
+        height: 18px;
     }
 
     /* .modal-body{
@@ -617,14 +644,14 @@ small {
     }
 
     .tamano32-16 {
-        height: 24px;
-    }
-
-    .tamano24 {
         height: 16px;
     }
 
-    .tamano16 {
+    .tamano24-8 {
+        height: 8px;
+    }
+
+    .tamano16-8 {
         height: 8px;
     }
 
@@ -634,6 +661,13 @@ small {
 
     .tamano8-4 {
         height: 4px;
+    }
+
+    .div-title-experience {
+        width: 240px;
+        height: 48px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 
     .title-experience {
@@ -652,7 +686,7 @@ small {
         float: left
     }
 
-    .desc-opinion {
+    /* .desc-opinion {
 
         font-family: 'Roboto';
         font-style: normal;
@@ -662,7 +696,7 @@ small {
         text-align: center;
         letter-spacing: 0.25px;
         color: #2D3338;
-    }
+    } */
 
     .sub-title-experience {
         font-family: 'Roboto';
@@ -675,8 +709,55 @@ small {
         color: #2D3338;
     }
 
-    .td-table-response {
+    /* .td-table-response {
         height: 32px;
+    } */
+
+    .table-response {
+        width: 271px;
+        height: 208px;
+    }
+
+    .table-table-response {
+        border: white 9px solid;
+        margin-bottom: 0px;
+        width: 271px;
+    }
+
+    .td-table-response-title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-right: 0px;
+        width: 127px !important;
+        height: 32px !important;
+    }
+
+    .td-table-response {
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-right: 0px;
+        width: 127px !important;
+        height: 32px !important;
     }
 
     .box-text-response {
@@ -748,6 +829,114 @@ small {
         /* Grey / 300 Default */
 
         color: #2D3338;
+    }
+
+    ::ng-deep .myCustomModalClass .modal-dialog {
+        /* max-width: 100px !important;
+        max-height: 100px !important; */
+
+        width: 272px !important;
+        height: 504px !important;
+
+    }
+
+    ::ng-deep .myCustomModalClass .modal-content {
+        width: 272px !important;
+        height: 504px !important;
+    }
+
+    .img-terms {
+        padding: 10px 10px 10px 0px;
+    }
+
+    .terms-conditions-content {
+        position: relative;
+        width: 272px;
+        height: 64px;
+    }
+
+    .terms-conditions-content {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.002em;
+        color: #707382;
+        padding: 16px 10px 16px 16px;
+    }
+
+    .tamano4-12 {
+        height: 12px;
+    }
+
+    .text-area-exp {
+        width: 240px;
+        height: 104px;
+        background: #FFFFFF;
+        border: 1px solid #C9D0E4;
+        border-radius: 4px;
+    }
+
+    .div-text-area-exp {
+        width: 240px;
+        height: 104px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .btn-enviar-exp {
+        width: 240px;
+        height: 40px;
+        background: #6B196B;
+        border: 1px solid #6B196B;
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #FFFFFF;
+
+    }
+
+    .btn-enviar-exp-disabled {
+        width: 240px;
+        height: 40px;
+        background: #E7EBF3;
+        border: 1px solid #E7EBF3;
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #A0AFCA;
+
+    }
+
+    .div-desc-opinion {
+        width: 240px !important;
+        height: 48px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .desc-opinion {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        margin-bottom: 0px;
     }
 
 }
