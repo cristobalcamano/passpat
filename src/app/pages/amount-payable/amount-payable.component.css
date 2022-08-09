@@ -340,13 +340,8 @@ small {
         color: #FCFDFE;
     }
 
+    
     .text-tiempo {
-        padding: 16px;
-        gap: 8px;
-
-        max-width: 632px;
-        max-height: 48px;
-
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -354,7 +349,32 @@ small {
         line-height: 16px;
         letter-spacing: 0.25px;
         color: #2D3338;
+        display: flex;
+        width: 533px;
+height: 16px;
     }
+
+    .div-text-tiempo {
+        width: 632px;
+        height: 48px;
+        background: #EBF6FF;
+        border-radius: 4px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+
+
+    .div-aux-text-tiempo {
+        width: 632px;
+        height: 48px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        padding: 16px;
+gap: 8px;
+    }
+
 
     .text-descripcion-digitar-monto {
         font-family: 'Roboto';
@@ -391,7 +411,7 @@ small {
         border: 1px solid #730397 !important;
         border-radius: 4px;
         margin-top: 1px;
-        margin-left: 48px;
+        margin-left: 60px;
     }
 
     .btn-pd-disabled {
@@ -408,8 +428,8 @@ small {
         background-color: #E7EBF3;
         border: 1px solid #E7EBF3 !important;
         border-radius: 4px;
-        margin-top: 3px;
-        margin-left: 48px;
+        margin-left: 60px;
+        margin-top: 1px;
     }
 
     .btn-pd {
@@ -421,6 +441,7 @@ small {
         color: #730397 !important;
         /* margin-top: 45px !important; */
         position: relative;
+        
     }
 
     .button input[type="radio"]:checked+label {
@@ -457,17 +478,22 @@ small {
         font-weight: 700;
         font-size: 36px;
         line-height: 48px;
-        /* identical to box height, or 133% */
-
         letter-spacing: 0.25px;
-
-        /* Grey / 300 Default */
-
         color: #2D3338;
     }
 
     .btn-back {
+        width: 73px;
+        height: 40px;
         margin-left: 0px !important;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #6B196B;
     }
 
     .opcionesMonto {
@@ -490,36 +516,17 @@ small {
         line-height: 24px;
         letter-spacing: 0.25px;
         color: #2D3338;
-    }
-
-    .div-text-tiempo {
-        width: 632px;
         height: 48px;
-        background: #EBF6FF;
-        border-radius: 4px;
-        text-align: center;
-        align-items: center;
-        display: flex;
     }
 
-
-    .div-aux-text-tiempo {
-        width: 632px;
-        height: 48px;
-        text-align: center;
-        align-items: center;
-        display: flex;
-    }
-
-    .text-tiempo {
+    option {
         font-family: 'Roboto';
         font-style: normal;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
         letter-spacing: 0.25px;
         color: #2D3338;
-        display: flex;
     }
 
     .div-btn-mobil {
@@ -530,6 +537,27 @@ small {
         background: #6B196B !important;
         color: white !important;
         border-radius: 100px !important;
+    }
+
+    .ingrese-cantidad {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+        height: 48px;
+    }
+
+    .ingrese-cantidad::placeholder {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #828EA5;
     }
 
 }
@@ -740,6 +768,18 @@ small {
         line-height: 24px;
         letter-spacing: 0.25px;
         color: #2D3338;
+        width: 272px;
+        height: 48px;
+    }
+
+    option {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
     }
 
     .btn-monto {
@@ -784,5 +824,27 @@ small {
         background: #6B196B !important;
         color: white !important;
         border-radius: 100px !important;
+    }
+
+    .ingrese-cantidad {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+        width: 272px;
+height: 48px;
+    }
+
+    .ingrese-cantidad::placeholder {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #828EA5;
     }
 }
