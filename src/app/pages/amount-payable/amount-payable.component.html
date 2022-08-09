@@ -1,5 +1,6 @@
 <div class="contenedor-pd center" 
-    [ngClass]="{'contenedor-pd-h404': montoPesos.length == 1 &&  monedaPeso == '1' && monedaUF == '0', 
+    [ngClass]="{
+    'contenedor-pd-h404': montoPesos.length == 1 &&  monedaPeso == '1' && monedaUF == '0', 
     'contenedor-pd-h416': montoPesos.length > 1 &&  monedaPeso == '1' && monedaUF == '0', 
     'contenedor-pd-h506': montoPesos.length > 1 &&  monedaPeso == '1' && monedaUF == '0' && tipoMonto == 'otro-monto', 
     'contenedor-pd-h472': montoPesos.length == 0 &&  monedaPeso == '1' && monedaUF == '0',
@@ -130,12 +131,12 @@
                                 pagar</label>
                             <div *ngIf="montoPesos.length > 0 || montoUF.length > 0" style="height: 20px;"></div>
                             <input type="number" [ngClass]="{'input-error-pd':(validateAmountPesos=='1')}"
-                                class="form-control" placeholder="Ingrese una cantidad"
+                                class="form-control ingrese-cantidad" placeholder="Ingrese una cantidad"
                                 formControlName="montoDigitadoPeso" name="monto-ingresado-peso"
                                 *ngIf="(monedaPeso == '1' && monedaUF == '0') || (tipoMonedaSeleccionada == 'PESOS')"
                                 (ngModelChange)="validateEnteredAmountPesos()" appFormatNumber>
                             <input type="number" [ngClass]="{'input-error-pd':(validateAmountUF=='1')}"
-                                class="form-control" placeholder="Ingrese una cantidad"
+                                class="form-control ingrese-cantidad" placeholder="Ingrese una cantidad"
                                 formControlName="montoDigitadoUF" name="monto-ingresado-uf"
                                 *ngIf="(monedaPeso == '0' && monedaUF == '1') || (tipoMonedaSeleccionada == 'UF')"
                                 (ngModelChange)="validateEnteredAmountUF()">
@@ -184,7 +185,7 @@
                         <div class="div-text-tiempo">
                             <div class="div-aux-text-tiempo center">
                                 <span class="text-tiempo"><img src="../../../assets/img/Icon.svg"
-                                        style="width: 13.13px;vertical-align: text-top;">
+                                        style="width: 13.13px;vertical-align: text-top;">&nbsp;
                                     El monto seleccionado para la suscripción se cargará mensualmente de manera
                                     indefinida.</span>
                             </div>
@@ -194,26 +195,24 @@
                 </div>
                 <div style="height: 40px;"></div>
                 <div class="row justify-content-center div-btn-desktop">
-                    <div class="col-md-4" style="padding-left: 0px;">
+                    <div class="col-md-4" style="padding-left: 0px; display: flex;
+                    align-items: center;">
                         <button class="form-control btn-pd"
-                            style="color: #6B196B; padding: 15px;margin-left: 20px; font-family: 'Roboto';font-style: normal;"
-                            class="btn-back " type="submit " (click)="volver()">
-                            <img src="../../../assets/img/arrow-left.svg"
-                                style="vertical-align: text-top;">Volver</button>
+                            class="btn-back " type="submit " (click)="volver()">< Volver</button>
                     </div>
                     <div class="col-md-4 offset-md-4">
-                        <button *ngIf="seleccionMonto=='0' && montoPesos.length > 1" class="form-control  btn-pd-disabled"
+                        <button *ngIf="(seleccionMonto=='0' && montoPesos.length > 1) || (seleccionMonto=='0' && montoDigitadoPeso?.value == '' && montoDigitadoPeso?.value > montoMaximoPeso)" class="  btn-pd-disabled"
                             style="background-color: #E7EBF3 !important;" disabled>Siguiente</button>
-                        <button *ngIf="seleccionMonto=='1'  || montoPesos.length == 1" class="form-control  btn-pd-2"
+                        <button *ngIf="seleccionMonto=='1'  || montoPesos.length == 1" class="  btn-pd-2"
                             type="submit">Siguiente</button>
                     </div>
                 </div>
 
                 <div class="row justify-content-center div-btn-mobil">
                     <div class="col-md-12">
-                        <button *ngIf="seleccionMonto=='0' && montoPesos.length > 1" class="form-control  btn-pd-disabled"
+                        <button *ngIf="(seleccionMonto=='0' && montoPesos.length > 1) || (seleccionMonto=='0' && montoDigitadoPeso?.value == '') || (seleccionMonto=='0' && montoDigitadoPeso?.value > montoMaximoPeso)" class="  btn-pd-disabled"
                             style="background-color: #E7EBF3 !important;" disabled>Siguiente</button>
-                        <button *ngIf="seleccionMonto=='1'  || montoPesos.length == 1" class="form-control  btn-pd-2"
+                        <button *ngIf="seleccionMonto=='1'  || montoPesos.length == 1" class="  btn-pd-2"
                             type="submit">Siguiente</button>
                     </div>
                     <div style="height: 4px;"></div>
