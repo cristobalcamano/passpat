@@ -24,6 +24,7 @@ import { BankResponseComponent } from './pages/bank-response/bank-response.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoadComponent } from './pages/load/load.component';
 import { ErrorComponent } from './error/error/error.component';
+import { BasicAuthService } from './interceptor/basic-auth.service';
 
 
 @NgModule({
@@ -53,7 +54,7 @@ import { ErrorComponent } from './error/error/error.component';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: Interceptor,
+      useClass: BasicAuthService,
       multi: true
     }
   ],
