@@ -29,7 +29,7 @@ export class AmountPayableComponent implements OnInit {
   selectUF: string = '';
   validateAmountPesos = '';
   validateAmountUF = '';
-  seleccionMonto = '';
+  seleccionMonto = '0';
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.searchForm = this.createformGroup();
@@ -56,6 +56,9 @@ export class AmountPayableComponent implements OnInit {
     if(this.montoPesos.length == 1){
       monto = this.montoPesos[0];
       moneda = 'PESOS';
+    }else if(this.montoUF.length == 1){
+      monto = this.montoUF[0];
+      moneda = 'UF'
     }else{
       if (this.monedaPeso == '1' && this.monedaUF == '1') {
         if (this.tipoMonedaSeleccionada == 'PESOS') {

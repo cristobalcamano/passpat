@@ -1,10 +1,17 @@
-.img-pd {
+/* .img-pd {
     width: 81px;
     height: 24px;
     right: 0 !important;
     position: absolute;
-}
+} */
 
+
+.img-pm {
+    width: 81px;
+    height: 24px;
+    right: 0px;
+    position: absolute;
+}
 
 
 .process {
@@ -181,6 +188,11 @@ small {
 /*FIN CONVERT IMG A RADIO*/
 
 @media(min-width:420px) {
+
+    .img-pm {
+        right: -73px !important;
+        padding: 0px;
+    }
 
     .contenedor-pd {
         box-sizing: border-box;
