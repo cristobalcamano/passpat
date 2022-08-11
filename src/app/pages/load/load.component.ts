@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CardService } from '../../services/card.service';
 import { Data } from '../../models/data.model';
 
@@ -10,6 +10,7 @@ import { Data } from '../../models/data.model';
 export class LoadComponent implements OnInit {
 
   data: Data;
+  @Output() viewShow: EventEmitter<string> = new EventEmitter();
 
   constructor(private cardService: CardService) {
     this.data = new Data('','','',12,'','','','',12,'','','','','','','');
@@ -18,6 +19,7 @@ export class LoadComponent implements OnInit {
   ngOnInit(): void {
 
     this.enrollCard();
+    
   }
 
   enrollCard(){
@@ -25,6 +27,7 @@ export class LoadComponent implements OnInit {
       this.companyO = data;
     }
     );*/
+    
   }
 
 }

@@ -14,8 +14,10 @@
                 [montoMaximoPeso]="companyO.montoMaximoPeso" [montoMaximoUF]="companyO.montoMaximoUF" (viewShow)="content($event)"></app-amount-payable>
             <app-payment-model *ngIf="paymentModel" (viewShow)="content($event)" [img]="companyO.imagen"></app-payment-model>
             <app-payment-method *ngIf="paymentMethod" (viewShow)="content($event)"></app-payment-method>
-            <app-load *ngIf="appLoad"></app-load>
+            <div (document:mousemove)="onMouseMove()" id="box">
+                <app-load *ngIf="appLoad" (viewShow)="content($event)"></app-load>
+            </div>
 
-            <app-bank-response *ngIf="appLoad" [img]="companyO.imagen"></app-bank-response>
+            <app-bank-response *ngIf="appBankResponse" [img]="companyO.imagen"></app-bank-response>
         </div>
     </div>
