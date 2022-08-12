@@ -450,7 +450,14 @@ small {
         color: #2D3338;
     }
 
+    .div-tittle-thank-opinion {
+        width: 467px;
+        height: 32px;
+    }
+
     .tittle-thank-opinion {
+        width: 467px;
+        height: 32pX;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -495,7 +502,7 @@ small {
 
         width: 633px !important;
         height: 590px !important;
-
+        max-width: 100% !important;
     }
 
     ::ng-deep .myCustomModalClass .modal-content {
@@ -503,13 +510,11 @@ small {
         height: 590px !important;
     }
 
-    ::ng-deep .modalClassEndedProcess .modal-dialog {
-        /* max-width: 100px !important;
-        max-height: 100px !important; */
+    /* ::ng-deep .modalClassEndedProcess .modal-dialog {
 
         width: 633px !important;
         height: 400px !important;
-    }
+    } */
 
     ::ng-deep .modalClassEndedProcess .modal-content {
         /* max-width: 100px !important;
@@ -625,6 +630,18 @@ small {
         padding: 16px 10px 16px 16px;
     }
 
+    .div-title-experience {
+        width: 466px;
+        height: 32px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .div-sub-title-experience {
+        width: 465px;
+        height: 32px;
+    }
+
 
 }
 
@@ -682,6 +699,7 @@ small {
         padding-left: 0px;
     }
 
+
     .title-experience {
         font-family: 'Roboto';
         font-style: normal;
@@ -711,6 +729,8 @@ small {
     } */
 
     .sub-title-experience {
+        width: 240px;
+        height: 24px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
@@ -720,6 +740,12 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
+    .div-sub-title-experience{
+        width: 240px;
+        height: 24px;
+    }
+
 
     /* .td-table-response {
         height: 32px;
