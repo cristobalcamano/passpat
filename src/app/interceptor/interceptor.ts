@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
 @Injectable()
 export class Interceptor implements HttpInterceptor {
     constructor(private router: Router){}
+
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(req).pipe(
             retry(1),

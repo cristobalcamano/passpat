@@ -33,17 +33,18 @@
                             <img src="{{imgCD}}" class="img-dinamica-tarjeta-credito" alt="">
                             <div style="position: relative;top: -20px;">
                                 <div *ngIf="tarjetaChangeval"><img style="
-                                width: 100%;
+                                width: 200px;
                                 height: 128px;
                                 max-width: 200px;
                                 min-width: 180px;position: relative;
                                 top: 8px;" src="../../../assets/img/payment-model/tarjeta-cvv.svg"></div>
                                 <div *ngIf="!tarjetaChangeval"><img style="
-                                width: 100%;
+                                width: 200px;
                                 height: 128px;
                                 max-width: 200px;
                                 min-width: 180px;position: relative;
-                                top: 8px;" class="img-p-m-a" src="../../../assets/img/payment-model/Frontside.svg"></div>
+                                top: 8px;    background: #E7EBF3;
+                                border-radius: 8px;" class="img-p-m-a" src="../../../assets/img/payment-model/Frontside.svg"></div>
                             </div>
                         </div>
                     </div>
@@ -58,11 +59,11 @@
                         <div style="top:-16px; position: relative;" class="small-text" *ngIf="searchForm.controls['tarjeta'].invalid &&
                             (searchForm.controls['tarjeta'].dirty || searchForm.controls['tarjeta'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un número de tarjeta válido</div>
                         <br>
-                        <div *ngIf="searchForm.controls[ 'tarjeta'].valid && (searchForm.controls[ 'tarjeta'].dirty || searchForm.controls[ 'tarjeta'].touched) " class="row ">
+                        <div style="position: relative;top: -5px;" *ngIf="searchForm.controls[ 'tarjeta'].valid && (searchForm.controls[ 'tarjeta'].dirty || searchForm.controls[ 'tarjeta'].touched) " class="row ">
 
                             <div class="form-group col">
-                                <label>Fecha de expiración</label>
-                                <input (click)='changeTargeta(2)' [ngClass]="{'input-error-pd':searchForm.controls['fechaV'].invalid &&
+                                <label style="height: 16px;">Fecha de expiración</label>
+                                <input style="width: 100%; max-width: 189px;height: 48px;" (click)='changeTargeta(2)' [ngClass]="{'input-error-pd':searchForm.controls['fechaV'].invalid &&
                                     (searchForm.controls['fechaV'].dirty || searchForm.controls['fechaV'].touched)}" type="text" class="form-control width-100 cdv-jm" maxlength="5 " placeholder="XX/XX " formControlName="fechaV" (ngModelChange)="validateFE() ">
                                 <div class="small-text row" *ngIf="searchForm.controls['fechaV'].invalid &&
                             (searchForm.controls['fechaV'].dirty || searchForm.controls['fechaV'].touched)">
@@ -72,9 +73,9 @@
 
                             </div>
                             <div class="form-group col">
-                                <label>CVV</label>
-                                <img src="../../../assets/img/Icon-interrogacion.svg" style="width: 13px;position :absolute; left: 93%" alt="">
-                                <input #cvv (click)='changeTargeta(3)' [ngClass]="{'input-error-pd':searchForm.controls['cvv'].invalid &&
+                                <label style="height: 16px;">CVV</label>
+                                <img src="../../../assets/img/Icon-interrogacion.svg" style="width: 13px;position :absolute; left: 93%; margin-top: 7px;" alt="">
+                                <input style="width: 100%; max-width: 189px;height: 48px;" #cvv (click)='changeTargeta(3)' [ngClass]="{'input-error-pd':searchForm.controls['cvv'].invalid &&
                                     (searchForm.controls['cvv'].dirty || searchForm.controls['cvv'].touched)}" type="password" class="form-control width-100 cdv-jm" placeholder="***" maxlength="3 " formControlName="cvv">
                                 <span (click)="showPassword()" style="position: relative; top: -30px; left: 80%;cursor: pointer;"><i class="bi bi-eye"></i></span>
                                 <div class="small-text row" *ngIf="searchForm.controls['cvv'].invalid &&
@@ -98,7 +99,8 @@
                                         <div class="row center message-pay-50-container">
 
                                             <div class="col message-pay-50">
-                                                <img src="../../../assets/img/Icon-interrogacion.svg" style="padding: 10px 10px 10px 14px;"> Haremos un cobro de $50, que serán devueltos luego de validar tu tarjeta.
+                                                <img src="../../../assets/img/Icon-interrogacion.svg" style="padding: 10px 10px 10px 14px;">
+                                                <div> Haremos un <strong> cobro de $50, que serán devueltos</strong> luego de validar tu tarjeta.</div>
                                             </div>
                                         </div>
                                     </div>
@@ -108,7 +110,7 @@
 
                             <div>
                                 <input type="checkbox" formControlName="termsconditions">&nbsp;
-                                <label> Acepto los  <a href="# ">términos y condiciones.</a></label>
+                                <label class="termsconditiosstyleletter"> Acepto los  <a href="# ">términos y condiciones.</a></label>
                             </div>
                             <div class="row u847ur-ur74y-9r74">
 
