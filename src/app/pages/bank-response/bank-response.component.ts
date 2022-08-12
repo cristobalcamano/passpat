@@ -23,7 +23,7 @@ export class BankResponseComponent implements OnInit {
 
   open(content: any) {
     clearTimeout(this.myTimeout!);
-    this.modalService.open(content, { windowClass: "myCustomModalClass"}).result.then((result) => {
+    this.modalService.open(content, { windowClass: "myCustomModalClass"}).result.then((result) => { 
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed}`;
