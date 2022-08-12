@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AmountPayable } from 'src/app/models/amount-payable/amount-payable.model';
@@ -29,7 +29,7 @@ export class AmountPayableComponent implements OnInit {
   selectUF: string = '';
   validateAmountPesos = '';
   validateAmountUF = '';
-  seleccionMonto = '';
+  seleccionMonto = '0';
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.searchForm = this.createformGroup();
@@ -39,6 +39,7 @@ export class AmountPayableComponent implements OnInit {
     this.validateAmountPesos = '0';
     this.validateAmountUF = '0';
     this.seleccionMonto = '0';
+    
   }
 
   get selecionarMonto() { return this.searchForm.get('selecionarMonto'); }
@@ -51,15 +52,40 @@ export class AmountPayableComponent implements OnInit {
     let monto = '0';
     let moneda = '';
     //DOS MONEDAS
-    if (this.monedaPeso == '1' && this.monedaUF == '1') {
-      if (this.tipoMonedaSeleccionada == 'PESOS') {
+
+    if(this.montoPesos.length == 1){
+      monto = this.montoPesos[0];
+      moneda = 'PESOS';
+    }else if(this.montoUF.length == 1){
+      monto = this.montoUF[0];
+      moneda = 'UF'
+    }else{
+      if (this.monedaPeso == '1' && this.monedaUF == '1') {
+        if (this.tipoMonedaSeleccionada == 'PESOS') {
+          moneda = 'PESOS';
+          if (this.tipoMonto == 'otro-monto') {
+            monto = this.montoDigitadoPeso?.value;
+          } else {
+            monto = this.montoSeleccionadoPeso?.value;
+          }
+        } else if (this.tipoMonedaSeleccionada == 'UF') {
+          moneda = 'UF';
+          if (this.tipoMonto == 'otro-monto') {
+            monto = this.montoDigitadoUF?.value;
+          } else {
+            monto = this.montoSeleccionadoUF?.value;
+          }
+        }
+        //PESOS
+      } else if (this.monedaPeso == '1' && this.monedaUF == '0') {
         moneda = 'PESOS';
         if (this.tipoMonto == 'otro-monto') {
           monto = this.montoDigitadoPeso?.value;
         } else {
           monto = this.montoSeleccionadoPeso?.value;
         }
-      } else if (this.tipoMonedaSeleccionada == 'UF') {
+        //UF
+      } else if (this.monedaPeso == '0' && this.monedaUF == '1') {
         moneda = 'UF';
         if (this.tipoMonto == 'otro-monto') {
           monto = this.montoDigitadoUF?.value;
@@ -67,27 +93,12 @@ export class AmountPayableComponent implements OnInit {
           monto = this.montoSeleccionadoUF?.value;
         }
       }
-      //PESOS
-    } else if (this.monedaPeso == '1' && this.monedaUF == '0') {
-      moneda = 'PESOS';
-      if (this.tipoMonto == 'otro-monto') {
-        monto = this.montoDigitadoPeso?.value;
-      } else {
-        monto = this.montoSeleccionadoPeso?.value;
-      }
-      //UF
-    } else if (this.monedaPeso == '0' && this.monedaUF == '1') {
-      moneda = 'UF';
-      if (this.tipoMonto == 'otro-monto') {
-        monto = this.montoDigitadoUF?.value;
-      } else {
-        monto = this.montoSeleccionadoUF?.value;
-      }
     }
 
     let amountPayable: AmountPayable = new AmountPayable(monto, moneda);
     this.montoDebitar.emit(amountPayable);
     this.viewShow.emit('paymentModel');
+
   }
 
   createformGroup() {
@@ -101,6 +112,8 @@ export class AmountPayableComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // let element: HTMLElement = document.getElementsByClassName('montoClassSeleccionadoPeso')[0] as HTMLElement;
+    // element.click();
   }
 
   onChange(event: any) {
@@ -152,7 +165,7 @@ export class AmountPayableComponent implements OnInit {
 
 
 
-  
+
 
 
 

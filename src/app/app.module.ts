@@ -49,6 +49,7 @@ import { BasicAuthService } from './interceptor/basic-auth.service';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule
   ],
   providers: [

@@ -18,6 +18,8 @@
                 <app-load *ngIf="appLoad" (viewShow)="content($event)"></app-load>
             </div>
 
-            <app-bank-response *ngIf="appBankResponse" [img]="companyO.imagen"></app-bank-response>
+            <!--            <app-bank-response *ngIf="appBankResponse" [img]="companyO.imagen"></app-bank-response>-->
+            <app-bank-response *ngIf="appBankResponse" (viewShow)="content($event)" [img]="companyO.imagen"></app-bank-response>
+
         </div>
     </div>
