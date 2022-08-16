@@ -497,9 +497,6 @@ small {
     }
 
     ::ng-deep .myCustomModalClass .modal-dialog {
-        /* max-width: 100px !important;
-        max-height: 100px !important; */
-
         width: 633px !important;
         height: 590px !important;
         max-width: 100% !important;
@@ -517,9 +514,6 @@ small {
     } */
 
     ::ng-deep .modalClassEndedProcess .modal-content {
-        /* max-width: 100px !important;
-        max-height: 100px !important; */
-
         width: 633px !important;
         height: 400px !important;
     }
