@@ -60,8 +60,6 @@ export class PagesComponent implements OnInit {
     this.bankResponse = false;
     this.appBankResponse = false;
 
-    console.log(view);
-
     switch(view){
       case 'dashboard':
         this.dashboard = true;
@@ -109,6 +107,7 @@ export class PagesComponent implements OnInit {
         this.appLoad = false;
         this.appBankResponse = true;
         this.view = 'appBankResponse';
+
       
     }
     
