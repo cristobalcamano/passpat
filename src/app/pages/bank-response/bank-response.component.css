@@ -371,6 +371,29 @@ small {
     }
  */
 
+    .btn-descargar-comprobante {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #FFFFFF;
+
+    }
+
+    .btn-dejanos-opinion {
+        font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.25px;
+color: #6B196B;
+    }
+
 
     .box-text-response {
         width: 632px;
@@ -378,6 +401,16 @@ small {
         left: 404px;
         top: 733px;
 
+    }
+
+    .text-response {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
     }
 
     .title-response {
@@ -735,7 +768,7 @@ small {
         color: #2D3338;
     }
 
-    .div-sub-title-experience{
+    .div-sub-title-experience {
         width: 240px;
         height: 24px;
     }

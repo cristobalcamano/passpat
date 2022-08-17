@@ -19,7 +19,9 @@ export class QrService {
 
     consultaId(id:string, serviceId:string){
         const url = `${url_base}service/consulta/${id}/${serviceId}`;
-        
+       /*
+        const url = `http://localhost:8082/api/v1/mandatodigital/service/consulta/2/2`;
+*/
         return this.http.get<Company>(url)
         .pipe(catchError( e =>{
             return throwError(e);
