@@ -409,6 +409,15 @@ small {
     }
  */
 
+    .div-descargar-comprobante{
+        width: 242px;
+        height: 53px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .btn-descargar-comprobante {
         font-family: 'Roboto';
         font-style: normal;
