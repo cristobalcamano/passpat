@@ -189,10 +189,40 @@ small {
 
 @media(min-width:420px) {
 
+    .tamano13 {
+        height: 13px;
+    }
+
+    .img-pd {
+        top: -25px;
+        width: 81px;
+        height: 24px;
+        right: 0px !important;
+        position: absolute;
+    }
+
     .img-pm {
-        right: -73px !important;
+        right: -47px !important;
         padding: 0px;
     }
+
+    .div-img-check {
+        width: 64px;
+        height: 64px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .img-check {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    } */
+
 
     .contenedor-pd {
         box-sizing: border-box;
@@ -227,6 +257,14 @@ small {
     /* ::ng-deep .myCustomModalClass .modal-body{
         padding-top: 24px !important;
     } */
+
+    .tamano4-16 {
+        height: 4px;
+    }
+
+    .tamano40 {
+        height: 40px;
+    }
 
     .tamano40-32 {
         height: 40px;
@@ -371,6 +409,31 @@ small {
     }
  */
 
+    .btn-descargar-comprobante {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #FFFFFF;
+
+    }
+
+    .btn-dejanos-opinion {
+        width: 202px;
+        height: 48px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #6B196B;
+    }
+
 
     .box-text-response {
         width: 632px;
@@ -378,6 +441,16 @@ small {
         left: 404px;
         top: 733px;
 
+    }
+
+    .text-response {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
     }
 
     .title-response {
@@ -435,6 +508,8 @@ small {
     }
 
     .tittle-ended-process {
+        width: 632px;
+        height: 48px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -607,6 +682,10 @@ small {
         top: 50px;
         width: 100%;
         justify-content: center;
+        padding-top: 6px;
+        padding-left: 6px;
+        padding-bottom: 6px;
+        padding-right: 6px;
     }
 
     .terms-conditions-content {
@@ -621,7 +700,7 @@ small {
         letter-spacing: -0.002em;
         /* Grey / 200 */
         color: #707382;
-        padding: 16px 10px 16px 16px;
+        /* padding: 16px 10px 16px 16px; */
     }
 
     .div-title-experience {
@@ -735,7 +814,7 @@ small {
         color: #2D3338;
     }
 
-    .div-sub-title-experience{
+    .div-sub-title-experience {
         width: 240px;
         height: 24px;
     }
