@@ -18,9 +18,11 @@ export class CardService {
 
     }
 
-    registrartarjeta(data:Data){
-        const url = `${url_base}service/inscription-card`;
-        
+    registrartarjeta(data:Data,id:string, serviceId:string){
+        /*const url = `${url_base}service/inscription-card`;*/
+
+        const url = `http://localhost:8081/api/v1/mandatodigital/service/inscripcion/${id}/${serviceId}`;
+
         const httpOptions = {
             headers: new HttpHeaders({
               'Content-Type':  'application/json'

@@ -19,5 +19,5 @@ RUN npm run build
 FROM nginx:1.17.1-alpine
 
 #COPY --from=build-step /app/dist/pat-pass-app /usr/share/nginx/html
-COPY --from=build-step /app/dist/pat-pass-app /usr/share/nginx/htmle
+COPY --from=build-step /app/dist/pat-pass-app /usr/share/nginx/html
 COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf

@@ -5,6 +5,7 @@ import { QrService } from 'src/app/services/qr.service';
 import { PersonalData } from '../models/personal-data/personal-data.model';
 import { Company } from 'src/app/models/company.model';
 import { AmountPayable } from '../models/amount-payable/amount-payable.model';
+import { PaymentModel } from '../models/payment-model/payment-model.model';
 
 @Component({
   selector: 'app-pages',
@@ -99,6 +100,11 @@ export class PagesComponent implements OnInit {
   capturarMonto(monto:AmountPayable){
 
     console.log('Monto Debitar: ',monto);
+  }
+
+  capturarPaymentModel(pm:PaymentModel){
+
+    console.log('Payment Model: ',pm);
   }
 
   onMouseMove(){
