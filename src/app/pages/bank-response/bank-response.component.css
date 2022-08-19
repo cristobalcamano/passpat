@@ -189,10 +189,40 @@ small {
 
 @media(min-width:420px) {
 
+    .tamano13 {
+        height: 13px;
+    }
+
+    .img-pd {
+        top: -25px;
+        width: 81px;
+        height: 24px;
+        right: 0px !important;
+        position: absolute;
+    }
+
     .img-pm {
-        right: -73px !important;
+        right: -47px !important;
         padding: 0px;
     }
+
+    .div-img-check {
+        width: 64px;
+        height: 64px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .img-check {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    } */
+
 
     .contenedor-pd {
         box-sizing: border-box;
@@ -227,6 +257,14 @@ small {
     /* ::ng-deep .myCustomModalClass .modal-body{
         padding-top: 24px !important;
     } */
+
+    .tamano4-16 {
+        height: 4px;
+    }
+
+    .tamano40 {
+        height: 40px;
+    }
 
     .tamano40-32 {
         height: 40px;
@@ -384,14 +422,16 @@ small {
     }
 
     .btn-dejanos-opinion {
+        width: 202px;
+        height: 48px;
         font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-text-align: center;
-letter-spacing: 0.25px;
-color: #6B196B;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #6B196B;
     }
 
 
@@ -468,6 +508,8 @@ color: #6B196B;
     }
 
     .tittle-ended-process {
+        width: 632px;
+        height: 48px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
@@ -640,6 +682,10 @@ color: #6B196B;
         top: 50px;
         width: 100%;
         justify-content: center;
+        padding-top: 6px;
+        padding-left: 6px;
+        padding-bottom: 6px;
+        padding-right: 6px;
     }
 
     .terms-conditions-content {
@@ -654,7 +700,7 @@ color: #6B196B;
         letter-spacing: -0.002em;
         /* Grey / 200 */
         color: #707382;
-        padding: 16px 10px 16px 16px;
+        /* padding: 16px 10px 16px 16px; */
     }
 
     .div-title-experience {
