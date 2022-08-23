@@ -4,7 +4,7 @@
     /* width: 100% !important; */
     width: 960px;
     height: 616px;
-    top: 32px;
+    top: 55px;
     /* Other/Light */
     background: #FFFFFF;
     /* Basic / 300 */
@@ -18,7 +18,7 @@
     width: 100%;
     max-width: 633px;
     position: relative;
-    top: 28px;
+    top: 38px;
 }
 
 .button-mount {
@@ -87,6 +87,7 @@ label {
 }
 
 .btn-pmo-position {
+    font-family: 'Roboto';
     width: 100%;
     float: right;
     max-width: 219px;
@@ -227,6 +228,7 @@ label {
 
 .numero-tarjeta-txt {
     font-size: 12px;
+    font-family: 'Roboto';
 }
 
 
@@ -420,7 +422,7 @@ label {
     }
     .terms-conditions-content {
         padding: 23px 23px 23px 55px;
-        top: 211px;
+        top: 228px;
         position: absolute;
     }
     .arriba-img-tamano {
@@ -444,7 +446,7 @@ label {
         margin-left: 0px !important;
         margin-right: 59px !important;
         position: relative;
-        top: -5px;
+        top: -10px;
     }
     .u847ur-ur74y-9r74 {
         top: 40px !important;
@@ -454,7 +456,7 @@ label {
     }
     .pading-style-0p-320 {
         position: absolute;
-        top: 184px;
+        top: 174px;
         margin: auto;
     }
     .mensaje-cobro-validacion-tarjeta {

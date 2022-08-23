@@ -1,6 +1,7 @@
 import { Component, OnInit,Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { Data } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { PaymentModel } from 'src/app/models/payment-model/payment-model.model';
 
 @Component({
   selector: 'app-payment-model',
@@ -10,8 +11,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class PaymentModelComponent implements OnInit {
 
   @ViewChild('cvv') tagCvv : ElementRef | undefined;
-
   @Output() viewShow: EventEmitter<string> = new EventEmitter();
+  @Output() paymentModel: EventEmitter<PaymentModel> = new EventEmitter();
 
   @Input() img: string = '';
 
@@ -124,10 +125,12 @@ export class PaymentModelComponent implements OnInit {
   }
 
   inscribirTarjeta(){
+    let paymentModelData :PaymentModel =new PaymentModel(
+    this.searchForm.get('tarjeta')?.value,
+    this.searchForm.get('cvv')?.value,
+    this.searchForm.get('fechaV')?.value,true);
     
-    this.viewShow.emit('bankResponse');
-    const data:Data = {
-    }
+    this.paymentModel.emit(paymentModelData);
     this.viewShow.emit('appLoad');
   }
 
