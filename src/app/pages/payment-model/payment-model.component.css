@@ -1,8 +1,8 @@
 .contenedor-pm {
     box-sizing: border-box;
     position: relative;
-    width: 100% !important;
-    max-width: 960px;
+    /* width: 100% !important; */
+    width: 960px;
     height: 616px;
     top: 55px;
     /* Other/Light */
@@ -101,6 +101,10 @@ label {
     height: 24px;
     right: 0px;
     position: absolute;
+}
+
+.tamano13{
+    height: 13px;
 }
 
 .input-error-pd {
@@ -421,8 +425,11 @@ label {
         top: 228px;
         position: absolute;
     }
+    .arriba-img-tamano {
+        height: 11px;
+    }
     .img-pm {
-        right: -78px !important;
+        right: -81px !important;
         padding: 0px;
     }
     .container-terminos-condiciones {

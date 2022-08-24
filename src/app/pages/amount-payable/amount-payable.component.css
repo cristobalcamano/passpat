@@ -66,8 +66,8 @@
 .contenedor-pd {
     box-sizing: border-box;
     position: relative;
-    width: 100% !important;
-    max-width: 960px;
+    /* width: 100% !important; */
+    width: 960px;
     /* height: 546px; */
     /* height: 504px; */
     /* height: 404px; */
@@ -308,12 +308,16 @@ small {
     }
 
     .img-pm {
-        right: -73px !important;
+        right: -81px !important;
         padding: 0px;
     }
 
     .tamano20-24 {
         height: 20px;
+    }
+
+    .tamano13{
+        height: 13px;
     }
 
     .montoClassSeleccionadoPeso {
