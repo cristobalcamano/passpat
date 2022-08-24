@@ -5,6 +5,9 @@
     height: 8px;
     top: 3px;
     width: 100%;
+
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .process {
@@ -49,6 +52,12 @@
 
 .bold-pb {
     font-weight: bolder;
+}
+
+.tamano-progres-bar{
+    width: 960px !important;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 @media(max-width:388px) {

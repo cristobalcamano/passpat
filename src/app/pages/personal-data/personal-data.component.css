@@ -28,6 +28,9 @@
     height: 24px;
     right: 0px !important;
     position: absolute;
+
+    right: -47px !important;
+        padding: 0px;
 }
 
 .process {
@@ -49,8 +52,8 @@
 .contenedor-pd {
     box-sizing: border-box;
     position: relative;
-    width: 100% !important;
-    max-width: 960px;
+    /* width: 100% !important; */
+    width: 960px;
     height: 496px;
     top: 45px;
     /* Other/Light */
