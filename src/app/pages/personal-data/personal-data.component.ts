@@ -20,13 +20,14 @@ export class PersonalDataComponent implements OnInit {
   createformGroup(){
     return new FormGroup({
       nombre: new FormControl('', [Validators.required, Validators.minLength(6), Validators.pattern(/^[a-zA-Z]{1,12}\s([a-zA-Z\s]{1,50})$/i)]),
-      rut: new FormControl('', [Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern(/^([1-9]{9}-\d)+$/)]),
+      rut: new FormControl('', [Validators.required, Validators.minLength(9), Validators.maxLength(10), Validators.pattern(/^([1-9]{9,10})+$/)]),
       correo: new FormControl('', [Validators.required, Validators.email, Validators.pattern(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i)]),
       telefono: new FormControl('', [Validators.required, Validators.minLength(12), Validators.maxLength(18), Validators.pattern(/^(\+\s[1-9]{3}\s[1-9]{8,12})+$/)])
     });
   }
 
   rutValidate = '';
+  rutValidateFormatK = false;
   telefonoValidate = '';
   get nombre() { return this.searchForm.get('nombre'); }
   get rut() { return this.searchForm.get('rut'); }
@@ -58,12 +59,13 @@ export class PersonalDataComponent implements OnInit {
   validateRut(){
     
     //this.rut?.value
-        if(this.rutValidate.length == 8 && this.searchForm.get('rut')?.value.length == 9){
-          this.searchForm.controls['rut'].setValue(this.searchForm.get('rut')?.value+'-');
-        } else if(this.rutValidate.length == 10 && this.searchForm.get('rut')?.value.length == 9){
-          this.searchForm.controls['rut'].setValue(this.searchForm.get('rut')?.value.substring(0,8));
-        }
+        //if(this.rutValidate.length == 6 && this.searchForm.get('rut')?.value.length == 7){
+        //  this.searchForm.controls['rut'].setValue(this.searchForm.get('rut')?.value+'-');
+        //} else if(this.rutValidate.length == 8 && this.searchForm.get('rut')?.value.length == 7){
+        //  this.searchForm.controls['rut'].setValue(this.searchForm.get('rut')?.value.substring(0,6));
+        //}
         this.rutValidate = this.searchForm.get('rut')?.value;
+        if(this.searchForm.get('rut')?.value.length > 8){this.validarRut()}
       }
 
     validateTelefono(){
@@ -83,5 +85,42 @@ export class PersonalDataComponent implements OnInit {
 
     this.telefonoValidate = this.searchForm.get('telefono')?.value;
   }
+
+  n_dv = 0;
+  getDV(){
+    let suma = 0;
+    if(this.searchForm.get('rut')?.value.length == 9){
+      var nuevo_numero = this.searchForm.get('rut')?.value.toString().substring(0,7).split("");
+    } else {
+      var nuevo_numero = this.searchForm.get('rut')?.value.toString().substring(0,8).split("");
+    }
+    
+    for(let i=0,j=2; i < nuevo_numero.length; i++, ((j==7) ? j=2 : j++)) {
+      if(nuevo_numero[nuevo_numero.length-(i+1)] != '-' && nuevo_numero[nuevo_numero.length-(i+1)] != 'k'){
+        
+            suma += (parseInt(nuevo_numero[nuevo_numero.length-(i+1)]) * j); 
+        
+      }
+    }
+    this.n_dv = 11 - (suma % 11);
+    
+    return ((this.n_dv == 11) ? 0 : ((this.n_dv == 10) ? "K" : this.n_dv));
+}
+
+  validarRut() {
+    if(this.searchForm.get('rut')?.value.length == 9){
+      var rutValidator = this.searchForm.get('rut')?.value.toString().substring(8,9);
+    } else {
+      var rutValidator = this.searchForm.get('rut')?.value.toString().substring(9,10);
+    }
+
+    if(this.getDV().toString().toUpperCase() === rutValidator.toString().toUpperCase()){
+      this.rutValidateFormatK = true;
+    } else {
+      this.rutValidateFormatK = false;
+    
+    }
+    
+}
   
 }
