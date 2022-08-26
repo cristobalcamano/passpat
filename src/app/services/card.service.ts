@@ -5,6 +5,9 @@ import { Router } from '@angular/router';
 import { catchError, throwError } from 'rxjs';
 import { Company } from 'src/app/models/company.model';
 import { Data } from 'src/app/models/data.model';
+import { Inscripcion } from '../models/inscripcion.model';
+import { InscripcionTarjeta } from '../models/inscripcion-tarjeta/inscripcion.request.model';
+import { DataResponseInscriptionCard } from '../models/inscripcion-tarjeta/response-inscription-card/data-response-inscription-card.model';
 
 const url_base = environment.base_url;
 
@@ -18,7 +21,7 @@ export class CardService {
 
     }
 
-    registrartarjeta(data:Data,id:string, serviceId:string){
+    registrartarjeta(data:InscripcionTarjeta ,id:string, serviceId:string){
         /*const url = `${url_base}service/inscription-card`;*/
 
         const url = `http://localhost:8081/api/v1/mandatodigital/service/inscripcion/${id}/${serviceId}`;
@@ -28,7 +31,7 @@ export class CardService {
               'Content-Type':  'application/json'
             })
           };
-        return this.http.post<Company>(url,data,httpOptions)
+        return this.http.post<DataResponseInscriptionCard>(url,data,httpOptions)
         .pipe(catchError( e =>{
             return throwError(e);
         }));

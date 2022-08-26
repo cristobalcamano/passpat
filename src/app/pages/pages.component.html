@@ -12,10 +12,10 @@
             <app-personal-data *ngIf="personalData" (dataPersonal)="capturarData($event)" [img]="companyO.imagen" (viewShow)="content($event)"></app-personal-data>
             <app-amount-payable *ngIf="amountPayable" (montoDebitar)="capturarMonto($event)" [img]="companyO.imagen" [montoPesos]="companyO.presupuestoPesos" [montoUF]="companyO.presupuestoUF" [monedaPeso]="companyO.tipoDeMonedaPeso" [monedaUF]="companyO.tipoDeMonedaUF"
                 [montoMaximoPeso]="companyO.montoMaximoPeso" [montoMaximoUF]="companyO.montoMaximoUF" (viewShow)="content($event)"></app-amount-payable>
-            <app-payment-model *ngIf="paymentModel" (viewShow)="content($event)" [img]="companyO.imagen"></app-payment-model>
+            <app-payment-model *ngIf="paymentModel" (paymentModel)="capturarPaymentModel($event)" (viewShow)="content($event)" [img]="companyO.imagen"></app-payment-model>
             <app-payment-method *ngIf="paymentMethod" (viewShow)="content($event)"></app-payment-method>
-            <div (document:mousemove)="onMouseMove()" id="box">
-                <app-load *ngIf="appLoad" (viewShow)="content($event)"></app-load>
+            <div id="box">
+                <app-load *ngIf="appLoad" (viewShow)="content($event)" [inscripcion]="inscripcionTarjeta"></app-load>
             </div>
 
             <!--            <app-bank-response *ngIf="appBankResponse" [img]="companyO.imagen"></app-bank-response>-->

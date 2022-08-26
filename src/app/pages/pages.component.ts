@@ -6,6 +6,7 @@ import { PersonalData } from '../models/personal-data/personal-data.model';
 import { Company } from 'src/app/models/company.model';
 import { AmountPayable } from '../models/amount-payable/amount-payable.model';
 import { PaymentModel } from '../models/payment-model/payment-model.model';
+import { InscripcionTarjeta } from '../models/inscripcion-tarjeta/inscripcion.request.model';
 
 @Component({
   selector: 'app-pages',
@@ -24,6 +25,9 @@ export class PagesComponent implements OnInit {
   appLoad:  boolean = false;
   bankResponse: boolean = false;
   appBankResponse:boolean = false;
+
+  inscripcionTarjeta:InscripcionTarjeta = new InscripcionTarjeta(new PersonalData('','','',''),
+  new AmountPayable('',''), new PaymentModel('','','',true));
 
   id = '';
   serviceId = '';
@@ -85,6 +89,8 @@ export class PagesComponent implements OnInit {
         this.bankResponse = true;
       break;
       case 'appLoad':
+        this.inscripcionTarjeta = new InscripcionTarjeta(this.personal,
+        this.monto, this.paymentPayable);
         this.appLoad = true;
       break;
       case 'appBankResponse':
@@ -93,31 +99,22 @@ export class PagesComponent implements OnInit {
     }
   }
 
+  personal:PersonalData= new PersonalData('','','','');
+  paymentPayable:PaymentModel= new PaymentModel('','','',false);
+  monto:AmountPayable= new AmountPayable('','');
   capturarData(personal:PersonalData){
-
+    this.personal = personal;
     console.log('Persona: ',personal);
   }
 
   capturarMonto(monto:AmountPayable){
-
+    this.monto = monto;
     console.log('Monto Debitar: ',monto);
   }
 
   capturarPaymentModel(pm:PaymentModel){
-
+    this.paymentPayable = pm;
     console.log('Payment Model: ',pm);
-  }
-
-  onMouseMove(){
-    if(this.appLoad){
-      
-        this.appLoad = false;
-        this.appBankResponse = true;
-        this.view = 'appBankResponse';
-
-      
-    }
-    
   }
 
 }
