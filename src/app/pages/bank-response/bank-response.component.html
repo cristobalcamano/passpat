@@ -9,7 +9,7 @@
             <br>
             <div class="row justify-content-center">
                 <div class="div-img-check text-center">
-                    <img src="../../../assets/img/Check.svg"  class="img-check">
+                    <img src="../../../assets/img/Check.svg" class="img-check">
                 </div>
             </div>
             <div class="tamano8-4"></div>
@@ -70,8 +70,7 @@
             <div style="height: 4px;"></div>
             <div class="row justify-content-center ">
                 <div class="col-12 text-center">
-                    <button class="center btn-pd btn-dejanos-opinion" style="color: #6B196B; padding: 15px;"
-                        class="btn-back btn-dejanos-opinion" (click)="open(content)">Déjanos tu opinión
+                    <button class="center btn-pd btn-dejanos-opinion" style="color: #6B196B; padding: 15px;" class="btn-back btn-dejanos-opinion" (click)="open(content)">Déjanos tu opinión
                     </button>
                 </div>
             </div>
@@ -86,8 +85,7 @@
             <div class="tamano24-8"></div>
             <div class="row justify-content-end">
                 <div class="div-btn-close">
-                    <button type="button" class="btn-close" aria-label="Close"
-                        (click)="modal.dismiss('Cross click')"></button>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
                 </div>
                 <!-- <div class="col-md-6"></div>
                 <div class="col-md-1">
@@ -173,16 +171,13 @@
             <div class="row justify-content-center">
                 <div class="div-text-area-exp text-center ">
                     <!-- <textarea name="" id="" cols="50" rows="10" placeholder="Encuentro que el proceso fue rÃ¡pido y seguro :)"></textarea> -->
-                    <textarea class="text-area-exp" name="" id="text-opinion"
-                    [ngClass]="{'disabled-element':selectCalification == ''}"
-                        placeholder="Encuentro que el proceso fue rápido y seguro :)"></textarea>
+                    <textarea class="text-area-exp" name="" id="text-opinion" [ngClass]="{'disabled-element':selectCalification == ''}" placeholder="Encuentro que el proceso fue rápido y seguro :)"></textarea>
                 </div>
             </div>
             <div style="height: 40px;"></div>
             <div class="row justify-content-center">
                 <div class="col-md-5 text-center">
-                    <button *ngIf="selectCalification != ''" class="btn-enviar-exp "
-                        (click)="openThankyou(thankyou, content)">Enviar</button>
+                    <button *ngIf="selectCalification != ''" class="btn-enviar-exp " (click)="openThankyou(thankyou, content)">Enviar</button>
                     <button *ngIf="selectCalification == ''" class="btn-enviar-exp-disabled " disabled>Enviar</button>
                 </div>
             </div>
@@ -195,8 +190,7 @@
         <div class="modal-body">
             <div class="row justify-content-end">
                 <div class="col-md-1">
-                    <button type="button" class="btn-close" aria-label="Close"
-                        (click)="modal.dismiss('Cross click')"></button>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
                 </div>
             </div>
             <div class="row">
@@ -232,7 +226,7 @@
     </ng-template>
 
 
-    <ng-template #endedProcess let-modal>
+    <ng-template #endedProcess let-modal style="margin-left: auto; margin-right: auto;">
         <div class="modal-body">
             <div class="row">
                 <div class="col-md-1">
@@ -240,8 +234,7 @@
                 <div class="col-md-10">
                 </div>
                 <div class="col-md-1">
-                    <button type="button" class="btn-close" aria-label="Close"
-                        (click)="modal.dismiss('Cross click')"></button>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
                 </div>
             </div>
             <div style="height: 16px;">
