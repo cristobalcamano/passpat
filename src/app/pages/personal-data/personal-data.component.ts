@@ -20,7 +20,7 @@ export class PersonalDataComponent implements OnInit {
   createformGroup(){
     return new FormGroup({
       nombre: new FormControl('', [Validators.required, Validators.minLength(6), Validators.pattern(/^[a-zA-Z]{1,12}\s([a-zA-Z\s]{1,50})$/i)]),
-      rut: new FormControl('', [Validators.required, Validators.minLength(9), Validators.maxLength(10), Validators.pattern(/^([1-9]{7,8}\-[1-9]{1})+$/)]),
+      rut: new FormControl('', [Validators.required, Validators.minLength(9), Validators.maxLength(10), Validators.pattern(/^([1-9]{7,8}\-\w{1})+$/)]),
       correo: new FormControl('', [Validators.required, Validators.email, Validators.pattern(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i)]),
       telefono: new FormControl('', [Validators.required, Validators.minLength(12), Validators.maxLength(15), Validators.pattern(/^(\+\s56[1-9]{1}\s[1-9]{8,9})+$/)])
     });
