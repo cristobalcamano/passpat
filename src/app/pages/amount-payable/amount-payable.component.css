@@ -5,6 +5,11 @@
     position: absolute;
 }
 
+.modal-dialog {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .img-pm {
     width: 81px;
     height: 24px;
@@ -66,8 +71,8 @@
 .contenedor-pd {
     box-sizing: border-box;
     position: relative;
-    /* width: 100% !important; */
-    width: 960px;
+    width: 100% !important;
+    max-width: 960px;
     /* height: 546px; */
     /* height: 504px; */
     /* height: 404px; */
@@ -93,7 +98,6 @@ label {
     font-size: 12px;
 }
 
-
 @media(max-width:720px) {
     .contenedor-page {
         width: 100%;
@@ -108,6 +112,7 @@ label {
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
+        box-shadow: none;
     }
 }
 
@@ -184,8 +189,6 @@ small {
 } */
 
 
-
-
 /*Fin convert readio botton en botton*/
 
 
@@ -234,12 +237,12 @@ small {
     color: white !important;
 } */
 
+@media(min-width:721px) {
 
-
-
-
-
-
+    .tamano10 {
+        height: 10px;
+    }
+}
 
 @media(min-width:420px) {
 
@@ -298,7 +301,6 @@ small {
         height: 620px !important;
     }
 
-
     .contenedor-pd {
         top: 32px;
     }
@@ -316,7 +318,7 @@ small {
         height: 20px;
     }
 
-    .tamano13{
+    .tamano13 {
         height: 13px;
     }
 
@@ -344,7 +346,6 @@ small {
         color: #FCFDFE;
     }
 
-    
     .text-tiempo {
         font-family: 'Roboto';
         font-style: normal;
@@ -354,8 +355,9 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
         display: flex;
-        width: 533px;
-height: 16px;
+        width: 100%;
+        max-width: 533px;
+        height: 16px;
     }
 
     .div-text-tiempo {
@@ -368,17 +370,16 @@ height: 16px;
         display: flex;
     }
 
-
     .div-aux-text-tiempo {
-        width: 632px;
+        width: 100% !important;
+        max-width: 632px !important;
         height: 48px;
         text-align: center;
         align-items: center;
         display: flex;
         padding: 16px;
-gap: 8px;
+        gap: 8px;
     }
-
 
     .text-descripcion-digitar-monto {
         font-family: 'Roboto';
@@ -445,7 +446,6 @@ gap: 8px;
         color: #730397 !important;
         /* margin-top: 45px !important; */
         position: relative;
-        
     }
 
     .button input[type="radio"]:checked+label {
@@ -510,8 +510,6 @@ gap: 8px;
         color: #2D3338;
     }
 
-
-
     .select-tipo-monto {
         font-family: 'Roboto';
         font-style: normal;
@@ -564,12 +562,12 @@ gap: 8px;
         color: #828EA5;
     }
 
-    .div-valor-dia-uf{
+    .div-valor-dia-uf {
         width: 632px;
         height: 16px;
     }
 
-    .valor-dia-uf{
+    .valor-dia-uf {
         width: 164.16px;
         height: 16px;
         font-family: 'Roboto';
@@ -581,10 +579,19 @@ gap: 8px;
         color: #707382;
         position: absolute;
     }
+
+    .label-montos {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+    }
 }
 
 @media(max-width:419px) {
-
     .img-pm {
         left: 0px !important;
         padding-left: 0px;
@@ -635,7 +642,6 @@ gap: 8px;
     }
 
     .text-tiempo {
-
         /* width: 216px !important;
         height: 48px !important; */
         font-family: 'Roboto';
@@ -645,11 +651,11 @@ gap: 8px;
         line-height: 16px;
         letter-spacing: 0.25px;
         color: #2D3338;
-
     }
 
     .div-aux-text-tiempo {
-        width: 216px !important;
+        width: 100% !important;
+        max-width: 216px !important;
         height: 48px !important;
     }
 
@@ -715,8 +721,6 @@ gap: 8px;
         width: 81px;
         height: 40px;
         border-radius: 4px;
-
-
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
@@ -877,12 +881,12 @@ gap: 8px;
         color: #828EA5;
     }
 
-    .div-valor-dia-uf{
+    .div-valor-dia-uf {
         width: 272px;
         height: 16px;
     }
 
-    .valor-dia-uf{
+    .valor-dia-uf {
         width: 163px;
         height: 16px;
         font-family: 'Roboto';
@@ -893,5 +897,15 @@ gap: 8px;
         letter-spacing: 0.25px;
         color: #707382;
         position: absolute;
+    }
+
+    .label-montos {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
     }
 }

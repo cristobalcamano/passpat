@@ -1,8 +1,8 @@
 .contenedor-pm {
     box-sizing: border-box;
     position: relative;
-    /* width: 100% !important; */
-    width: 960px;
+    width: 100% !important;
+    max-width: 960px;
     height: 616px;
     top: 55px;
     /* Other/Light */
@@ -103,7 +103,7 @@ label {
     position: absolute;
 }
 
-.tamano13{
+.tamano13 {
     height: 13px;
 }
 

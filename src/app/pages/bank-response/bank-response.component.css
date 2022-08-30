@@ -5,6 +5,21 @@
     position: absolute;
 } */
 
+.btn-volver-al-inicio {
+    width: 144px;
+    height: 40px;
+    background: #6B196B;
+    border: 1px solid #6B196B;
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #FFFFFF;
+}
 
 .img-pm {
     width: 81px;
@@ -12,7 +27,6 @@
     right: 0px;
     position: absolute;
 }
-
 
 .process {
     width: 95%;
@@ -30,13 +44,11 @@
     background-color: #00C4B4;
 }
 
-
-
 .contenedor-pd-second {
     width: 100%;
     max-width: 700px;
     position: relative;
-    top: 40px;
+    top: 5px;
 }
 
 .disabled-element {
@@ -63,15 +75,14 @@ label {
         width: 100%;
         max-width: 9600px;
     }
-
     /* .img-pd {
         left: 0px !important;
         padding: 0px;
     } */
-
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
+        box-shadow: none;
     }
 }
 
@@ -100,18 +111,11 @@ small {
     color: white !important;
 }
 
-
-
-
 .bd-example {
     padding: 1.5rem !important;
     margin-right: 0 !important;
     margin-left: 0 !important;
     border-width: 0.2rem !important;
-
-
-
-
     position: relative !important;
     padding: 1rem !important;
     margin: 1rem -15px 0 !important;
@@ -119,19 +123,13 @@ small {
     border-width: 0.2rem 0 0 !important;
 }
 
-
-
 .titulo-info {
     /* Monto suscrito */
-
-
     width: 280px;
     height: 24px;
     font-size: 14px;
     color: #2D3338;
-
     font-weight: bold;
-
 }
 
 
@@ -143,6 +141,8 @@ small {
     border-radius: 8px !important;
 }
 */
+
+
 /* .title-experience {
 
     font-family: 'Roboto';
@@ -167,19 +167,26 @@ small {
 
 
 /*INICIO CONVERT IMG A RADIO*/
+
+
 /* HIDE RADIO */
+
 [type=radio] {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
+
 /* IMAGE STYLES */
+
 [type=radio]+img {
     cursor: pointer;
 }
 
+
 /* CHECKED STYLES */
+
 [type=radio]:checked+img {
     /* outline: 2px solid #f00; */
 }
@@ -187,12 +194,18 @@ small {
 
 /*FIN CONVERT IMG A RADIO*/
 
-@media(min-width:420px) {
+@media(min-width:721px) {
 
+    .tamano10{
+        height: 10px;
+    }
+}
+
+
+@media(min-width:420px) {
     .tamano13 {
         height: 13px;
     }
-
     .img-pd {
         top: -25px;
         width: 81px;
@@ -200,35 +213,29 @@ small {
         right: 0px !important;
         position: absolute;
     }
-
     .img-pm {
         right: -47px !important;
         padding: 0px;
     }
-
     .div-img-check {
         width: 64px;
         height: 64px;
         padding-left: 0px;
         padding-right: 0px;
-
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     /* .img-check {
         margin-left: auto;
         margin-right: auto;
         display: block;
     } */
-
-
     .contenedor-pd {
         box-sizing: border-box;
         position: relative;
-        /* width: 100% !important; */
-        width: 960px !important;
+        width: 100% !important;
+        max-width: 960px !important;
         height: 754px !important;
         top: 32px;
         /* Other/Light */
@@ -239,7 +246,6 @@ small {
         box-shadow: 0px 16px 64px rgba(170, 174, 187, 0.2);
         border-radius: 16px;
     }
-
     .btn-close {
         width: 24px;
         height: 24px;
@@ -249,59 +255,45 @@ small {
         padding-top: 0px;
         float: right;
     }
-
     .div-btn-close {
         height: 24px;
     }
-
     /* ::ng-deep .myCustomModalClass .modal-body{
         padding-top: 24px !important;
     } */
-
     .tamano4-16 {
         height: 4px;
     }
-
     .tamano40 {
         height: 40px;
     }
-
     .tamano40-32 {
         height: 40px;
     }
-
     .tamano32-24 {
         height: 32px;
     }
-
     .tamano32-16 {
         height: 32px;
     }
-
     .tamano24 {
         height: 8px;
     }
-
     .tamano24-8 {
         height: 8px;
     }
-
     .tamano16 {
         height: 16px;
     }
-
     .tamano16-8 {
         height: 16px;
     }
-
     .tamano416 {
         height: 4px;
     }
-
     .tamano8-4 {
         height: 8px;
     }
-
     .title-experience {
         font-family: 'Roboto';
         font-style: normal;
@@ -311,13 +303,11 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .space-emoji {
         width: 32px;
         height: 40px;
         float: left
     }
-
     .sub-title-experience {
         font-family: 'Roboto';
         font-style: normal;
@@ -328,20 +318,17 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .table-response {
         margin-right: 0px;
         margin-left: 22px;
         width: 632px;
         height: 264px;
     }
-
     .table-table-response {
         border: white 9px solid;
         margin-bottom: 0px;
         width: 578px;
     }
-
     .td-table-response-title {
         font-family: 'Roboto';
         font-style: normal;
@@ -357,9 +344,7 @@ small {
         width: 280px !important;
         height: 48px !important;
     }
-
     .td-table-response {
-
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -375,14 +360,12 @@ small {
         width: 280px !important;
         height: 48px !important;
     }
-
     /* .table-table-response {
         width: 632px;
         height: 264px;
         border: 1px solid #E7EBF3;
         border-radius: 4px;
     } */
-
     /* .div-table-table-response{
         width: 632px;
         height: 264px;
@@ -408,16 +391,13 @@ small {
         height: 48px;
     }
  */
-
-    .div-descargar-comprobante{
+    .div-descargar-comprobante {
         width: 242px;
         height: 53px;
-
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     .btn-descargar-comprobante {
         font-family: 'Roboto';
         font-style: normal;
@@ -427,9 +407,7 @@ small {
         text-align: center;
         letter-spacing: 0.25px;
         color: #FFFFFF;
-
     }
-
     .btn-dejanos-opinion {
         width: 202px;
         height: 48px;
@@ -442,16 +420,12 @@ small {
         letter-spacing: 0.25px;
         color: #6B196B;
     }
-
-
     .box-text-response {
         width: 632px;
         height: 48px;
         left: 404px;
         top: 733px;
-
     }
-
     .text-response {
         font-family: 'Roboto';
         font-style: normal;
@@ -461,7 +435,6 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .title-response {
         font-family: 'Roboto';
         font-style: normal;
@@ -469,30 +442,22 @@ small {
         font-size: 36px;
         line-height: 48px;
         /* identical to box height, or 133% */
-
         text-align: center;
         letter-spacing: 0.25px;
-
         /* Grey / 300 Default */
-
         color: #2D3338;
     }
-
     .table-response {
         margin-right: 0px;
         margin-left: 22px;
     }
-
-    ::ng-deep .modalClassEndedProcess .modal-dialog {
+     ::ng-deep .modalClassEndedProcess .modal-dialog {
         max-width: 633px;
         max-height: 400px;
-
         /* Other/Light */
-
         background: #FFFFFF;
         border-radius: 8px;
     }
-
     .text-ended-process {
         font-family: 'Roboto';
         font-style: normal;
@@ -500,22 +465,17 @@ small {
         font-size: 16px;
         line-height: 24px;
         /* or 150% */
-
         text-align: center;
         letter-spacing: 0.25px;
-
         /* Grey / 300 Default */
-
         color: #2D3338;
     }
-
     .div-text-ended-process {
         width: 467px;
         height: 72px;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-
     .tittle-ended-process {
         width: 632px;
         height: 48px;
@@ -525,20 +485,15 @@ small {
         font-size: 20px;
         line-height: 32px;
         /* identical to box height, or 160% */
-
         text-align: center;
         letter-spacing: 0.25px;
-
         /* Grey / 300 Default */
-
         color: #2D3338;
     }
-
     .div-tittle-thank-opinion {
         width: 467px;
         height: 32px;
     }
-
     .tittle-thank-opinion {
         width: 467px;
         height: 32pX;
@@ -551,7 +506,6 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .text-thank-opinion {
         font-family: 'Roboto';
         font-style: normal;
@@ -562,46 +516,38 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .div-text-thank-opinion {
         width: 467px !important;
         height: 72px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-
-    ::ng-deep .modalClassThank .modal-content {
+     ::ng-deep .modalClassThank .modal-content {
         width: 633px !important;
         height: 391px !important;
     }
-
-    ::ng-deep .modalClassThank .modal-dialog {
+     ::ng-deep .modalClassThank .modal-dialog {
         max-width: 633px !important;
         height: 391px !important;
     }
-
-    ::ng-deep .myCustomModalClass .modal-dialog {
+     ::ng-deep .myCustomModalClass .modal-dialog {
         width: 633px !important;
         height: 590px !important;
         max-width: 100% !important;
     }
-
-    ::ng-deep .myCustomModalClass .modal-content {
+     ::ng-deep .myCustomModalClass .modal-content {
         width: 633px !important;
         height: 590px !important;
     }
-
     /* ::ng-deep .modalClassEndedProcess .modal-dialog {
 
         width: 633px !important;
         height: 400px !important;
     } */
-
-    ::ng-deep .modalClassEndedProcess .modal-content {
+     ::ng-deep .modalClassEndedProcess .modal-content {
         width: 633px !important;
         height: 400px !important;
     }
-
     .desc-opinion {
         font-family: 'Roboto';
         font-style: normal;
@@ -612,14 +558,12 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .div-desc-opinion {
         width: 466px !important;
         height: 72px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-
     .btn-enviar-exp {
         width: 110px;
         height: 48px;
@@ -634,9 +578,7 @@ small {
         text-align: center;
         letter-spacing: 0.25px;
         color: #FFFFFF;
-
     }
-
     .btn-enviar-exp-disabled {
         width: 110px;
         height: 48px;
@@ -652,7 +594,6 @@ small {
         letter-spacing: 0.25px;
         color: #A0AFCA;
     }
-
     .text-area-exp {
         width: 469px;
         height: 105px;
@@ -660,32 +601,13 @@ small {
         border: 1px solid #C9D0E4;
         border-radius: 4px;
     }
-
     .div-text-area-exp {
         width: 469px;
         height: 105px;
     }
-
-    .btn-volver-al-inicio {
-        width: 144px;
-        height: 40px;
-        background: #6B196B;
-        border: 1px solid #6B196B;
-        border-radius: 4px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
-        text-align: center;
-        letter-spacing: 0.25px;
-        color: #FFFFFF;
-    }
-
     .img-terms {
         padding: 10px 10px 10px 0px;
     }
-
     .terms-conditions-content {
         position: relative;
         top: 50px;
@@ -696,7 +618,6 @@ small {
         padding-bottom: 6px;
         padding-right: 6px;
     }
-
     .terms-conditions-content {
         font-family: 'Roboto';
         font-style: normal;
@@ -711,20 +632,16 @@ small {
         color: #707382;
         /* padding: 16px 10px 16px 16px; */
     }
-
     .div-title-experience {
         width: 466px;
         height: 32px;
         padding-right: 0px;
         padding-left: 0px;
     }
-
     .div-sub-title-experience {
         width: 465px;
         height: 32px;
     }
-
-
 }
 
 @media(max-width:419px) {
@@ -737,51 +654,39 @@ small {
         padding-top: 0px;
         float: right;
     }
-
     .div-btn-close {
         height: 18px;
     }
-
     /* .modal-body{
         padding-top: 16px!important;
     } */
-
     .tamano40-32 {
         height: 32px;
     }
-
     .tamano32-24 {
         height: 24px;
     }
-
     .tamano32-16 {
         height: 16px;
     }
-
     .tamano24-8 {
         height: 8px;
     }
-
     .tamano16-8 {
         height: 8px;
     }
-
     .tamano4-16 {
         height: 16px;
     }
-
     .tamano8-4 {
         height: 4px;
     }
-
     .div-title-experience {
         width: 240px;
         height: 48px;
         padding-right: 0px;
         padding-left: 0px;
     }
-
-
     .title-experience {
         font-family: 'Roboto';
         font-style: normal;
@@ -791,13 +696,11 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .space-emoji {
         width: 8px;
         height: 40px;
         float: left
     }
-
     /* .desc-opinion {
 
         font-family: 'Roboto';
@@ -809,7 +712,6 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     } */
-
     .sub-title-experience {
         width: 240px;
         height: 24px;
@@ -822,28 +724,22 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .div-sub-title-experience {
         width: 240px;
         height: 24px;
     }
-
-
     /* .td-table-response {
         height: 32px;
     } */
-
     .table-response {
         width: 271px;
         height: 208px;
     }
-
     .table-table-response {
         border: white 9px solid;
         margin-bottom: 0px;
         width: 271px;
     }
-
     .td-table-response-title {
         font-family: 'Roboto';
         font-style: normal;
@@ -852,7 +748,6 @@ small {
         line-height: 16px;
         letter-spacing: 0.25px;
         color: #2D3338;
-
         padding-left: 0px;
         padding-bottom: 0px;
         padding-top: 0px;
@@ -860,9 +755,7 @@ small {
         width: 127px !important;
         height: 32px !important;
     }
-
     .td-table-response {
-
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -870,7 +763,6 @@ small {
         line-height: 16px;
         letter-spacing: 0.25px;
         color: #2D3338;
-
         padding-left: 0px;
         padding-bottom: 0px;
         padding-top: 0px;
@@ -879,20 +771,17 @@ small {
         width: 127px !important;
         height: 32px !important;
     }
-
     .box-text-response {
         width: 272px;
         height: 80px;
         left: 24px;
         top: 541px;
     }
-
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
         box-shadow: none;
     }
-
     .title-response {
         font-family: 'Roboto';
         font-style: normal;
@@ -900,25 +789,18 @@ small {
         font-size: 16px;
         line-height: 24px;
         /* identical to box height, or 150% */
-
         text-align: center;
         letter-spacing: 0.25px;
-
         /* Grey / 300 Default */
-
         color: #2D3338;
     }
-
-    ::ng-deep .modalClassEndedProcess .modal-dialog {
+     ::ng-deep .modalClassEndedProcess .modal-dialog {
         max-width: 272px;
         max-height: 352px;
-
         /* Other/Light */
-
         background: #FFFFFF;
         border-radius: 8px;
     }
-
     .tittle-ended-process {
         font-family: 'Roboto';
         font-style: normal;
@@ -926,15 +808,11 @@ small {
         font-size: 16px;
         line-height: 24px;
         /* identical to box height, or 150% */
-
         text-align: center;
         letter-spacing: 0.25px;
-
         /* Grey / 300 Default */
-
         color: #2D3338;
     }
-
     .text-ended-process {
         font-family: 'Roboto';
         font-style: normal;
@@ -942,39 +820,29 @@ small {
         font-size: 12px;
         line-height: 16px;
         /* or 133% */
-
         text-align: center;
         letter-spacing: 0.25px;
-
         /* Grey / 300 Default */
-
         color: #2D3338;
     }
-
-    ::ng-deep .myCustomModalClass .modal-dialog {
+     ::ng-deep .myCustomModalClass .modal-dialog {
         /* max-width: 100px !important;
         max-height: 100px !important; */
-
-        width: 272px !important;
-        height: 504px !important;
-
-    }
-
-    ::ng-deep .myCustomModalClass .modal-content {
         width: 272px !important;
         height: 504px !important;
     }
-
+     ::ng-deep .myCustomModalClass .modal-content {
+        width: 272px !important;
+        height: 504px !important;
+    }
     .img-terms {
         padding: 10px 10px 10px 0px;
     }
-
     .terms-conditions-content {
         position: relative;
         width: 272px;
         height: 64px;
     }
-
     .terms-conditions-content {
         font-family: 'Roboto';
         font-style: normal;
@@ -987,11 +855,9 @@ small {
         color: #707382;
         padding: 16px 10px 16px 16px;
     }
-
     .tamano4-12 {
         height: 12px;
     }
-
     .text-area-exp {
         width: 240px;
         height: 104px;
@@ -999,14 +865,12 @@ small {
         border: 1px solid #C9D0E4;
         border-radius: 4px;
     }
-
     .div-text-area-exp {
         width: 240px;
         height: 104px;
         padding-right: 0px;
         padding-left: 0px;
     }
-
     .btn-enviar-exp {
         width: 240px;
         height: 40px;
@@ -1021,9 +885,7 @@ small {
         text-align: center;
         letter-spacing: 0.25px;
         color: #FFFFFF;
-
     }
-
     .btn-enviar-exp-disabled {
         width: 240px;
         height: 40px;
@@ -1038,16 +900,13 @@ small {
         text-align: center;
         letter-spacing: 0.25px;
         color: #A0AFCA;
-
     }
-
     .div-desc-opinion {
         width: 240px !important;
         height: 48px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-
     .desc-opinion {
         font-family: 'Roboto';
         font-style: normal;
@@ -1058,7 +917,6 @@ small {
         letter-spacing: 0.25px;
         margin-bottom: 0px;
     }
-
 }
 
 #text-opinion {
@@ -1074,6 +932,7 @@ small {
     border-radius: 4px;
     border: 1px solid #E7EBF3;
     font-size: 14px;
+    width: 100%;
     max-width: 632px;
     max-height: 264px;
     left: 404px;
