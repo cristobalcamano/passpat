@@ -48,7 +48,7 @@
     width: 100%;
     max-width: 700px;
     position: relative;
-    top: 40px;
+    top: 5px;
 }
 
 .disabled-element {
@@ -82,6 +82,7 @@ label {
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
+        box-shadow: none;
     }
 }
 
@@ -192,6 +193,14 @@ small {
 
 
 /*FIN CONVERT IMG A RADIO*/
+
+@media(min-width:721px) {
+
+    .tamano10{
+        height: 10px;
+    }
+}
+
 
 @media(min-width:420px) {
     .tamano13 {

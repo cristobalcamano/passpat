@@ -1,3 +1,4 @@
+<div class="tamano10"></div>
 <div class="tamano13"></div>
 <div class="contenedor-pd center" 
     [ngClass]="{
@@ -89,13 +90,13 @@
                                     [ngClass]="{'select-monto-unico':montoPesos.length==1}" 
                                     [checked]="{'true':montoPesos.length==1}" 
                                     name="montoSeleccionadoPeso" id="{{i}}" [value]="valor" checked="true" />
-                                <label class="bttn btn-default form-control" for="{{i}}">${{valor}}</label>
+                                <label class="bttn btn-default form-control label-montos" for="{{i}}">${{valor}}</label>
                             </div>
                             <div class="btn-monto-otro button col-md-3" *ngIf="montoPesos.length > 1">
                                 <input type="radio" (change)="valorSeleccionado( $event )"
                                     class="montoClassSeleccionadoPesoOtroMonto" formControlName="montoSeleccionadoPeso"
                                     name="montoSeleccionadoPeso" value="otro-monto" id="{{montoPesos.length}}" />
-                                <label class="bttn btn-default form-control" for="{{montoPesos.length}}">Otro
+                                <label class="bttn btn-default form-control label-montos" for="{{montoPesos.length}}">Otro
                                     monto</label>
                             </div>
                         </div>
@@ -108,13 +109,13 @@
                                     class="montoClassSeleccionadoUF" formControlName="montoSeleccionadoUF"
                                     [ngClass]="{'select-monto-unico':montoUF.length==1}"
                                     name="montoSeleccionadoUF" id="{{i*5}}" [value]="valor" />
-                                <label class="bttn btn-default form-control" for="{{i*5}}">{{valor}} UF</label>
+                                <label class="bttn btn-default form-control label-montos" for="{{i*5}}">{{valor}} UF</label>
                             </div>
                             <div class="btn-monto-otro button col-3" *ngIf="montoUF.length > 1">
                                 <input type="radio" id="{{montoUF.length*5}}" (change)="valorSeleccionado( $event )"
                                     class="montoClassSeleccionadoUFOtroMonto" formControlName="montoSeleccionadoUF"
                                     name="montoSeleccionadoUF" value="otro-monto" />
-                                <label class="bttn btn-default form-control" for="{{montoUF.length*5}}">Otro
+                                <label class="bttn btn-default form-control label-montos" for="{{montoUF.length*5}}">Otro
                                     monto</label>
                             </div>
                             <div style="height: 8px;"></div>

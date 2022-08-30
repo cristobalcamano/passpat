@@ -110,6 +110,7 @@ label {
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
+        box-shadow: none;
     }
 }
 
@@ -234,6 +235,13 @@ small {
     color: white !important;
 } */
 
+@media(min-width:721px) {
+
+    .tamano10 {
+        height: 10px;
+    }
+}
+
 @media(min-width:420px) {
     /*clase para el height 404px, pantalla con un solo monto (PESOS)*/
     .contenedor-pd-h404 {
@@ -292,6 +300,7 @@ small {
     .tamano20-24 {
         height: 20px;
     }
+
     .tamano13 {
         height: 13px;
     }
@@ -317,6 +326,7 @@ small {
         letter-spacing: 0.25px;
         color: #FCFDFE;
     }
+    
     .text-tiempo {
         font-family: 'Roboto';
         font-style: normal;
@@ -339,6 +349,7 @@ small {
         align-items: center;
         display: flex;
     }
+
     .div-aux-text-tiempo {
         width: 100% !important;
         max-width: 632px !important;
@@ -349,6 +360,7 @@ small {
         padding: 16px;
         gap: 8px;
     }
+
     .text-descripcion-digitar-monto {
         font-family: 'Roboto';
         font-style: normal;
@@ -467,6 +479,7 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .select-tipo-monto {
         font-family: 'Roboto';
         font-style: normal;
@@ -513,10 +526,12 @@ small {
         letter-spacing: 0.25px;
         color: #828EA5;
     }
+
     .div-valor-dia-uf {
         width: 632px;
         height: 16px;
     }
+
     .valor-dia-uf {
         width: 164.16px;
         height: 16px;
@@ -528,6 +543,16 @@ small {
         letter-spacing: 0.25px;
         color: #707382;
         position: absolute;
+    }
+
+    .label-montos {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
     }
 }
 
@@ -786,10 +811,12 @@ small {
         letter-spacing: 0.25px;
         color: #828EA5;
     }
+
     .div-valor-dia-uf {
         width: 272px;
         height: 16px;
     }
+
     .valor-dia-uf {
         width: 163px;
         height: 16px;
@@ -801,5 +828,15 @@ small {
         letter-spacing: 0.25px;
         color: #707382;
         position: absolute;
+    }
+
+    .label-montos {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
     }
 }
