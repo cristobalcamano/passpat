@@ -48,6 +48,9 @@
     margin-left: auto !important;
     margin-right: auto !important;
     display: block !important;
+    background-color: #730397 !important;
+    border: white 1px solid !important;
+    color: white !important;
 }
 
 .btn-width {
