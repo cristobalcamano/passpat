@@ -103,12 +103,10 @@ label {
         width: 100%;
         max-width: 9600px;
     }
-
     .img-pd {
         left: 0px !important;
         padding: 0px;
     }
-
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
@@ -245,75 +243,60 @@ small {
 }
 
 @media(min-width:420px) {
-
     /*clase para el height 404px, pantalla con un solo monto (PESOS)*/
     .contenedor-pd-h404 {
         height: 404px;
     }
-
     /*clase para el height 472px, pantalla monto digitado (PESOS)*/
     .contenedor-pd-h472 {
         height: 472px;
     }
-
     /*clase para el height 416px, pantalla varios montos (PESOS)*/
     .contenedor-pd-h416 {
         height: 416px;
     }
-
     /*clase para el height 506px, pantalla varios montos, seleccionando otro monto (PESOS)*/
     .contenedor-pd-h506 {
         height: 506px !important;
     }
-
     /*clase para el height 440px, pantalla varios montos (UF)*/
     .contenedor-pd-h440 {
         height: 440px;
     }
-
     /*clase para el height 528px, pantalla varios montos, seleccionando otro monto (UF)*/
     .contenedor-pd-h528 {
         height: 528px !important;
     }
-
     /*clase para el height 436px, pantalla selec tipo monto, sin seleccion*/
     .contenedor-pd-h436 {
         height: 436px;
     }
-
     /*clase para el height 504px, pantalla selec tipo monto, seleccion PESOS*/
     .contenedor-pd-h504 {
         height: 504px;
     }
-
     /*clase para el height 532px, pantalla selec tipo monto, seleccion UF*/
     .contenedor-pd-h532 {
         height: 532px;
     }
-
     /*clase para el height 592px, pantalla selec tipo monto, seleccion PESOS y otro monto*/
     .contenedor-pd-h592 {
         height: 592px !important;
     }
-
     /*clase para el height 620px, pantalla selec tipo monto, seleccion UF y otro monto*/
     .contenedor-pd-h620 {
         height: 620px !important;
     }
-
     .contenedor-pd {
         top: 32px;
     }
-
     .contenedor-pd-second {
         top: 40px;
     }
-
     .img-pm {
         right: -81px !important;
         padding: 0px;
     }
-
     .tamano20-24 {
         height: 20px;
     }
@@ -321,7 +304,6 @@ small {
     .tamano13 {
         height: 13px;
     }
-
     .montoClassSeleccionadoPeso {
         width: 140px;
         height: 32px;
@@ -333,7 +315,6 @@ small {
         letter-spacing: 0.25px;
         color: #FCFDFE;
     }
-
     .montoClassSeleccionadoUF {
         width: 140px;
         height: 32px;
@@ -345,7 +326,7 @@ small {
         letter-spacing: 0.25px;
         color: #FCFDFE;
     }
-
+    
     .text-tiempo {
         font-family: 'Roboto';
         font-style: normal;
@@ -359,7 +340,6 @@ small {
         max-width: 533px;
         height: 16px;
     }
-
     .div-text-tiempo {
         width: 632px;
         height: 48px;
@@ -390,7 +370,6 @@ small {
         letter-spacing: 0.25px;
         color: #707382;
     }
-
     input::placeholder {
         font-family: 'Roboto';
         font-style: normal;
@@ -400,7 +379,6 @@ small {
         letter-spacing: 0.25px;
         color: #828EA5;
     }
-
     .btn-pd-2 {
         font-family: 'Roboto';
         font-style: normal;
@@ -418,7 +396,6 @@ small {
         margin-top: 1px;
         margin-left: 60px;
     }
-
     .btn-pd-disabled {
         font-family: 'Roboto';
         font-style: normal;
@@ -436,7 +413,6 @@ small {
         margin-left: 60px;
         margin-top: 1px;
     }
-
     .btn-pd {
         width: 134px !important;
         height: 48px !important;
@@ -447,7 +423,6 @@ small {
         /* margin-top: 45px !important; */
         position: relative;
     }
-
     .button input[type="radio"]:checked+label {
         background: #6B196B;
         color: white;
@@ -455,7 +430,6 @@ small {
         width: 140px;
         height: 32px;
     }
-
     .button input[type="radio"]+label {
         width: 140px;
         height: 32px;
@@ -463,7 +437,6 @@ small {
         border: 1px solid #E7EBF3;
         border-radius: 100px;
     }
-
     .text-sub-title {
         font-family: 'Roboto';
         font-style: normal;
@@ -475,7 +448,6 @@ small {
         /* width: 272px;
         height: 64px; */
     }
-
     .text-title {
         font-family: 'Roboto';
         font-style: normal;
@@ -485,7 +457,6 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .btn-back {
         width: 73px;
         height: 48px;
@@ -499,7 +470,6 @@ small {
         letter-spacing: 0.25px;
         color: #6B196B;
     }
-
     .opcionesMonto {
         font-family: 'Roboto';
         font-style: normal;
@@ -520,7 +490,6 @@ small {
         color: #2D3338;
         height: 48px;
     }
-
     option {
         font-family: 'Roboto';
         font-style: normal;
@@ -530,17 +499,14 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .div-btn-mobil {
         display: none !important;
     }
-
     .select-monto-unico+label {
         background: #6B196B !important;
         color: white !important;
         border-radius: 100px !important;
     }
-
     .ingrese-cantidad {
         font-family: 'Roboto';
         font-style: normal;
@@ -551,7 +517,6 @@ small {
         color: #2D3338;
         height: 48px;
     }
-
     .ingrese-cantidad::placeholder {
         font-family: 'Roboto';
         font-style: normal;
@@ -597,26 +562,21 @@ small {
         padding-left: 0px;
         padding-right: 0px;
     }
-
     .arriba-img-tamano {
         height: 20px;
     }
-
     .abajo-img-tamano {
         height: 16px;
     }
-
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
         box-shadow: none;
         width: 320px;
     }
-
     .tamano20-24 {
         height: 24px;
     }
-
     .montoClassSeleccionadoPeso {
         width: 80px;
         height: 32px;
@@ -628,7 +588,6 @@ small {
         letter-spacing: 0.25px;
         color: #FFFFFF;
     }
-
     .montoClassSeleccionadoUF {
         width: 80px;
         height: 32px;
@@ -640,7 +599,6 @@ small {
         letter-spacing: 0.25px;
         color: #FFFFFF;
     }
-
     .text-tiempo {
         /* width: 216px !important;
         height: 48px !important; */
@@ -652,20 +610,17 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .div-aux-text-tiempo {
         width: 100% !important;
         max-width: 216px !important;
         height: 48px !important;
     }
-
     .div-text-tiempo {
         width: 272px;
         height: 80px;
         background: #EBF6FF;
         border-radius: 4px;
     }
-
     .text-descripcion-digitar-monto {
         font-family: 'Roboto';
         font-style: normal;
@@ -675,7 +630,6 @@ small {
         letter-spacing: 0.25px;
         color: #707382;
     }
-
     input::placeholder {
         font-family: 'Roboto';
         font-style: normal;
@@ -685,7 +639,6 @@ small {
         letter-spacing: 0.25px;
         color: #828EA5;
     }
-
     .btn-pd-2 {
         font-family: 'Roboto';
         font-style: normal;
@@ -700,7 +653,6 @@ small {
         background-color: #730397;
         border: 1px solid #730397 !important;
     }
-
     .btn-pd-disabled {
         font-family: 'Roboto';
         font-style: normal;
@@ -716,7 +668,6 @@ small {
         border: 1px solid #E7EBF3;
         border-radius: 4px;
     }
-
     .btn-pd {
         width: 81px;
         height: 40px;
@@ -730,7 +681,6 @@ small {
         letter-spacing: 0.25px;
         color: #6B196B;
     }
-
     .button input[type="radio"]:checked+label {
         background: #6B196B;
         color: white;
@@ -738,7 +688,6 @@ small {
         width: 80px;
         height: 32px;
     }
-
     .button input[type="radio"]+label {
         width: 80px;
         height: 32px;
@@ -746,23 +695,18 @@ small {
         border: 1px solid #E7EBF3;
         border-radius: 100px;
     }
-
     .montoClassSeleccionadoPesoOtroMonto+label {
         width: 100px !important;
     }
-
     .montoClassSeleccionadoPesoOtroMonto:checked+label {
         width: 100px !important;
     }
-
     .montoClassSeleccionadoUFOtroMonto+label {
         width: 100px !important;
     }
-
     .montoClassSeleccionadoUFOtroMonto:checked+label {
         width: 100px !important;
     }
-
     .text-sub-title {
         font-family: 'Roboto';
         font-style: normal;
@@ -772,7 +716,6 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .text-title {
         font-family: 'Roboto';
         font-style: normal;
@@ -782,7 +725,6 @@ small {
         letter-spacing: 0.25px;
         color: #202830;
     }
-
     .opcionesMonto {
         font-family: 'Roboto';
         font-style: normal;
@@ -792,7 +734,6 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .select-tipo-monto {
         font-family: 'Roboto';
         font-style: normal;
@@ -804,7 +745,6 @@ small {
         width: 272px;
         height: 48px;
     }
-
     option {
         font-family: 'Roboto';
         font-style: normal;
@@ -814,34 +754,28 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
-
     .btn-monto {
         height: 32px !important;
         width: 80px !important;
     }
-
     .btn-monto-otro {
         height: 32px !important;
         width: 100px !important;
         margin-top: 16px !important;
     }
-
     .div-text-tiempo {
         display: inline-flex;
         /* display: block; */
     }
-
     .div-btn-desktop {
         display: none !important;
     }
-
     .div-btn-volver-mobile {
         width: 272px;
         height: 40px;
         padding-right: 0px;
         padding-left: 0px;
     }
-
     .btn-volver-mobile {
         font-family: 'Roboto';
         font-style: normal;
@@ -852,13 +786,11 @@ small {
         letter-spacing: 0.25px;
         color: #6B196B;
     }
-
     .select-monto-unico+label {
         background: #6B196B !important;
         color: white !important;
         border-radius: 100px !important;
     }
-
     .ingrese-cantidad {
         font-family: 'Roboto';
         font-style: normal;
@@ -870,7 +802,6 @@ small {
         width: 272px;
         height: 48px;
     }
-
     .ingrese-cantidad::placeholder {
         font-family: 'Roboto';
         font-style: normal;
