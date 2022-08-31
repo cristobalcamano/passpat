@@ -834,7 +834,9 @@ small {
      ::ng-deep .myCustomModalClass .modal-content {
         width: 272px !important;
         height: 504px !important;
+        margin-left: 16px !important;
     }
+    
     .img-terms {
         padding: 10px 10px 10px 0px;
     }
@@ -917,6 +919,8 @@ small {
         letter-spacing: 0.25px;
         margin-bottom: 0px;
     }
+
+
 }
 
 #text-opinion {
