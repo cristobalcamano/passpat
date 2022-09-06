@@ -390,8 +390,10 @@ small {
         color: #FFFFFF !important;
         width: 134px !important;
         height: 48px !important;
-        background-color: #730397;
-        border: 1px solid #730397 !important;
+        /* background-color: #730397;
+        border: 1px solid #730397 !important; */
+        background: #6B196B;
+        border: 1px solid #6B196B;
         border-radius: 4px;
         margin-top: 1px;
         margin-left: 60px;
@@ -409,6 +411,7 @@ small {
         height: 48px !important;
         background-color: #E7EBF3;
         border: 1px solid #E7EBF3 !important;
+        background: #6B196B;
         border-radius: 4px;
         margin-left: 60px;
         margin-top: 1px;
@@ -650,8 +653,9 @@ small {
         color: #FFFFFF !important;
         width: 272px;
         height: 48px;
-        background-color: #730397;
-        border: 1px solid #730397 !important;
+        background: #6B196B !important;
+        border: 1px solid #6B196B !important;
+        border-radius: 4px;
     }
     .btn-pd-disabled {
         font-family: 'Roboto';

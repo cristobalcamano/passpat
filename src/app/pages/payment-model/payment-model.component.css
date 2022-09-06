@@ -4,7 +4,8 @@
     width: 100% !important;
     max-width: 960px;
     height: 616px;
-    top: 55px;
+    /* top: 55px; */
+    top: 30px;
     /* Other/Light */
     background: #FFFFFF;
     /* Basic / 300 */
