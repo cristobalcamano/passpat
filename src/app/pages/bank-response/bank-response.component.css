@@ -548,6 +548,7 @@ small {
         width: 633px !important;
         height: 400px !important;
     }
+
     .desc-opinion {
         font-family: 'Roboto';
         font-style: normal;
@@ -777,6 +778,22 @@ small {
         left: 24px;
         top: 541px;
     }
+
+    .text-response{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+        width: 216px;
+    }
+
+    .img-text-response{
+        padding-bottom: 30px;
+    }
+
     .contenedor-pd {
         /* Basic / 300 */
         border: none;
@@ -800,6 +817,7 @@ small {
         /* Other/Light */
         background: #FFFFFF;
         border-radius: 8px;
+        margin-left: 24px !important;
     }
     .tittle-ended-process {
         font-family: 'Roboto';
@@ -807,10 +825,8 @@ small {
         font-weight: 700;
         font-size: 16px;
         line-height: 24px;
-        /* identical to box height, or 150% */
         text-align: center;
         letter-spacing: 0.25px;
-        /* Grey / 300 Default */
         color: #2D3338;
     }
     .text-ended-process {

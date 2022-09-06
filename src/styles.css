@@ -76,14 +76,16 @@ label {
 .btn {
     width: 134px !important;
     height: 48px !important;
-    background-color: #730397;
+    /* background-color: #730397; */
+    background-color: #6B196B;
     border: white 1px solid !important;
     color: white !important;
     border-radius: 4px;
 }
 
 .btn:hover {
-    background-color: #730397;
+    /* background-color: #730397; */
+    background-color: #6B196B;
     border: white 1px solid !important;
     color: white !important;
 }
@@ -96,7 +98,8 @@ small {
 .btn-back {
     border: none;
     background-color: white;
-    color: #730397 !important;
+    /* color: #730397 !important; */
+    color: #6B196B !important;
 }
 
 .font-size-34px {
@@ -183,7 +186,7 @@ small {
 
 @media(max-width:320px) {
     .titulo-figma {
-        font-size: 24px !important;
+        font-size: 20px !important;
     }
     .texto-figma-on {
         font-size: 14px;
