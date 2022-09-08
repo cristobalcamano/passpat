@@ -6,11 +6,8 @@
     height: 616px;
     /* top: 55px; */
     top: 30px;
-    /* Other/Light */
     background: #FFFFFF;
-    /* Basic / 300 */
     border: 1px solid #E7EBF3;
-    /* Box shadow/Default WP 3DS */
     box-shadow: 0px 16px 64px rgba(170, 174, 187, 0.2);
     border-radius: 16px;
 }
@@ -44,7 +41,6 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
     letter-spacing: 0.25px;
 }
 
@@ -67,9 +63,7 @@ label {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    /* identical to box height, or 133% */
     letter-spacing: 0.25px;
-    /* Danger / 300 Default */
     color: #FF4B4B;
 }
 
@@ -178,7 +172,9 @@ label {
     border: none;
     background: white;
     text-align: left;
-}
+}   
+  
+
 
 .container-terminos-condiciones {
     width: 100%;

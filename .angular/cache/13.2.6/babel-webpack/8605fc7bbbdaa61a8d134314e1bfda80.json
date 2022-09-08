@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class PaymentModel {\n  constructor(tarjeta, cvv, fecha, terminoscondiciones) {\n    this.tarjeta = tarjeta;\n    this.cvv = cvv;\n    this.fecha = fecha;\n    this.terminoscondiciones = terminoscondiciones;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
