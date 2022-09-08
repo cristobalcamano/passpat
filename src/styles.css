@@ -1,3 +1,7 @@
+label {
+    font-family: 'Roboto' !important;
+}
+
 .width-100 {
     width: 100%;
     ;
@@ -87,6 +91,7 @@
 }
 
 small {
+    font-family: 'Roboto';
     color: rgb(199, 0, 0);
 }
 

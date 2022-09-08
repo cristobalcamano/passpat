@@ -28,10 +28,10 @@
                         <div class="form-group col formulario-32px-r">
 
                             <label for="rut">Rut</label>
-                            <input [ngClass]="{'input-error-pd':(!rutValidateFormatK &&
+                            <input [ngClass]="{'input-error-pd':((!rutValidateFormatK || !searchForm.controls['rut'].valid) &&
                             (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched))}" maxlength="10" formControlName="rut" type="txt" class="form-control input-pd" placeholder="111111111-1" (ngModelChange)="validateRut()" ngModel required>
 
-                            <small *ngIf="(!rutValidateFormatK &&
+                            <small *ngIf="((!rutValidateFormatK || !searchForm.controls['rut'].valid ) &&
             (searchForm.controls['rut'].dirty || searchForm.controls['rut'].touched))"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp; Ingresa un rut válido</small>
                         </div>
                         <div class="form-group col formulario-32px">
@@ -46,7 +46,7 @@
                         <div class="form-group col formulario-32px">
                             <label>Teléfono</label>
                             <input [ngClass]="{'input-error-pd':searchForm.controls['telefono'].invalid &&
-                            (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)}" (ngModelChange)="validateTelefono()" maxlength="18" placeholder="+ 123 12345678" formControlName="telefono" class="form-control input-pd">
+                            (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)}" (ngModelChange)="validateTelefono()" maxlength="15" placeholder="+ 123 12345678" formControlName="telefono" class="form-control input-pd">
 
                             <small *ngIf="searchForm.controls['telefono'].invalid &&
             (searchForm.controls['telefono'].dirty || searchForm.controls['telefono'].touched)"><img class="icon-error-pd" src="../../../assets/img/icon/icon-error.PNG">&nbsp;Ingresa un número válido</small>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
                 <br>
-                <button class="center btn-pd-position" [ngClass]="{'btn-disable-primary':!searchForm.valid, 'btn':searchForm.valid}" type="submit" [disabled]="!searchForm.valid">Siguiente</button>
+                <button class="center btn-pd-position" [ngClass]="{'btn-disable-primary':!searchForm.valid || !rutValidateFormatK, 'btn':searchForm.valid}" type="submit" [disabled]="!searchForm.valid || !rutValidateFormatK">Siguiente</button>
 
             </form>
         </div>
