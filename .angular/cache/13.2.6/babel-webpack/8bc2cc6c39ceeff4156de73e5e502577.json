@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class AmountPayable {\n  constructor(monto, tipoMoneda) {\n    this.monto = monto;\n    this.tipoMoneda = tipoMoneda;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -75,6 +75,7 @@ label {
         width: 100%;
         max-width: 9600px;
     }
+
     /* .img-pd {
         left: 0px !important;
         padding: 0px;
@@ -196,7 +197,7 @@ small {
 
 @media(min-width:721px) {
 
-    .tamano10{
+    .tamano10 {
         height: 10px;
     }
 }
@@ -206,6 +207,7 @@ small {
     .tamano13 {
         height: 13px;
     }
+
     .img-pd {
         top: -25px;
         width: 81px;
@@ -213,10 +215,12 @@ small {
         right: 0px !important;
         position: absolute;
     }
+
     .img-pm {
         right: -47px !important;
         padding: 0px;
     }
+
     .div-img-check {
         width: 64px;
         height: 64px;
@@ -226,6 +230,7 @@ small {
         justify-content: center;
         align-items: center;
     }
+
     /* .img-check {
         margin-left: auto;
         margin-right: auto;
@@ -246,6 +251,7 @@ small {
         box-shadow: 0px 16px 64px rgba(170, 174, 187, 0.2);
         border-radius: 16px;
     }
+
     .btn-close {
         width: 24px;
         height: 24px;
@@ -255,45 +261,58 @@ small {
         padding-top: 0px;
         float: right;
     }
+
     .div-btn-close {
         height: 24px;
     }
+
     /* ::ng-deep .myCustomModalClass .modal-body{
         padding-top: 24px !important;
     } */
     .tamano4-16 {
         height: 4px;
     }
+
     .tamano40 {
         height: 40px;
     }
+
     .tamano40-32 {
         height: 40px;
     }
+
     .tamano32-24 {
         height: 32px;
     }
+
     .tamano32-16 {
         height: 32px;
     }
+
     .tamano24 {
         height: 8px;
     }
+
     .tamano24-8 {
         height: 8px;
     }
+
     .tamano16 {
         height: 16px;
     }
+
     .tamano16-8 {
         height: 16px;
     }
+
     .tamano416 {
         height: 4px;
     }
+
     .tamano8-4 {
         height: 8px;
     }
+
     .title-experience {
         font-family: 'Roboto';
         font-style: normal;
@@ -303,11 +322,13 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .space-emoji {
         width: 32px;
         height: 40px;
         float: left
     }
+
     .sub-title-experience {
         font-family: 'Roboto';
         font-style: normal;
@@ -318,17 +339,20 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .table-response {
         margin-right: 0px;
         margin-left: 22px;
         width: 632px;
         height: 264px;
     }
+
     .table-table-response {
         border: white 9px solid;
         margin-bottom: 0px;
         width: 578px;
     }
+
     .td-table-response-title {
         font-family: 'Roboto';
         font-style: normal;
@@ -344,6 +368,7 @@ small {
         width: 280px !important;
         height: 48px !important;
     }
+
     .td-table-response {
         font-family: 'Roboto';
         font-style: normal;
@@ -360,6 +385,7 @@ small {
         width: 280px !important;
         height: 48px !important;
     }
+
     /* .table-table-response {
         width: 632px;
         height: 264px;
@@ -398,6 +424,7 @@ small {
         justify-content: center;
         align-items: center;
     }
+
     .btn-descargar-comprobante {
         font-family: 'Roboto';
         font-style: normal;
@@ -408,6 +435,7 @@ small {
         letter-spacing: 0.25px;
         color: #FFFFFF;
     }
+
     .btn-dejanos-opinion {
         width: 202px;
         height: 48px;
@@ -420,12 +448,14 @@ small {
         letter-spacing: 0.25px;
         color: #6B196B;
     }
+
     .box-text-response {
         width: 632px;
         height: 48px;
         left: 404px;
         top: 733px;
     }
+
     .text-response {
         font-family: 'Roboto';
         font-style: normal;
@@ -435,6 +465,7 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .title-response {
         font-family: 'Roboto';
         font-style: normal;
@@ -447,17 +478,20 @@ small {
         /* Grey / 300 Default */
         color: #2D3338;
     }
+
     .table-response {
         margin-right: 0px;
         margin-left: 22px;
     }
-     ::ng-deep .modalClassEndedProcess .modal-dialog {
+
+    ::ng-deep .modalClassEndedProcess .modal-dialog {
         max-width: 633px;
         max-height: 400px;
         /* Other/Light */
         background: #FFFFFF;
         border-radius: 8px;
     }
+
     .text-ended-process {
         font-family: 'Roboto';
         font-style: normal;
@@ -470,12 +504,14 @@ small {
         /* Grey / 300 Default */
         color: #2D3338;
     }
+
     .div-text-ended-process {
         width: 467px;
         height: 72px;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+
     .tittle-ended-process {
         width: 632px;
         height: 48px;
@@ -490,10 +526,12 @@ small {
         /* Grey / 300 Default */
         color: #2D3338;
     }
+
     .div-tittle-thank-opinion {
         width: 467px;
         height: 32px;
     }
+
     .tittle-thank-opinion {
         width: 467px;
         height: 32pX;
@@ -506,6 +544,7 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .text-thank-opinion {
         font-family: 'Roboto';
         font-style: normal;
@@ -516,35 +555,41 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .div-text-thank-opinion {
         width: 467px !important;
         height: 72px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
-     ::ng-deep .modalClassThank .modal-content {
+
+    ::ng-deep .modalClassThank .modal-content {
         width: 633px !important;
         height: 391px !important;
     }
-     ::ng-deep .modalClassThank .modal-dialog {
+
+    ::ng-deep .modalClassThank .modal-dialog {
         max-width: 633px !important;
         height: 391px !important;
     }
-     ::ng-deep .myCustomModalClass .modal-dialog {
+
+    ::ng-deep .myCustomModalClass .modal-dialog {
         width: 633px !important;
         height: 590px !important;
         max-width: 100% !important;
     }
-     ::ng-deep .myCustomModalClass .modal-content {
+
+    ::ng-deep .myCustomModalClass .modal-content {
         width: 633px !important;
         height: 590px !important;
     }
+
     /* ::ng-deep .modalClassEndedProcess .modal-dialog {
 
         width: 633px !important;
         height: 400px !important;
     } */
-     ::ng-deep .modalClassEndedProcess .modal-content {
+    ::ng-deep .modalClassEndedProcess .modal-content {
         width: 633px !important;
         height: 400px !important;
     }
@@ -559,12 +604,14 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .div-desc-opinion {
         width: 466px !important;
         height: 72px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+
     .btn-enviar-exp {
         width: 110px;
         height: 48px;
@@ -580,6 +627,7 @@ small {
         letter-spacing: 0.25px;
         color: #FFFFFF;
     }
+
     .btn-enviar-exp-disabled {
         width: 110px;
         height: 48px;
@@ -595,6 +643,7 @@ small {
         letter-spacing: 0.25px;
         color: #A0AFCA;
     }
+
     .text-area-exp {
         width: 469px;
         height: 105px;
@@ -602,13 +651,16 @@ small {
         border: 1px solid #C9D0E4;
         border-radius: 4px;
     }
+
     .div-text-area-exp {
         width: 469px;
         height: 105px;
     }
+
     .img-terms {
         padding: 10px 10px 10px 0px;
     }
+
     .terms-conditions-content {
         position: relative;
         top: 50px;
@@ -619,6 +671,7 @@ small {
         padding-bottom: 6px;
         padding-right: 6px;
     }
+
     .terms-conditions-content {
         font-family: 'Roboto';
         font-style: normal;
@@ -633,15 +686,22 @@ small {
         color: #707382;
         /* padding: 16px 10px 16px 16px; */
     }
+
     .div-title-experience {
         width: 466px;
         height: 32px;
         padding-right: 0px;
         padding-left: 0px;
     }
+
     .div-sub-title-experience {
         width: 465px;
         height: 32px;
+    }
+
+    .img-thank{
+        width: 173.47px;
+height: 134.17px;
     }
 }
 
@@ -655,39 +715,49 @@ small {
         padding-top: 0px;
         float: right;
     }
+
     .div-btn-close {
         height: 18px;
     }
+
     /* .modal-body{
         padding-top: 16px!important;
     } */
     .tamano40-32 {
         height: 32px;
     }
+
     .tamano32-24 {
         height: 24px;
     }
+
     .tamano32-16 {
         height: 16px;
     }
+
     .tamano24-8 {
         height: 8px;
     }
+
     .tamano16-8 {
         height: 8px;
     }
+
     .tamano4-16 {
         height: 16px;
     }
+
     .tamano8-4 {
         height: 4px;
     }
+
     .div-title-experience {
         width: 240px;
         height: 48px;
         padding-right: 0px;
         padding-left: 0px;
     }
+
     .title-experience {
         font-family: 'Roboto';
         font-style: normal;
@@ -697,11 +767,13 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .space-emoji {
         width: 8px;
         height: 40px;
         float: left
     }
+
     /* .desc-opinion {
 
         font-family: 'Roboto';
@@ -725,10 +797,12 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .div-sub-title-experience {
         width: 240px;
         height: 24px;
     }
+
     /* .td-table-response {
         height: 32px;
     } */
@@ -736,11 +810,13 @@ small {
         width: 271px;
         height: 208px;
     }
+
     .table-table-response {
         border: white 9px solid;
         margin-bottom: 0px;
         width: 271px;
     }
+
     .td-table-response-title {
         font-family: 'Roboto';
         font-style: normal;
@@ -756,6 +832,7 @@ small {
         width: 127px !important;
         height: 32px !important;
     }
+
     .td-table-response {
         font-family: 'Roboto';
         font-style: normal;
@@ -772,6 +849,7 @@ small {
         width: 127px !important;
         height: 32px !important;
     }
+
     .box-text-response {
         width: 272px;
         height: 80px;
@@ -779,7 +857,7 @@ small {
         top: 541px;
     }
 
-    .text-response{
+    .text-response {
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -790,7 +868,7 @@ small {
         width: 216px;
     }
 
-    .img-text-response{
+    .img-text-response {
         padding-bottom: 30px;
     }
 
@@ -799,6 +877,7 @@ small {
         border: none;
         box-shadow: none;
     }
+
     .title-response {
         font-family: 'Roboto';
         font-style: normal;
@@ -811,7 +890,8 @@ small {
         /* Grey / 300 Default */
         color: #2D3338;
     }
-     ::ng-deep .modalClassEndedProcess .modal-dialog {
+
+    ::ng-deep .modalClassEndedProcess .modal-dialog {
         max-width: 272px;
         max-height: 352px;
         /* Other/Light */
@@ -819,6 +899,7 @@ small {
         border-radius: 8px;
         margin-left: 24px !important;
     }
+
     .tittle-ended-process {
         font-family: 'Roboto';
         font-style: normal;
@@ -829,6 +910,7 @@ small {
         letter-spacing: 0.25px;
         color: #2D3338;
     }
+
     .text-ended-process {
         font-family: 'Roboto';
         font-style: normal;
@@ -841,26 +923,30 @@ small {
         /* Grey / 300 Default */
         color: #2D3338;
     }
-     ::ng-deep .myCustomModalClass .modal-dialog {
+
+    ::ng-deep .myCustomModalClass .modal-dialog {
         /* max-width: 100px !important;
         max-height: 100px !important; */
         width: 272px !important;
         height: 504px !important;
     }
-     ::ng-deep .myCustomModalClass .modal-content {
+
+    ::ng-deep .myCustomModalClass .modal-content {
         width: 272px !important;
         height: 504px !important;
         margin-left: 16px !important;
     }
-    
+
     .img-terms {
         padding: 10px 10px 10px 0px;
     }
+
     .terms-conditions-content {
         position: relative;
         width: 272px;
         height: 64px;
     }
+
     .terms-conditions-content {
         font-family: 'Roboto';
         font-style: normal;
@@ -873,9 +959,11 @@ small {
         color: #707382;
         padding: 16px 10px 16px 16px;
     }
+
     .tamano4-12 {
         height: 12px;
     }
+
     .text-area-exp {
         width: 240px;
         height: 104px;
@@ -883,12 +971,14 @@ small {
         border: 1px solid #C9D0E4;
         border-radius: 4px;
     }
+
     .div-text-area-exp {
         width: 240px;
         height: 104px;
         padding-right: 0px;
         padding-left: 0px;
     }
+
     .btn-enviar-exp {
         width: 240px;
         height: 40px;
@@ -904,6 +994,7 @@ small {
         letter-spacing: 0.25px;
         color: #FFFFFF;
     }
+
     .btn-enviar-exp-disabled {
         width: 240px;
         height: 40px;
@@ -919,12 +1010,14 @@ small {
         letter-spacing: 0.25px;
         color: #A0AFCA;
     }
+
     .div-desc-opinion {
         width: 240px !important;
         height: 48px !important;
         padding-left: 0px !important;
         padding-right: 0px !important;
     }
+
     .desc-opinion {
         font-family: 'Roboto';
         font-style: normal;
@@ -934,6 +1027,49 @@ small {
         text-align: center;
         letter-spacing: 0.25px;
         margin-bottom: 0px;
+    }
+
+    .div-tittle-thank-opinion {
+        width: 240px;
+        height: 24px;
+    }
+
+    .tittle-thank-opinion {
+        width: 240px;
+        height: 24px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+    }
+
+    .text-thank-opinion {
+        width: 240px !important;
+        height: 64px !important;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: 0.25px;
+        color: #2D3338;
+    }
+
+    .div-text-thank-opinion {
+        width: 240px !important;
+        height: 64px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .img-thank{
+        width: 129.29px;
+        height: 100px;
     }
 
 
